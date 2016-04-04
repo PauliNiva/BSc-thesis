@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Ehrenfeucht--Fraïssé-peleistä.aux
+The style file: babplain-lf.bst
+Database file #1: references-fi.bib
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--empty language in Bos93
+Warning--empty language in Ete96
+Warning--empty language in Hod97
+Warning--empty language in Vaa11
+You've used 7 entries,
+            2783 wiz_defined-function locations,
+            696 strings with 7090 characters,
+and the built_in function-call counts, 2705 in all, are:
+= -- 258
+> -- 55
+< -- 2
++ -- 27
+- -- 16
+* -- 252
+:= -- 382
+add.period$ -- 20
+call.type$ -- 7
+change.case$ -- 27
+chr.to.int$ -- 0
+cite$ -- 11
+duplicate$ -- 142
+empty$ -- 277
+format.name$ -- 25
+if$ -- 598
+int.to.chr$ -- 0
+int.to.str$ -- 7
+missing$ -- 12
+newline$ -- 54
+num.names$ -- 14
+pop$ -- 40
+preamble$ -- 1
+purify$ -- 22
+quote$ -- 0
+skip$ -- 80
+stack$ -- 0
+substring$ -- 162
+swap$ -- 50
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 24
+warning$ -- 4
+while$ -- 22
+width$ -- 8
+write$ -- 104
+(There were 4 warnings)

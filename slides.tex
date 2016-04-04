@@ -1,0 +1,356 @@
+\documentclass{beamer}
+
+\usepackage[utf8]{inputenc}
+
+\title{Otsikko}
+\author{Pauli Niva}
+\date{\today}
+
+
+
+\usepackage{mathtools}
+\usepackage {tikz}
+\usetikzlibrary {positioning}
+%\usepackage {xcolor}
+\definecolor {processblue}{cmyk}{0.96,0,0,0}
+
+\begin{document}
+
+\frame{\titlepage}
+
+%frame1
+\begin{frame}
+\frametitle{Historiallinen tausta}
+\begin{itemize}
+\item<1->1930-luvulla Alfred Tarski esittelee elementaarisen ekvivalenssin käsitteen
+\item<2->1946 Tarski Princetonissa pidetyssä konferenssissa joka käsittelee ongelmia matematiikassa
+
+On olemassa algebroja jotka eivät ole isomorfisia, mutta joita ei kuitenkaan voi erottaa toisistaan näiden aritmeettisten ominaisuuksien perusteella; Tarvitaan teoria algebrojen aritmeettiselle ekvivalenssille joka on käsitteenä yhtä perustavanlaatuinen kuin isomorfismi.
+\item<3->1954 Roland Fraïssé esittelee osittaisisomorfismin, jonka avulla saadaan elementaarinen ekvivalenssi predikaattilogiikalle
+\item<4->1961 Andrzej Ehrenfeucht muokkasi Fraïssén menetelmästä peliteoreettisen version
+\end{itemize}
+\end{frame}
+
+%frame2
+\begin{frame}
+\frametitle{Relaatiot}
+Joukon $X$ \textit{kaksipaikkainen relaatio} $R$ on mikä tahansa joukko joukon $X$ alkioista muodostettuja pareja $(x, y)$, joiden molemmat alkiot ovat joukossa $X$, eli $R \subset X^2$. \pause Jos $(x, y) \in R$, sanotaan, että $x$ on $y$:n kanssa \textit{relaatiossa} $R$.
+
+\end{frame}
+
+%frame3
+\begin{frame}
+\frametitle{Mallit}
+Olkoon $L$ aakkosto ja olkoon $M$ epätyhjä joukko. Tällöin $L$\textit{-malli} koostuu seuraavista:
+\begin{itemize}
+\item<1-> Joukosta $M$.
+\item<2-> Relaatioista $R^M \subset M$, jokaiselle relaatiosymbolille $R \in L$, $\#R = n$, jossa $n\in \mathbb{Z}_+$.
+\item<3-> Vakioista $c^M \in M$, jokaiselle vakiosymbolille $c \in L$.
+\item<4-> Funktioista $f^M: M^m \rightarrow M$, jokaiselle funktiosymbolille $f \in L$, $\#f = m$, jossa $m\in \mathbb{Z}_+$.
+\end{itemize}
+\pause \pause \pause \pause
+Relaatiota $R^M$ sanotaan relaatiosymbolin $R$ \textit{tulkinnaksi mallissa} $M$, funktiota $f^M$ sanotaan funktiosymbolin $f$ \textit{tulkinnaksi mallissa} $M$, ja alkiota $c^M$ kutsutaan vakiosymbolin $c$ \textit{tulkinnaksi mallissa} $M$.
+\end{frame}
+
+%frame4
+\begin{frame}
+\frametitle{Isomorfiset mallit}
+Kaksi mallia $A$ ja $B$ yli saman äärellisen aakkoston $L$ ovat isomorfisia $(A \cong B)$ jos on olemassa isomorfismi $A$:lta $B$:hen, eli on olemassa bijektio $f: A \rightarrow B$, joka säilyttää relaatiot ja vakiot.
+\end{frame}
+
+\begin{frame}
+\frametitle{Verifikaatio}
+Äärelliset mallit voidaan koodata
+\begin{itemize}
+\item<1-> puiksi
+\item<2-> verkoiksi
+\item<3-> sanoiksi
+\end{itemize}
+\pause \pause \pause
+eli niitä voidaan käyttää laskennan olioina ja täten niillä voidaan kuvata äärellistilallisia systeemejä ja tutkia näiden toiminnan oikeellisuutta
+\end{frame}
+
+\begin{frame}
+\frametitle{Tietokantateoria}
+Relationaalinen malli identifioi tietokannan äärellisen relaationaalisen struktuurin kanssa.
+\pause
+Formaalin kielen kaavat voidaan ajatella ohjelmina, jotta niiden merkitystä struktuurissa voidaan arvioida
+\pause
+Ja toisinpäin, voidaan esittää jonkin laskennallisen vaativuusluokan kyselyitä jollakin formaalilla kielellä
+\end{frame}
+
+\begin{frame}
+\frametitle{Laskennan vaativuus}
+Laskennan vaativuusluokkien looginen selitys
+\pause
+Esimerkiksi $P = NP$ -ongelma redusoituu kysymykseksi: onko kahdella kiintopistelogiikalla sama ilmaisuvoima äärellisissä malleissa 
+\end{frame}
+
+\begin{frame}
+\frametitle{EF-pelin kierroksen kulku}
+Merkitään pelattavien kierrosten määrää luvulla $k \in \mathbb{Z}_+$. EF-peliä pituudeltaan $k$-kierrosta malleilla $A$ ja $B$ merkitään $EF_k(A, B)$. Pelin $EF_k(A, B)$ mielivaltaisen kierroksen $i \in \{1, \ldots, k\}$ kulku on seuraavanlainen: 
+\begin{itemize}
+\item<2-> Ensin Pelaaja I valitsee toisen malleista $A$ tai $B$ sekä jonkin alkion $a_i \in A$ tai $b_i \in B$ tästä mallista.
+\item<3-> Tämän jälkeen Pelaaja II valitsee malleista sen, jota Pelaaja I ei valinnut ja valitsee tästä mallista jonkin alkion.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{EF-pelin voittaminen}
+Olkoon $a = (a_1, \ldots, a_i)$ mallista $A$ valitut alkiot ja $b = (b_1, \ldots, b_i)$ mallista $B$ valitut alkiot mielivaltaisella kierroksella $i$. \pause Pelaajan II voittaa jos ja vain jos jokaisella kierroksella $i \leq n$ pari $(a, b)$ määrää osittaisen isomorfismin $A \rightarrow B$ eli on olemassa kuvaus $h: A \rightarrow B$, siten että $a \in A \mapsto b \in B$ \pause Muussa tapauksessa Pelaaja I voittaa.
+\end{frame}
+
+\begin{frame}
+\frametitle{Voittostrategia}
+Strategia on joukko sääntöjä, joiden mukaan pelaaja tekee valintansa toisen pelaajan valinnasta riippuen. \pause EF-pelissä kummallakin pelaajalla on koko ajan tiedossa mallit, niiden rakenne ja jo tehdyt valinnat, eli peli on \textit{täydellisen informaation peli}. \pause Strategiaa, jota seuraamalla pelaaja voittaa pelin riippumatta mitä valintoja toinen pelajaa tekee kutsutaan \textit{voittavaksi strategiaksi}. \pause Jos Pelaaja II:lla on voittava strategia EF-pelissä $EF_k(A, B)$, niin tätä merkitään $A \sim_k B$.
+\end{frame}
+
+\begin{frame}
+\begin {center}
+\begin {tikzpicture}[-latex ,auto ,node distance =4 cm and 5cm ,on grid ,
+semithick ,
+state/.style ={ circle ,top color =white , bottom color = processblue!20 ,
+draw,processblue , text=blue , minimum width =1 cm}]
+\node[state] (x_1) {$x_1$};
+\node[state] (x_2) [above =of x_1] {$x_2$};
+\node[state] (y_2) [above right =of x_1] {$y_2$};
+\node[state] (y_1) [right =of x_1] {$y_1$};
+\node[state] (y_3) [right =of y_1] {$y_3$};
+\path (x_1) edge (x_2);
+\path (x_2) edge (x_1);
+\path (y_1) edge (y_2);
+\path (y_2) edge (y_1);
+\path (y_3) edge (y_1);
+\path (y_1) edge (y_3);
+\path (y_2) edge (y_3);
+\path (y_3) edge (y_2);
+\node[align=left, below] at (0.1,-.9)%
+{Verkko \textit{X}};
+\node[align=right, below] at (7.5,-.9)%
+{Verkko \textit{Y}};
+\end{tikzpicture}
+\end{center}
+Kierros 1:
+\begin{itemize}
+  \item<2> Pelaaja I voi valita solmun kummasta verkosta tahansa.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin {center}
+\begin {tikzpicture}[-latex ,auto ,node distance =4 cm and 5cm ,on grid ,
+semithick ,
+state/.style ={ circle ,top color =white , bottom color = processblue!20 ,
+draw,processblue , text=blue , minimum width =1 cm}]
+\node[state] (x_1) {$x_1$};
+\node[state] (x_2) [above =of x_1] {$x_2$};
+\node[state] (y_2) [above right =of x_1] {$y_2$};
+\node[state] (y_1) [right =of x_1] {$y_1$};
+\node[state] (y_3) [right =of y_1] {$y_3$};
+\path (x_1) edge (x_2);
+\path (x_2) edge (x_1);
+\path (y_1) edge (y_2);
+\path (y_2) edge (y_1);
+\path (y_3) edge (y_1);
+\path (y_1) edge (y_3);
+\path (y_2) edge (y_3);
+\path (y_3) edge (y_2);
+\node[align=left, below] at (0.1,-.9)%
+{Verkko \textit{X}};
+\node[align=right, below] at (7.5,-.9)%
+{Verkko \textit{Y}};
+\end{tikzpicture}
+\end{center}
+Kierros 1:
+\begin{itemize}
+  \item Jos Pelaaja I valitsee solmun verkosta $X$, Pelaaja II valitsee vastinpariksi verkosta $Y$ solmun $y_1$, muulloin Pelaaja II valitsee vastinpariksi solmun $x_1$.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin {center}
+\begin {tikzpicture}[-latex ,auto ,node distance =4 cm and 5cm ,on grid ,
+semithick ,
+state/.style ={ circle ,top color =white , bottom color = processblue!20 ,
+draw,processblue , text=blue , minimum width =1 cm}]
+\node[state] (x_1) {$x_1$};
+\node[state] (x_2) [above =of x_1] {$x_2$};
+\node[state] (y_2) [above right =of x_1] {$y_2$};
+\node[state] (y_1) [right =of x_1] {$y_1$};
+\node[state] (y_3) [right =of y_1] {$y_3$};
+\path (x_1) edge (x_2);
+\path (x_2) edge (x_1);
+\path (y_1) edge (y_2);
+\path (y_2) edge (y_1);
+\path (y_3) edge (y_1);
+\path (y_1) edge (y_3);
+\path (y_2) edge (y_3);
+\path (y_3) edge (y_2);
+\node[align=left, below] at (0.1,-.9)%
+{Verkko \textit{X}};
+\node[align=right, below] at (7.5,-.9)%
+{Verkko \textit{Y}};
+\end{tikzpicture}
+\end{center}
+Kierros 1:
+\begin{itemize}
+  \item Oletetaan, että Pelaaja I valitsee solmun $x_2$. Tällöin meillä on $a_1 \coloneqq x_2, b_1 \coloneqq y_1$ ensimmäisen kierroksen jälkeen.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin {center}
+\begin {tikzpicture}[-latex ,auto ,node distance =4 cm and 5cm ,on grid ,
+semithick ,
+state/.style ={ circle ,top color =white , bottom color = processblue!20 ,
+draw,processblue , text=blue , minimum width =1 cm}]
+\node[state] (x_1) {$x_1$};
+\node[state] (x_2) [above =of x_1] {$x_2$};
+\node[state] (y_2) [above right =of x_1] {$y_2$};
+\node[state] (y_1) [right =of x_1] {$y_1$};
+\node[state] (y_3) [right =of y_1] {$y_3$};
+\path (x_1) edge (x_2);
+\path (x_2) edge (x_1);
+\path (y_1) edge (y_2);
+\path (y_2) edge (y_1);
+\path (y_3) edge (y_1);
+\path (y_1) edge (y_3);
+\path (y_2) edge (y_3);
+\path (y_3) edge (y_2);
+\node[align=left, below] at (0.1,-.9)%
+{Verkko \textit{X}};
+\node[align=right, below] at (7.5,-.9)%
+{Verkko \textit{Y}};
+\end{tikzpicture}
+\end{center}
+Kierros 2:
+\begin{itemize}
+  \item Minkä tahansa solmun Pelaaja I valitseekin, Pelaaja II voi peilata valinnan. Oletetaan, että tällä kertaa Pelaaja I valitsee verkosta $Y$.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin {center}
+\begin {tikzpicture}[-latex ,auto ,node distance =4 cm and 5cm ,on grid ,
+semithick ,
+state/.style ={ circle ,top color =white , bottom color = processblue!20 ,
+draw,processblue , text=blue , minimum width =1 cm}]
+\node[state] (x_1) {$x_1$};
+\node[state] (x_2) [above =of x_1] {$x_2$};
+\node[state] (y_2) [above right =of x_1] {$y_2$};
+\node[state] (y_1) [right =of x_1] {$y_1$};
+\node[state] (y_3) [right =of y_1] {$y_3$};
+\path (x_1) edge (x_2);
+\path (x_2) edge (x_1);
+\path (y_1) edge (y_2);
+\path (y_2) edge (y_1);
+\path (y_3) edge (y_1);
+\path (y_1) edge (y_3);
+\path (y_2) edge (y_3);
+\path (y_3) edge (y_2);
+\node[align=left, below] at (0.1,-.9)%
+{Verkko \textit{X}};
+\node[align=right, below] at (7.5,-.9)%
+{Verkko \textit{Y}};
+\end{tikzpicture}
+\end{center}
+Kierros 2:
+\begin{itemize}
+\item Jos Pelaaja I valitsee solmun $y_1$, eli saman solmun kuin $b_1 = y_1$, on Pelaajan II valittava vastinpariksi Pelaajan I ensimmäisen kierroksen valinta $x_2$.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin {center}
+\begin {tikzpicture}[-latex ,auto ,node distance =4 cm and 5cm ,on grid ,
+semithick ,
+state/.style ={ circle ,top color =white , bottom color = processblue!20 ,
+draw,processblue , text=blue , minimum width =1 cm}]
+\node[state] (x_1) {$x_1$};
+\node[state] (x_2) [above =of x_1] {$x_2$};
+\node[state] (y_2) [above right =of x_1] {$y_2$};
+\node[state] (y_1) [right =of x_1] {$y_1$};
+\node[state] (y_3) [right =of y_1] {$y_3$};
+\path (x_1) edge (x_2);
+\path (x_2) edge (x_1);
+\path (y_1) edge (y_2);
+\path (y_2) edge (y_1);
+\path (y_3) edge (y_1);
+\path (y_1) edge (y_3);
+\path (y_2) edge (y_3);
+\path (y_3) edge (y_2);
+\node[align=left, below] at (0.1,-.9)%
+{Verkko \textit{X}};
+\node[align=right, below] at (7.5,-.9)%
+{Verkko \textit{Y}};
+\end{tikzpicture}
+\end{center}
+Kierros 2:
+\begin{itemize}
+\item Jos Pelaaja I taas valitsee solmun $y_2$ tai $y_3$, eli jommankumman solmun $b_1 = y_1$ naapureista, Pelaajan II täytyy valita vastinpariksi solmun $a_1 = x_2$ naapuri.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin {center}
+\begin {tikzpicture}[-latex ,auto ,node distance =4 cm and 5cm ,on grid ,
+semithick ,
+state/.style ={ circle ,top color =white , bottom color = processblue!20 ,
+draw,processblue , text=blue , minimum width =1 cm}]
+\node[state] (x_1) {$x_1$};
+\node[state] (x_2) [above =of x_1] {$x_2$};
+\node[state] (y_2) [above right =of x_1] {$y_2$};
+\node[state] (y_1) [right =of x_1] {$y_1$};
+\node[state] (y_3) [right =of y_1] {$y_3$};
+\path (x_1) edge (x_2);
+\path (x_2) edge (x_1);
+\path (y_1) edge (y_2);
+\path (y_2) edge (y_1);
+\path (y_3) edge (y_1);
+\path (y_1) edge (y_3);
+\path (y_2) edge (y_3);
+\path (y_3) edge (y_2);
+\node[align=left, below] at (0.1,-.9)%
+{Verkko \textit{X}};
+\node[align=right, below] at (7.5,-.9)%
+{Verkko \textit{Y}};
+\end{tikzpicture}
+\end{center}
+Kierros 2:
+\begin{itemize}
+\item Toisen kierroksen jälkeen tilanne on $a_2 \coloneqq x_2, b_2 \coloneqq y_1$ tai $a_2 \coloneqq x_1, b_2 \coloneqq y_2/y_3$.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin {center}
+\begin {tikzpicture}[-latex ,auto ,node distance =4 cm and 5cm ,on grid ,
+semithick ,
+state/.style ={ circle ,top color =white , bottom color = processblue!20 ,
+draw,processblue , text=blue , minimum width =1 cm}]
+\node[state] (x_1) {$x_1$};
+\node[state] (x_2) [above =of x_1] {$x_2$};
+\node[state] (y_2) [above right =of x_1] {$y_2$};
+\node[state] (y_1) [right =of x_1] {$y_1$};
+\node[state] (y_3) [right =of y_1] {$y_3$};
+\path (x_1) edge (x_2);
+\path (x_2) edge (x_1);
+\path (y_1) edge (y_2);
+\path (y_2) edge (y_1);
+\path (y_3) edge (y_1);
+\path (y_1) edge (y_3);
+\path (y_2) edge (y_3);
+\path (y_3) edge (y_2);
+\node[align=left, below] at (0.1,-.9)%
+{Verkko \textit{X}};
+\node[align=right, below] at (7.5,-.9)%
+{Verkko \textit{Y}};
+\end{tikzpicture}
+\end{center}
+Kierros 2:
+\begin{itemize}
+\item Pelaaja II voittaa, koska kuvaus $f$ verkolta $A$ verkolle $B$, $f(a_i) = b_i, i = 1, 2$ säilyttää naapuruussuhteet, eli $f$ on osittaisisomorfismi.
+\end{itemize}
+\end{frame}
+
+\end{document}

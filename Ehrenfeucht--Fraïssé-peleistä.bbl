@@ -1,0 +1,80 @@
+\begin{thebibliography}{1}
+  \providebibliographyfont{name}{}%
+  \providebibliographyfont{lastname}{}%
+  \providebibliographyfont{title}{\emph}%
+  \providebibliographyfont{jtitle}{\btxtitlefont}%
+  \providebibliographyfont{etal}{\emph}%
+  \providebibliographyfont{journal}{}%
+  \providebibliographyfont{volume}{}%
+  \providebibliographyfont{ISBN}{\MakeUppercase}%
+  \providebibliographyfont{ISSN}{\MakeUppercase}%
+  \providebibliographyfont{url}{\url}%
+  \providebibliographyfont{numeral}{}%
+  \expandafter\btxselectlanguage\expandafter {\btxfallbacklanguage}
+
+\expandafter\btxselectlanguage\expandafter {\btxfallbacklanguage}
+\bibitem {Bos93}
+\btxnamefont {\btxlastnamefont {Bosse}, Uwe}\btxauthorcolon\ \btxtitlefont
+  {\btxifchangecase {An ehrenfeucht-fraïssé game for fixpoint logic and
+  stratified fixpoint logic}{An Ehrenfeucht-Fraïssé Game for Fixpoint Logic
+  and Stratified Fixpoint Logic}}.
+\newblock \Btxinlong {}\ \btxtitlefont {Selected Papers from the Workshop on
+  Computer Science Logic}, CSL '92, \btxpageslong {}\ 100--114, London, UK, UK,
+  1993. \btxpublisherfont {Springer-Verlag}\ifbtxprintISBN {,
+  \mbox{\btxISBN~\btxISBNfont {3-540-56992-8}}}.
+\newblock {\latintext
+  \btxurlfont{http://dl.acm.org/citation.cfm?id=647842.736408}}.
+
+\btxselectlanguage {eng}
+\bibitem {Ehr61}
+\btxnamefont {\btxlastnamefont {Ehrenfeucht}, Andrzej}\btxauthorcolon\
+  \btxjtitlefont {\btxifchangecase {An application of games to the completeness
+  problem for formalized theories}{An application of games to the completeness
+  problem for formalized theories}}.
+\newblock \btxjournalfont {Fundamenta Mathematicae}, 49(2):129--141, 1961.
+\newblock {\latintext \btxurlfont{http://eudml.org/doc/213582}}.
+
+\expandafter\btxselectlanguage\expandafter {\btxfallbacklanguage}
+\bibitem {Ete96}
+\btxnamefont {\btxlastnamefont {Etessami}, K.} \btxandlong {}\ \btxnamefont
+  {\btxlastnamefont {Wilke}, T.}\btxauthorcolon\ \btxtitlefont
+  {\btxifchangecase {An until hierarchy for temporal logic}{An Until hierarchy
+  for temporal logic}}.
+\newblock \Btxinlong {}\ \btxtitlefont {Logic in Computer Science, 1996. LICS
+  '96. Proceedings., Eleventh Annual IEEE Symposium on}, \btxpageslong {}\
+  108--117, \btxprintmonthyear{.}{Jul}{1996}{long}.
+
+\btxselectlanguage {fre}
+\bibitem {Fra54}
+\btxnamefont {\btxlastnamefont {Fraïssé}, Roland}\btxauthorcolon\
+  \btxjtitlefont {\btxifchangecase {Sur l'extension aux relations de quelques
+  propriétés des ordres}{Sur l'extension aux relations de quelques
+  propriétés des ordres}}.
+\newblock \btxjournalfont {Annales scientifiques de l'École Normale
+  Supérieure}, 71(4):363--388, 1954.
+\newblock {\latintext \btxurlfont{http://eudml.org/doc/81696}}.
+
+\expandafter\btxselectlanguage\expandafter {\btxfallbacklanguage}
+\bibitem {Hod97}
+\btxnamefont {\btxlastnamefont {Hodges}, Wilfrid}\btxauthorcolon\ \btxtitlefont
+  {A Shorter Model Theory}.
+\newblock \btxpublisherfont {Cambridge University Press}, 1997\ifbtxprintISBN
+  {, \mbox{\btxISBN~\btxISBNfont {0-521-58713-1}}}.
+
+\btxselectlanguage {ger}
+\bibitem {Tar35}
+\btxnamefont {\btxlastnamefont {Tarski}, Alfred}\btxauthorcolon\ \btxjtitlefont
+  {\btxifchangecase {Grundzüge der systemenkalküls i}{Grundzüge der
+  Systemenkalküls I}}.
+\newblock \btxjournalfont {Fundamenta Mathematicae}, 25(1):503--526, 1935.
+\newblock {\latintext \btxurlfont{http://eudml.org/doc/212807}}.
+
+\expandafter\btxselectlanguage\expandafter {\btxfallbacklanguage}
+\bibitem {Vaa11}
+\btxnamefont {\btxlastnamefont {V{\"a}{\"a}n{\"a}nen}, J.}\btxauthorcolon\
+  \btxtitlefont {Models and Games}.
+\newblock Cambridge Studies in Advanced Mathematics. \btxpublisherfont
+  {Cambridge University Press}, 2011\ifbtxprintISBN {,
+  \mbox{\btxISBN~\btxISBNfont {9780521518123}}}.
+
+\end{thebibliography}

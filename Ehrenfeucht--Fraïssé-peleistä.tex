@@ -1,0 +1,358 @@
+% --- Template for thesis / report with tktltiki2 class ---
+% 
+% last updated 2013/02/15 for tkltiki2 v1.02
+
+\documentclass[finnish]{tktltiki2}
+
+% tktltiki2 automatically loads babel, so you can simply
+% give the language parameter (e.g. finnish, swedish, english, british) as
+% a parameter for the class: \documentclass[finnish]{tktltiki2}.
+% The information on title and abstract is generated automatically depending on
+% the language, see below if you need to change any of these manually.
+% 
+% Class options:
+% - grading                 -- Print labels for grading information on the front page.
+% - disablelastpagecounter  -- Disables the automatic generation of page number information
+%                              in the abstract. See also \numberofpagesinformation{} command below.
+%
+% The class also respects the following options of article class:
+%   10pt, 11pt, 12pt, final, draft, oneside, twoside,
+%   openright, openany, onecolumn, twocolumn, leqno, fleqn
+%
+% The default font size is 11pt. The paper size used is A4, other sizes are not supported.
+%
+% rubber: module pdftex
+
+% --- General packages ---
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsfonts,amsmath,amssymb,amsthm,booktabs,color,enumitem,graphicx}
+\usepackage[pdftex,hidelinks]{hyperref}
+
+% Automatically set the PDF metadata fields
+\makeatletter
+\AtBeginDocument{\hypersetup{pdftitle = {\@title}, pdfauthor = {\@author}}}
+\makeatother
+
+% --- Language-related settings ---
+%
+% these should be modified according to your language
+
+% babelbib for non-english bibliography using bibtex
+\usepackage[fixlanguage]{babelbib}
+\selectbiblanguage{finnish}
+
+% add bibliography to the table of contents
+\usepackage[nottoc]{tocbibind}
+% tocbibind renames the bibliography, use the following to change it back
+\settocbibname{Lähteet}
+
+% --- Theorem environment definitions ---
+
+\newtheorem{lau}{Lause}
+\newtheorem{lem}[lau]{Lemma}
+\newtheorem{kor}[lau]{Korollaari}
+
+\theoremstyle{definition}
+\newtheorem{maar}[lau]{Määritelmä}
+\newtheorem{ong}{Ongelma}
+\newtheorem{alg}[lau]{Algoritmi}
+\newtheorem{esim}[lau]{Esimerkki}
+
+\theoremstyle{remark}
+\newtheorem*{huom}{Huomautus}
+
+\newenvironment{tod}{\paragraph{Todistus:}}{\hfill$\square$}
+
+% --- tktltiki2 options ---
+%
+% The following commands define the information used to generate title and
+% abstract pages. The following entries should be always specified:
+
+\title{Ehrenfeucht--Fraïssé-peleistä}
+\author{Pauli Niva}
+\date{\today}
+\level{Kandi}
+\abstract{Kirjoitan tiivistelmän vasta sitten kun lopullinen työ alkaa olla valmis}
+
+% The following can be used to specify keywords and classification of the paper:
+
+\keywords{Ehrenfeucht--Fraïssé-peli,  äärellisten mallien teoria}
+
+% classification according to ACM Computing Classification System (http://www.acm.org/about/class/)
+% This is probably mostly relevant for computer scientists
+% uncomment the following; contents of \classification will be printed under the abstract with a title
+% "ACM Computing Classification System (CCS):"
+\classification{Theory of computation $\rightarrow$ Finite Model Theory}
+
+% If the automatic page number counting is not working as desired in your case,
+% uncomment the following to manually set the number of pages displayed in the abstract page:
+%
+% \numberofpagesinformation{16 sivua + 10 sivua liitteissä}
+%
+% If you are not a computer scientist, you will want to uncomment the following by hand and specify
+% your department, faculty and subject by hand:
+%
+% \faculty{Matemaattis-luonnontieteellinen}
+% \department{Tietojenkäsittelytieteen laitos}
+% \subject{Tietojenkäsittelytiede}
+%
+% If you are not from the University of Helsinki, then you will most likely want to set these also:
+%
+% \university{Helsingin Yliopisto}
+% \universitylong{HELSINGIN YLIOPISTO --- HELSINGFORS UNIVERSITET --- UNIVERSITY OF HELSINKI} % displayed on the top of the abstract page
+% \city{Helsinki}
+%
+
+\usepackage{mathtools}
+\usepackage {tikz}
+\usetikzlibrary {positioning}
+%\usepackage {xcolor}
+\definecolor {processblue}{cmyk}{0.96,0,0,0}
+
+\begin{document}
+
+% --- Front matter ---
+
+\frontmatter      % roman page numbering for front matter
+
+\maketitle        % title page
+\makeabstract     % abstract page
+
+\tableofcontents  % table of contents
+
+% --- Main matter ---
+
+\mainmatter       % clear page, start arabic page numbering
+
+\section{Johdanto}
+%Vuonna 1713 James Waldegrave kävi ensimmäisen tunnetun peliteoreettisen keskustelun
+%kirjoittamassaan kirjeessä. Kirjeessään hän esittää minmax-strategia ratkaisun le Her -korttipelin kahden pelaajan versioon. Kuitenkin vasta Antoine Augustin Courtnot esitteli ensimmäisen yleisen peliteoreettisen analyysin vuonna 1838. Tässä työssään hän tarkastelee duopolia ja esittelee ratkaisun, joka on rajoitettu versio Nash-tasapainosta.
+
+%Peliteorian katsotaan yleisesti kuitenkin syntyneen omana alanaan kun John von Neumann julkaisi vuonna 1928 sarjan artikkeleita. Von Neumannin työ peliteorian saralla kulminoitui vuonna 1944 kirjaan \textit{Theory of Games and Economic Behavior}, jonka hän kirjoitti yhdessä Oscar Morgensternin kanssa. Kirjassa esitellään menetelmä optimaalisen ratkaisun löytämiseksi kahden henkilön nollasummapeleissä. Logiikkaan pelit ilmestyivät 1950 -luvulla, kun Leon Henkin ehdotti pelien käyttöä antamaan äärettömille kielille semantiikoita.
+Tässä tutkielmassa tarkastellaan Ehrenfeucht--Fraïssé-pelejä, joita sovelletaan logiikan määrittelemättömyystulosten todistamisessa ja tietojenkäsittelytieteessä esimerkiksi tietokantakielien ilmaisuvoiman mittaamisessa tai verkkojen tutkimisessa. Alunperin Ehrenfeucht--Fraïssé-peli määriteltiin ensimmäisen kertaluvun predikaattilogiikalle, mutta tästä pelistä kehitettiin nopeasti erilaisia variaatioita monille muille logiikoille, kuten esimerkiksi kiintopistelogiikalle (fixpoint logic) \cite{Bos93} ja lineaariselle temporaalilogiikalle (linear temporal logic) \cite{Ete96}.
+
+Ensimmäisen kerran \textit{elementaarinen ekvivalenssi} eli se, että täsmälleen samat ensimmäisen kertaluokan lauseet ovat tosia $A$:ssa ja $B$:ssä, esiintyy kirjallisuudessa Alfred Tarskin artikkelissa Grundzüge der Systemenkalküls 1 vuodelta 1935 \cite{Tar35}. Roland Fraïssé käytti väitöskirjatyössään \cite{Fra54} vuonna 1954 \textit{edestakaisin-menetelmää} osoittaakseen, että kaksi \textit{malliteoreettista struktuuria} ovat elementaarisesti ekvivalentit. Andrzej Ehrenfeucht muokkasi tästä Fraïssén menetelmästä peliteoreettisen version, joka julkaistiin vuonna 1961 Fundamenta Mathematicae:ssa \cite{Ehr61}. Nykyisin nämä pelit tunnetaan nimeltä \textit{Ehrenfeucht--Fraïssé-pelit} (jatkossa EF-pelit), joskus niitä kutsutaan myös edestakaisin-peleiksi.
+
+Tämä edestakaisin-menetelmä siis karakterisoi elementaarisen ekvivalenssin. Ideana on, että \textit{isomorfismeja} tutkitaan yksi kerrallaan ja katsotaan, kuinka niitä voisi laajentaa suuremmille äärellisille isomorfismeille.
+
+Tämän tutkielman tavoitteena on esitellä täsmällisesti, mutta kuitenkin samalla havainnollisesti EF-peliä ja sen hyödyllisyyttä matemaattisen logiikan ja tietojenkäsittelytieteen saralla. Tässä työssä esitellään joitain logiikan peruskäsitteitä, mutta työn seuraaminen edellyttää kuitenkin lukijalta yliopistotasoisen matematiikan perusteiden hallintaa ja joitain logiikan peruskäsitteiden tuntemista. Lukijan oletetaan esimerkiksi tuntevan joukon ja kuvauksien käsitteet.
+
+\section{Peruskäsitteitä}
+Tässä luvussa esitellään joitakin \textit{ensimmäisen kertaluvun predikaattilogiikan} peruskäsitteitä. Alaluku $2.1$ käsittelee relaatioita. Alaluvussa $2.2$ puolestaan määritellään mallin sekä alimallin käsite. $2.3$ keskittyy isomorfiaan ja osittaisisomorfiaan ja $2.4$ elementaariseen ekvivalenssiin. Peruskäsitteiden määrittelyssä seuraan karkeasti Wilfrid Hodgesia \cite{Hod97}.
+
+\subsection{Relaatiot}
+Olkoon $X$ jokin joukko. Joukon $X$ $n$\textit{-kertainen karteesinen tulo} tarkoittaa kaikkien joukon $X$ alkioiden $n$-pituisten jonojen joukkoa. Tätä merkitään $X^n$ tai vaihtoehtoisesti $X \times X \times \ldots \times X$, $n$ kertaa. Esimerkiksi joukko $\mathbb{R}^2$ on järjestettyjen reaalilukuparien joukko. Sen geometrinen vastine on taso. $\mathbb{R}^3$ on järjestettyjen reaalilukukolmikoiden joukko. Sen geometrinen vastine on kolmiulotteinen avaruus. 
+
+\begin{maar}
+Joukon $X$ \textit{kaksipaikkainen relaatio} $R$ on mikä tahansa joukko joukon $X$ alkioista muodostettuja pareja $(x, y)$, joiden molemmat alkiot ovat joukossa $X$, eli $R \subset X^2$.  Jos $(x, y) \in R$, sanotaan, että $x$ on $y$:n kanssa \textit{relaatiossa} $R$. Joukon $X$ kaksipaikkaista relaatiota $R$ sanotaan
+\begin{itemize}
+\item \textit{refleksiiviseksi}, jos $(x, x) \in R$, kaikilla $x \in X$
+\item \textit{irrefleksiiviseksi}, jos $(x, x) \notin R$, kaikilla $x \in X$
+\item \textit{symmetriseksi}, jos $(x, y) \in R$, aina kun $(y, x) \in R$
+\item \textit{antisymmetriseksi}, jos $(x, y) \in R$ ja $(y, x) \in R$, niin $x = y$
+\item \textit{transitiiviseksi}, jos $(x, y) \in R$ ja $(y, z) \in R$, niin $(x, z) \in R$
+\item \textit{vertailulliseksi}, jos $(x, y) \in R$ tai $(y, x) \in R$, kaikilla $x, y \in X$, $x \neq y$
+\end{itemize}
+\end{maar}
+
+\subsection{Mallit}
+Tässä alaluvussa määritellään, mikä on \textit{malli} eli \textit{struktuuri}. Karkeasti ottaen se on joukko, jolla on jonkinlainen rakenne ja joka koostuu relaatioista, vakioista ja funktioista. Jotta mallin määrittely onnistuisi, aluksi tarvitaan nimiä malliemme objekteille. \textit{Aakkosto} on mikä tahansa joukko $L$, joka koostuu relaatiosymboleista, vakiosymboleista ja funktiosymboleista. Jokaiseen relaatioon $R$ liittyy \textit{paikkaluku} $\#R$, ilmaisemaan kuinka monipaikkainen kyseinen relaatio on. Samoin jokaiseen funktioon liittyy paikkaluku $\#f$ ilmaisemaan kuinka monipaikkainen funktio on kyseessä.
+
+\begin{maar} Olkoon $L$ aakkosto ja olkoon $M$ epätyhjä joukko. Tällöin $L$\textit{-malli} koostuu seuraavista:
+\begin{itemize}
+\item Joukosta $M$.
+\item Relaatioista $R^M \subset M$, jokaiselle relaatiosymbolille $R \in L$, $\#R = n$, jossa $n\in \mathbb{Z}_+$.
+\item Vakioista $c^M \in M$, jokaiselle vakiosymbolille $c \in L$.
+\item Funktioista $f^M: M^m \rightarrow M$, jokaiselle funktiosymbolille $f \in L$, $\#f = m$, jossa $m\in \mathbb{Z}_+$.
+\end{itemize}
+
+Relaatiota $R^M$ sanotaan relaatiosymbolin $R$ \textit{tulkinnaksi mallissa} $M$, funktiota $f^M$ sanotaan funktiosymbolin $f$ \textit{tulkinnaksi mallissa} $M$, ja alkiota $c^M$ kutsutaan vakiosymbolin $c$ \textit{tulkinnaksi mallissa} $M$.
+\end{maar}
+
+Malli siis antaa aakkoston $L$ symboleille \textit{semantiikan} eli merkityksen sekä kontekstin, jossa formaalin kielen lauseet voivat olla tosia tai epätosia. Samaa merkintää $M$ käytetään sekä mallista kokonaisuutena että mallin \textit{universumista} eli mallin alkioiden joukosta.
+
+Relaatiosymbolin $R$ ja sen tulkinnan $R^M$ välistä eroa voidaan havainnollistaa esimerkiksi sanan ``tietokone'' ja tietokoneen välisellä erolla. Sana ``tietokone'' on suomen kieltä, joka koostuu yhdeksästä merkistä ja sitä voidaan käyttää muodostettaessa suomenkielisiä lauseita. Tietokone taas on fyysinen laite, joka käsittelee tietoa ohjelmointinsa mukaisesti, eikä sitä voida käyttää suomen kielen lauseiden osana. Lause ``Tietokoneeni on Mac'' on totta tai epätotta, riippuen siitä, mihin nimenomaiseen tietokoneeseen sana ``tietokone'' viittaa.
+
+\begin{maar}
+Oletaan, että $A$ on $L$-malli. $A$:n \textit{alimalli} $B$ on $L$-malli, siten että
+\begin{itemize}
+\item $B \subset A$
+\item jos $R \in L$ on relaatiosymboli ja $\#R = n$, niin tällöin $R^B = R^A \cap R^B$
+\item jos $c \in L$ on vakiosymboli, niin tällöin $c^B = c^A$ ja $c^b \in B$
+\item jos $f \in L$ on funktiosymboli ja $\#f = n$, niin tällöin $f^A(B^n) \in B$ ja $f^B = f^A \restriction B^n$ eli $f^A$ on $f^B$:n rajoittuma osajoukkoon $B^n$. Siis $B$ on suljettu $f^A$:n suhteen.
+\end{itemize}
+\end{maar}
+
+Olkoon $A$ malli ja $B \subset A$. Tällöin $\langle B \rangle$ on pienin $A$:n alimalli, joka sisältää joukon $B$. 
+
+\subsection{Isomorfia}
+Mallien kohdalla puhuttiin ``jonkinlaisesta rakenteesta'', eli struktuurista. Mallin objekteille annettiin nimiä, symboleja ja kaavoja, jotta tätä rakennetta voitiin kuvailla. Malleja joiden rakenne on samanlainen kutsutaan isomorfisiksi.
+
+\begin{maar}
+Oletetaan, että $L$ on aakkosto ja $A$ sekä $B$ ovat $L$-malleja. Kuvaus $g: A \rightarrow B$ on \textit{isomorfismi} mallista $A$ mallille $B$, jos
+\begin{itemize}
+\item $g$ on bijektio.
+\item Jokaisella vakiosymbolilla $c \in L$ pätee $g(c^A) = c^B$.
+\item Jokaisella relaatiosymbollilla $R \in L, \#R = n$ pätee $(a_1, \ldots, a_n) \in R^A \Longleftrightarrow (g(a_1), \ldots, g(a_n)) \in R^B$.
+\item Jokaisella funktiosymbolilla $f \in L, \#f = m$ pätee $g(f^A(a_1, \ldots, a_m)) = f^B(g(a_1), \ldots, g(a_m))$.
+\end{itemize}
+Jos on olemassa isomorfinen kuvaus $A \rightarrow B$, niin sanotaan, että $A$ ja $B$ ovat isomorfiset ja tätä merkitään $A \cong B$.
+\end{maar}
+
+Isomorfian ominaisuus mallien välillä on refleksiivinen, symmetrinen ja transitiivinen. Jotta mallien välillä voi olla isomorfia, niin mallien täytyy olla saman kokoiset, sillä muuten niiden välillä ei voi olla bijektiota, eikä siten isomorfiaakaan. EF-pelien kannalta tärkeä isomorfian ominaisuus on, että se säilyttää totuuden. Täten, jos $L$-mallit $A$ ja $B$ ovat isomorfiset, niin kaikille aakkoston $L$ muodostaman kielen lauseille $S$ pätee $A \vDash S \Longleftrightarrow B \vDash S$. Määritellään seuraavaksi osittaisisomorfia.
+
+\begin{maar}
+Olkoon $L$ aakkosto sekä olkoon $A$ ja $B$ kummatkin $L$-malleja. Olkoon $A' \subset A$ ja $B' \subset B$. Lisäksi olkoon $f: A' \rightarrow B'$. Jos on olemassa isomorfismi $g: \langle A' \rangle \rightarrow \langle B' \rangle$, siten että $g \restriction A = f$ eli kuvaus $g$ on kuvauksen $f$ rajoittuma osajoukkoon $A'$. Tällöin kuvausta $f$ kutsutaan \textit{osittaisisomorfismiksi} $A \rightarrow B$ ja tätä merkitään $A \cong_p B$.
+\end{maar}
+
+Toisin kuin isomorfismissa, osittaisisomorfismissa totuus ei välttämättä säily. Joissain tilanteissa osittaisisomorfismi kuitenkin säilyttää totuuden. Erityisesti näin on \textit{relationaalisten} aakkostojen, eli aakkostojen jotka sisältävät vain relaatiosymboleja, tapauksessa.
+
+\subsection{Elementaarinen ekvivalenssi}
+Siinä missä isomorfismi kuvailee kahden mallin rakenteellista samanlaisuutta, niin elementaarinen ekvivalenssi puolestaan vertailee malleja suhteessa käytettyyn kieleen.
+
+\begin{maar}
+Olkoon $L$ aakkosto joka muodostaa kielen $K$. Olkoon $A$ ja $B$ kummatkin $L$-malleja. $A$:ta ja $B$:tä sanotaan elementaarisesti ekvivalenteiksi, jos kaikilla lauseilla $S \in K$ pätee $A \vDash S \Longleftrightarrow B \vDash S$. Tätä merkitään $A \equiv B$
+\end{maar}
+
+\begin{kor}
+Jos $L$-mallit $A$ ja $B$ ovat isomorfiset, niin ne ovat elementaarisesti ekvivalentit.
+\end{kor}
+
+On huomattava, että tämä ei päde toisinpäin. Mallien $A$ ja $B$ välinen elementaarinen ekvivalenssi ei kerro mitään mallien isomorfisuudesta. 
+
+\section{EF-peli}
+\begin{huom}
+Jatkossa aakkostolla tarkoitetaan aina relationaalista aakkostoa, ellei toisin mainita.
+\end{huom}
+
+Tässä kappaleessa esitellään EF-peli, sen säännöt, strategian ja voittavan strategian käsitteet, joissa seuraan pitkälti Jouko Väänästä \cite{Vaa11} ja havainnollistetaan EF-peliä esimerkillä kahdelle verkolle.
+
+EF-pelissä ideana on, että peli on kahdelle pelaajalle, joita kutsutaan nimillä Pelaaja I ja Pelaaja II. Peliä pelataan kahdella mallilla $A$ ja $B$, joilla on sama aakkosto. Pelaaja II haluaa osoittaa, että kyseiset mallit ovat jossain määrin samankaltaiset, kun taas Pelaaja I haluaa osoittaa, että mallit ovat erilaiset. Pelissä on äärellinen määrä vuoroja ja vuorojen määrä on alussa sovittu.
+
+\subsection{Pelin kulku}
+Pelin kulku kuvataan kirjallisuudessa lähes aina samalla tavalla. Määritellään aluksi mielivaltaisen kierroksen kulku ja kummankin pelaajan voittokriteerit.
+
+\begin{maar}
+Merkitään pelattavien kierrosten määrää luvulla $k \in \mathbb{Z}_+$. EF-peliä pituudeltaan $k$-kierrosta malleilla $A$ ja $B$ merkitään $EF_k(A, B)$. Pelin $EF_k(A, B)$ mielivaltaisen kierroksen $i \in \{1, \ldots, k\}$ kulku on seuraavanlainen: 
+\begin{itemize}
+\item Ensin Pelaaja I valitsee toisen malleista $A$ tai $B$ sekä jonkin alkion $a_i \in A$ tai $b_i \in B$ tästä mallista.
+\item Tämän jälkeen Pelaaja II valitsee malleista sen, jota Pelaaja I ei valinnut ja valitsee tästä mallista jonkin alkion.
+\end{itemize}
+\end{maar}
+
+\begin{maar}
+Olkoon $a = (a_1, \ldots, a_i)$ mallista $A$ valitut alkiot ja $b = (b_1, \ldots, b_i)$ mallista $B$ valitut alkiot mielivaltaisella kierroksella $i$. Pelaajan II voittaa jos ja vain jos jokaisella kierroksella $i \leq n$ pari $(a, b)$ määrää osittaisen isomorfismin $A \rightarrow B$ eli on olemassa kuvaus $h: A \rightarrow B$, siten että $a \in A \mapsto b \in B$ Muussa tapauksessa Pelaaja I voittaa.
+\end{maar}
+
+\textit{Strategia} on joukko sääntöjä, joiden mukaan pelaaja tekee valintansa toisen pelaajan valinnasta riippuen. EF-pelissä kummallakin pelaajalla on koko ajan tiedossa mallit, niiden rakenne ja jo tehdyt valinnat, eli peli on \textit{täydellisen informaation peli}. Strategiaa, jota seuraamalla pelaaja voittaa pelin riippumatta mitä valintoja toinen pelajaa tekee kutsutaan \textit{voittavaksi strategiaksi}. Jos Pelaaja II:lla on voittava strategia EF-pelissä $EF_k(A, B)$, niin tätä merkitään $A \sim_k B$.
+
+\begin{lau} 
+Relaatio $\sim_k$ on $L$-mallien ekvivalenssirelaatio.
+\end{lau}
+\begin{tod} Todistus on Jouko Väänäsen kirjassa \cite{Vaa11} esiintyvää todistusta mukaileva. Oletetaan, että $A, B$ ja $C$ ovat kaikki saman aakkoston $L$-malleja. Tällöin
+\begin{itemize}
+\item Refleksiivisyys: $A \sim_k A$.\\
+Voittava strategia Pelaajalle II on valita aina sama alkio minkä Pelaaja I valitsi. Täten $\sim_k$ on refleksiivinen.
+\item Symmetrisyys: $A \sim_k B \iff B \sim_k A$.\\
+EF-pelin määritelmä ei millään tavoin tee eroa pelien $EF_k(A, B)$:n ja $EF_k(B, A)$:n välillä. Täten jos $A \sim_k B$, niin Pelaaja II voi käyttää samaa voittostrategiaa myös pelissä $EF_k(B, A)$. Jos taas $B \sim_k A$, niin Pelaaja II voi käyttää samaa voittostrategiaa pelissä $EF_k(A, B)$. Siis $\sim_k$ on symmetrinen.
+\item Transitiivisuus: $A \sim_k C \land B \sim_k C \implies A \sim_k C$.\\
+Todistetaan väite käsittelemällä kaikki väitteen ja implikaation pelit samaan aikaan. Peli $EF_k(A, C)$ pelataan siten, että Pelaaja II tekee valintansa pelaamalla samaan aikaa kuvitteellsia pelejä $EF_k(A, B)$ ja $EF_k(B, C)$. Oletetaan, että peli $EF_k(A, C)$ alkaa Pelaajan II valinnalla $a_1 \in A$, jolloin Pelaaja II valitsee seuraavalla strategialla:
+
+Pelaaja II kuvittelee, että Pelaaja I valitsi alkion $a_1 \in A$ pelissä $EF_k(A, B)$, jolloin hän valitsee alkion $b_1 \in B$ pelin $EF_k(A, B)$ voittostrategian mukaisesti. Seuraavaksi Pelaaja II kuvittelee, että äskeinen valinta oli Pelaajan I valinta pelissä $EF_k(B, C)$ ja valitsee alkion $c_1 \in C$ pelin $EF_k(B, C)$ voittostrategian mukaisesti. Tämä valinta $c_1$ on Pelaajan II vastaus Pelaajan I valintaan $a_1$ pelissä $EF_k(A, C)$.
+
+Jos Pelaaja I valitseekin alkion $c_1 \in C$, niin Pelaaja II yksinkertaisesti seuraa strategiaa toiseen suuntaan. Näin voidaan toimia, koska äsken todistimme, että voittavat strategiat ovat symmetrisiä.
+
+Kun peliä on pelattu $k$-kierrosta, niin meillä on valinnoista muodostuneet jonot $a_1, \ldots, a_k$, $b1, \ldots, b_k$ ja $c_1, \ldots, c_k$. Oletusten nojalla on olemassa osittaisisomorfismit $f: A \cong_p B$ ja $g: B \cong_p C$. Nyt voidaan muodostaa yhdistetty kuvaus $h(f(a_i)) = g(a_i)$, siten että $a_i \mapsto c_i$ on osittaisisomorfismi, kaikilla $i \in \{1, \ldots, k\}$. Täten $A \sim_k C$, siis relaatio $\sim_k$ on transitiivinen.
+\end{itemize}
+Koska relaatio $\sim_k$ on refleksiivinen, symmetrinen ja transitiivinen, niin se on tällöin ekvivalenssirelaatio.
+\end{tod}
+\\
+
+Kuten aikaisemmin todettiin, EF-pelistä on kehitetty monia erilaisia variaatioita, kuten esimerkiksi EF-peli verkoille (verkoilla voidaan esittää ensimmäisen kertaluokan predikaattilogiikan kaavoja. Verkon kaarethan ovat käytännössä relaatioita verkon pisteiden välillä). Havainnollistetaan nyt EF-pelin ideaa yksinkertaisella esimerkillä kahden kierroksen EF-pelillä verkoille $X$ ja $Y$, sekä esitetään samalla strategia $X \sim_k Y$, eli voittava strategia Pelaajalle II.
+
+Tässä EF-pelissä verkoille ideana on, että rakennetaan pelaajien tekemistä valinnoista kahta uutta verkkoa $A$ ja $B$, siten että verkosta $X$ valittu solmu merkitään verkon $A$ solmuksi $a_i$ ja verkosta $Y$ valittu solmu verkon $B$ solmuksi $b_i$, jossa $i$ ilmaisee millä kierroksella valinta on tapahtunut.
+
+\begin {center}
+\begin {tikzpicture}[-latex ,auto ,node distance =4 cm and 5cm ,on grid ,
+semithick ,
+state/.style ={ circle ,top color =white , bottom color = processblue!20 ,
+draw,processblue , text=blue , minimum width =1 cm}]
+\node[state] (x_1) {$x_1$};
+\node[state] (x_2) [above =of x_1] {$x_2$};
+\node[state] (y_2) [above right =of x_1] {$y_2$};
+\node[state] (y_1) [right =of x_1] {$y_1$};
+\node[state] (y_3) [right =of y_1] {$y_3$};
+\path (x_1) edge (x_2);
+\path (x_2) edge (x_1);
+\path (y_1) edge (y_2);
+\path (y_2) edge (y_1);
+\path (y_3) edge (y_1);
+\path (y_1) edge (y_3);
+\path (y_2) edge (y_3);
+\path (y_3) edge (y_2);
+\node[align=left, below] at (0.1,-.9)%
+{Verkko \textit{X}};
+\node[align=right, below] at (7.5,-.9)%
+{Verkko \textit{Y}};
+\end{tikzpicture}
+\end{center}
+
+
+Kierros 1:
+\begin{itemize}
+  \item Pelaaja I voi valita solmun kummasta verkosta tahansa.
+  \item Jos Pelaaja I valitsee solmun verkosta $X$, Pelaaja II valitsee vastinpariksi verkosta $Y$ solmun $y_1$, muulloin Pelaaja II valitsee vastinpariksi solmun $x_1$.
+  \item Oletetaan, että Pelaaja I valitsee solmun $x_2$. Tällöin meillä on $a_1 \coloneqq x_2, b_1 \coloneqq y_1$ ensimmäisen kierroksen jälkeen.
+\end{itemize}
+
+Kierros 2:
+\begin{itemize}
+  \item Minkä tahansa solmun Pelaaja I valitseekin, Pelaaja II voi peilata valinnan. Oletetaan, että tällä kertaa Pelaaja I valitsee verkosta $Y$.
+  \item Jos Pelaaja I valitsee solmun $y_1$, eli saman solmun kuin $b_1 = y_1$, on Pelaajan II valittava vastinpariksi Pelaajan I ensimmäisen kierroksen valinta $x_2$.
+  \item Jos Pelaaja I taas valitsee solmun $y_2$ tai $y_3$, eli jommankumman solmun $b_1 = y_1$ naapureista, Pelaajan II täytyy valita vastinpariksi solmun $a_1 = x_2$ naapuri.
+  \item Toisen kierroksen jälkeen tilanne on $a_2 \coloneqq x_2, b_2 \coloneqq y_1$ tai $a_2 \coloneqq x_1, b_2 \coloneqq y_2/y_3$.
+  \item Pelaaja II voittaa, koska kuvaus $f$ verkolta $A$ verkolle $B$, $f(a_i) = b_i, i = 1, 2$ säilyttää naapuruussuhteet, eli $f$ on osittaisisomorfismi.
+\end{itemize}
+
+Jos Pelaaja I olisi tehnyt toisellakin kierroksella valintansa verkosta $X$:
+\begin{itemize}
+\item Jos Pelaaja I valitsee solmun $x_1$, niin Pelaaja II valitsee solmun $y_1$.
+\item Jos Pelaaja I taas valitsee solmun $x_2$, niin Pelaaja II valitsee solmun $y_2$.
+\item Tällöin toisen kierroksen jälkeen tilanne olisi ollut $a_2 \coloneqq x_1, b_2 \coloneqq y_1$ tai $a_2 \coloneqq x_2, b_2 \coloneqq y_2$.
+\item Pelaaja II voittaa tässäkin skenaariossa, koska kuvaus $f$ verkolta $A$ verkolle $B$, $f(a_i) = b_i, i = 1, 2$ säilyttää naapuruussuhteet, eli $f$ on osittaisisomorfismi.
+\end{itemize}
+
+
+% Write some science here.
+
+% Esimerkkilause ja lähdeviite~\cite{esimerkki}.
+ 
+\newpage
+% --- References ---
+%
+% bibtex is used to generate the bibliography. The babplain style
+% will generate numeric references (e.g. [1]) appropriate for theoretical
+% computer science. If you need alphanumeric references (e.g [Tur90]), use
+%
+%\bibliographystyle{babalpha-lf}
+%
+% instead.
+
+\bibliographystyle{babplain-lf}
+\bibliography{references-fi}
+
+
+% --- Appendices ---
+
+% uncomment the following
+
+% \newpage
+% \appendix
+% 
+% \section{Esimerkkiliite}
+
+\end{document}
