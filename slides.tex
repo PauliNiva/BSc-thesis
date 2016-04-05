@@ -2,9 +2,9 @@
 
 \usepackage[utf8]{inputenc}
 
-\title{Otsikko}
+\title{Ehrenfeucht--Fraïssé-peleistä}
 \author{Pauli Niva}
-\date{\today}
+\date{06.04.2016}
 
 
 
@@ -18,12 +18,51 @@
 
 \frame{\titlepage}
 
+\begin{frame}
+\frametitle{Intro}
+Ehrenfeucht--Fraïssé-peli on malliteorian menetelmä, joka perustuu struktuurien samankaltaisuuden tarkasteluun. \pause Malliteorian menetelmistä suurin osa ei kuitenkaan toimi äärellisten mallien tapauksessa. \pause EF-peli on yksi harvoista menetelmistä, joka toimii myös äärellisillä malleilla. \pause Äärellisten mallien teoria on matemaattisen logiikan ja teoreettisen tietojenkäsittelytieteen, tarkemmin laskennan teorian osa-alue.
+\end{frame}
+
+\begin{frame}
+\frametitle{Sovellusalueita}
+EF-peli on teoreettinen työkalu jota pääasiassa käytetään määriteltävyyskysymyksiin ja todistusten apuna.
+Äärellisten mallien teoriaa ja sen menetelmää EF-peliä voidaan soveltaa tietojenkäsittelytieteessä muun muassa seuraavilla osa-alueilla:
+\end{frame}
+
+\begin{frame}
+\frametitle{Verifikaatio}
+Äärelliset mallit voidaan koodata
+\begin{itemize}
+\item<1-> puiksi
+\item<2-> verkoiksi
+\item<3-> sanoiksi
+\end{itemize}
+\pause \pause \pause
+eli niitä voidaan käyttää laskennan olioina ja täten niillä voidaan kuvata äärellistilallisia systeemejä ja tutkia näiden toiminnan oikeellisuutta.
+\end{frame}
+
+\begin{frame}
+\frametitle{Tietokantateoria}
+Relationaalinen malli samaistaa tietokannan äärellisen relaationaalisen struktuurin kanssa.
+\pause
+Formaalin kielen kaavat voidaan ajatella ohjelmina, jotta niiden merkitystä struktuurissa voidaan arvioida.
+\pause
+Ja toisinpäin, voidaan esittää jonkin laskennallisen vaativuusluokan kyselyitä jollakin formaalilla kielellä
+\end{frame}
+
+\begin{frame}
+\frametitle{Laskennan vaativuus}
+Laskennan vaativuusluokkien looginen selitys.
+\pause
+Esimerkiksi $P = NP$ -ongelma redusoituu kysymykseksi: onko kahdella kiintopistelogiikalla sama ilmaisuvoima äärellisissä malleissa 
+\end{frame}
+
 %frame1
 \begin{frame}
 \frametitle{Historiallinen tausta}
 \begin{itemize}
 \item<1->1930-luvulla Alfred Tarski esittelee elementaarisen ekvivalenssin käsitteen
-\item<2->1946 Tarski Princetonissa pidetyssä konferenssissa joka käsittelee ongelmia matematiikassa
+\item<2->1946 Tarski Princetonissa pidetyssä konferenssissa joka käsittelee ongelmia matematiikassa:
 
 On olemassa algebroja jotka eivät ole isomorfisia, mutta joita ei kuitenkaan voi erottaa toisistaan näiden aritmeettisten ominaisuuksien perusteella; Tarvitaan teoria algebrojen aritmeettiselle ekvivalenssille joka on käsitteenä yhtä perustavanlaatuinen kuin isomorfismi.
 \item<3->1954 Roland Fraïssé esittelee osittaisisomorfismin, jonka avulla saadaan elementaarinen ekvivalenssi predikaattilogiikalle
@@ -35,7 +74,6 @@ On olemassa algebroja jotka eivät ole isomorfisia, mutta joita ei kuitenkaan vo
 \begin{frame}
 \frametitle{Relaatiot}
 Joukon $X$ \textit{kaksipaikkainen relaatio} $R$ on mikä tahansa joukko joukon $X$ alkioista muodostettuja pareja $(x, y)$, joiden molemmat alkiot ovat joukossa $X$, eli $R \subset X^2$. \pause Jos $(x, y) \in R$, sanotaan, että $x$ on $y$:n kanssa \textit{relaatiossa} $R$.
-
 \end{frame}
 
 %frame3
@@ -52,6 +90,16 @@ Olkoon $L$ aakkosto ja olkoon $M$ epätyhjä joukko. Tällöin $L$\textit{-malli
 Relaatiota $R^M$ sanotaan relaatiosymbolin $R$ \textit{tulkinnaksi mallissa} $M$, funktiota $f^M$ sanotaan funktiosymbolin $f$ \textit{tulkinnaksi mallissa} $M$, ja alkiota $c^M$ kutsutaan vakiosymbolin $c$ \textit{tulkinnaksi mallissa} $M$.
 \end{frame}
 
+\begin{frame}
+\frametitle{Mallit jatkuu}
+Malli siis antaa aakkoston $L$ symboleille \textit{semantiikan} eli merkityksen sekä kontekstin, jossa formaalin kielen lauseet voivat olla tosia tai epätosia. \pause Samaa merkintää $M$ käytetään sekä mallista kokonaisuutena että mallin \textit{universumista} eli mallin alkioiden joukosta.
+\end{frame}
+
+\begin{frame}
+\frametitle{Symbolin ja sen tulkinnan erosta}
+Relaatiosymbolin $R$ ja sen tulkinnan $R^M$ välistä eroa voidaan havainnollistaa esimerkiksi sanan ``tietokone'' ja tietokoneen välisellä erolla. \pause Sana ``tietokone'' on suomen kieltä, joka koostuu yhdeksästä merkistä ja sitä voidaan käyttää muodostettaessa suomenkielisiä lauseita. \pause Tietokone taas on fyysinen laite, joka käsittelee tietoa ohjelmointinsa mukaisesti, eikä sitä voida käyttää suomen kielen lauseiden osana. \pause Lause ``Tietokoneeni on Mac'' on totta tai epätotta, riippuen siitä, mihin nimenomaiseen tietokoneeseen sana ``tietokone'' viittaa.
+\end{frame}
+
 %frame4
 \begin{frame}
 \frametitle{Isomorfiset mallit}
@@ -59,31 +107,19 @@ Kaksi mallia $A$ ja $B$ yli saman äärellisen aakkoston $L$ ovat isomorfisia $(
 \end{frame}
 
 \begin{frame}
-\frametitle{Verifikaatio}
-Äärelliset mallit voidaan koodata
-\begin{itemize}
-\item<1-> puiksi
-\item<2-> verkoiksi
-\item<3-> sanoiksi
-\end{itemize}
-\pause \pause \pause
-eli niitä voidaan käyttää laskennan olioina ja täten niillä voidaan kuvata äärellistilallisia systeemejä ja tutkia näiden toiminnan oikeellisuutta
+\frametitle{Elementaarinen ekvivalenssi}
+Siinä missä isomorfismi kuvailee kahden mallin rakenteellista samanlaisuutta, niin elementaarinen ekvivalenssi puolestaan vertailee malleja suhteessa käytettyyn kieleen. \pause Olkoon $L$ aakkosto joka muodostaa kielen $K$. Olkoon $A$ ja $B$ kummatkin $L$-malleja. $A$:ta ja $B$:tä sanotaan \textit{elementaarisesti ekvivalenteiksi}, jos kaikilla lauseilla $S \in K$ pätee $A \vDash S \Longleftrightarrow B \vDash S$. Tätä merkitään $A \equiv B$
 \end{frame}
 
 \begin{frame}
-\frametitle{Tietokantateoria}
-Relationaalinen malli identifioi tietokannan äärellisen relaationaalisen struktuurin kanssa.
-\pause
-Formaalin kielen kaavat voidaan ajatella ohjelmina, jotta niiden merkitystä struktuurissa voidaan arvioida
-\pause
-Ja toisinpäin, voidaan esittää jonkin laskennallisen vaativuusluokan kyselyitä jollakin formaalilla kielellä
+\frametitle{Elementaarinen ekvivalenssi jatkuu}
+Jos $L$-mallit $A$ ja $B$ ovat isomorfiset, niin ne ovat elementaarisesti ekvivalentit. \pause
+
+On huomattava, että tämä ei päde toisinpäin. Mallien $A$ ja $B$ välinen elementaarinen ekvivalenssi ei kerro mitään mallien isomorfisuudesta. 
 \end{frame}
 
 \begin{frame}
-\frametitle{Laskennan vaativuus}
-Laskennan vaativuusluokkien looginen selitys
-\pause
-Esimerkiksi $P = NP$ -ongelma redusoituu kysymykseksi: onko kahdella kiintopistelogiikalla sama ilmaisuvoima äärellisissä malleissa 
+EF-pelissä ideana on, että peli on kahdelle pelaajalle, joita kutsutaan nimillä Pelaaja I ja Pelaaja II. Peliä pelataan kahdella mallilla $A$ ja $B$, joilla on sama aakkosto. Pelaaja II haluaa osoittaa, että kyseiset mallit ovat jossain määrin samankaltaiset, kun taas Pelaaja I haluaa osoittaa, että mallit ovat erilaiset. Pelissä on äärellinen määrä vuoroja ja vuorojen määrä on alussa sovittu.
 \end{frame}
 
 \begin{frame}
@@ -351,6 +387,16 @@ Kierros 2:
 \begin{itemize}
 \item Pelaaja II voittaa, koska kuvaus $f$ verkolta $A$ verkolle $B$, $f(a_i) = b_i, i = 1, 2$ säilyttää naapuruussuhteet, eli $f$ on osittaisisomorfismi.
 \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Esimerkki määrittelemättömyystuloksesta}
+Olkoon $A$ malli, joka sisältää vain vakioita. \pause Boolean kysely: onko $A$:ssa parillinen määrä alkioita? \pause \\ $A$:n ja $B$:n konstruktio on tällöin: $|A_n| \coloneqq \{a_1, \ldots, a_n\}$ ja $|B_n| \coloneqq \{b_1, \ldots, b_n+1\}$, mielivaltaisella $n \in \mathbb{Z}_+$.
+\end{frame}
+
+\begin{frame}
+\frametitle{Esimerkki jatkuu}
+Konstruoidaan voittostrategia Pelaajalle II \pause Jos Pelaaja I valitsee mielivaltaisella kierroksella $i$ alkion $a_i$, niin Pelaaja II yksinkertaisesti valitsee alkion $b_i$. \pause Eli Boolean kysely onko mallissa $A$ parillinen määrä alkioita ei ole määriteltävissä propositiologiikan lauseeksi, eikä siten myöskään relaatioalgebran kyselyksi.
 \end{frame}
 
 \end{document}

@@ -178,12 +178,12 @@ Malli siis antaa aakkoston $L$ symboleille \textit{semantiikan} eli merkityksen 
 Relaatiosymbolin $R$ ja sen tulkinnan $R^M$ välistä eroa voidaan havainnollistaa esimerkiksi sanan ``tietokone'' ja tietokoneen välisellä erolla. Sana ``tietokone'' on suomen kieltä, joka koostuu yhdeksästä merkistä ja sitä voidaan käyttää muodostettaessa suomenkielisiä lauseita. Tietokone taas on fyysinen laite, joka käsittelee tietoa ohjelmointinsa mukaisesti, eikä sitä voida käyttää suomen kielen lauseiden osana. Lause ``Tietokoneeni on Mac'' on totta tai epätotta, riippuen siitä, mihin nimenomaiseen tietokoneeseen sana ``tietokone'' viittaa.
 
 \begin{maar}
-Oletaan, että $A$ on $L$-malli. $A$:n \textit{alimalli} $B$ on $L$-malli, siten että
+Oletaan, että $A$ on $L$-malli. $A$:n \textit{alimalli} $B$ on $L$-malli, jolle pätee
 \begin{itemize}
 \item $B \subset A$
-\item jos $R \in L$ on relaatiosymboli ja $\#R = n$, niin tällöin $R^B = R^A \cap R^B$
+\item jos $R \in L$ on relaatiosymboli ja $\#R = n \in \mathbb{Z}_+$, niin tällöin $R^B = R^A \cap B^n$
 \item jos $c \in L$ on vakiosymboli, niin tällöin $c^B = c^A$ ja $c^b \in B$
-\item jos $f \in L$ on funktiosymboli ja $\#f = n$, niin tällöin $f^A(B^n) \in B$ ja $f^B = f^A \restriction B^n$ eli $f^A$ on $f^B$:n rajoittuma osajoukkoon $B^n$. Siis $B$ on suljettu $f^A$:n suhteen.
+\item jos $f \in L$ on funktiosymboli ja $\#f = n \in \mathbb{Z}_+$, niin tällöin $f^A(B^n) \subset B$ ja $f^B = f^A \restriction B^n$ eli $f^B$ on $f^A$:n rajoittuma osajoukkoon $B^n$. Siis $B$ on suljettu $f^A$:n suhteen.
 \end{itemize}
 \end{maar}
 
@@ -203,10 +203,10 @@ Oletetaan, että $L$ on aakkosto ja $A$ sekä $B$ ovat $L$-malleja. Kuvaus $g: A
 Jos on olemassa isomorfinen kuvaus $A \rightarrow B$, niin sanotaan, että $A$ ja $B$ ovat isomorfiset ja tätä merkitään $A \cong B$.
 \end{maar}
 
-Isomorfian ominaisuus mallien välillä on refleksiivinen, symmetrinen ja transitiivinen. Jotta mallien välillä voi olla isomorfia, niin mallien täytyy olla saman kokoiset, sillä muuten niiden välillä ei voi olla bijektiota, eikä siten isomorfiaakaan. EF-pelien kannalta tärkeä isomorfian ominaisuus on, että se säilyttää totuuden. Täten, jos $L$-mallit $A$ ja $B$ ovat isomorfiset, niin kaikille aakkoston $L$ muodostaman kielen lauseille $S$ pätee $A \vDash S \Longleftrightarrow B \vDash S$. Määritellään seuraavaksi osittaisisomorfia.
+Isomorfia mallien välillä on refleksiivinen, symmetrinen ja transitiivinen. Jotta mallien välillä voi olla isomorfia, niin mallien täytyy olla saman kokoiset, sillä muuten niiden välillä ei voi olla bijektiota, eikä siten isomorfiaakaan. EF-pelien kannalta tärkeä isomorfian ominaisuus on, että se säilyttää totuuden. Täten, jos $L$-mallit $A$ ja $B$ ovat isomorfiset, niin kaikille aakkoston $L$ muodostaman kielen lauseille $S$ pätee $A \vDash S \Longleftrightarrow B \vDash S$. Määritellään seuraavaksi osittaisisomorfia.
 
 \begin{maar}
-Olkoon $L$ aakkosto sekä olkoon $A$ ja $B$ kummatkin $L$-malleja. Olkoon $A' \subset A$ ja $B' \subset B$. Lisäksi olkoon $f: A' \rightarrow B'$. Jos on olemassa isomorfismi $g: \langle A' \rangle \rightarrow \langle B' \rangle$, siten että $g \restriction A = f$ eli kuvaus $g$ on kuvauksen $f$ rajoittuma osajoukkoon $A'$. Tällöin kuvausta $f$ kutsutaan \textit{osittaisisomorfismiksi} $A \rightarrow B$ ja tätä merkitään $A \cong_p B$.
+Olkoon $L$ aakkosto sekä olkoon $A$ ja $B$ kummatkin $L$-malleja. Olkoon $A' \subset A$ ja $B' \subset B$. Lisäksi olkoon $f: A' \rightarrow B'$. Jos on olemassa isomorfismi $g: \langle A' \rangle \rightarrow \langle B' \rangle$, siten että $g \restriction A' = f$ eli kuvaus $g$ on kuvauksen $f$ rajoittuma osajoukkoon $A'$. Tällöin kuvausta $f$ kutsutaan \textit{osittaisisomorfismiksi} $A \rightarrow B$ ja tätä merkitään $A \cong_p B$.
 \end{maar}
 
 Toisin kuin isomorfismissa, osittaisisomorfismissa totuus ei välttämättä säily. Joissain tilanteissa osittaisisomorfismi kuitenkin säilyttää totuuden. Erityisesti näin on \textit{relationaalisten} aakkostojen, eli aakkostojen jotka sisältävät vain relaatiosymboleja, tapauksessa.
@@ -215,7 +215,7 @@ Toisin kuin isomorfismissa, osittaisisomorfismissa totuus ei välttämättä sä
 Siinä missä isomorfismi kuvailee kahden mallin rakenteellista samanlaisuutta, niin elementaarinen ekvivalenssi puolestaan vertailee malleja suhteessa käytettyyn kieleen.
 
 \begin{maar}
-Olkoon $L$ aakkosto joka muodostaa kielen $K$. Olkoon $A$ ja $B$ kummatkin $L$-malleja. $A$:ta ja $B$:tä sanotaan elementaarisesti ekvivalenteiksi, jos kaikilla lauseilla $S \in K$ pätee $A \vDash S \Longleftrightarrow B \vDash S$. Tätä merkitään $A \equiv B$
+Olkoon $L$ aakkosto joka muodostaa kielen $K$. Olkoon $A$ ja $B$ kummatkin $L$-malleja. $A$:ta ja $B$:tä sanotaan \textit{elementaarisesti ekvivalenteiksi}, jos kaikilla lauseilla $S \in K$ pätee $A \vDash S \Longleftrightarrow B \vDash S$. Tätä merkitään $A \equiv B$
 \end{maar}
 
 \begin{kor}

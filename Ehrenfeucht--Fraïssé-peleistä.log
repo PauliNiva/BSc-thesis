@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.25)  4 APR 2016 20:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.25)  4 APR 2016 22:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1250,9 +1250,9 @@ Package babel Info: Redefining finnish shorthand "|
 Package babel Info: Redefining finnish shorthand "|
 (babel)             in language  on input line 192.
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 207.
+(babel)             in language  on input line 204.
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 207.
+(babel)             in language  on input line 204.
  [3]
 Package babel Info: Redefining finnish shorthand "|
 (babel)             in language  on input line 214.
@@ -1389,7 +1389,7 @@ type1/public/lm/lmr8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public
 local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texl
 ive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/
 texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Ehrenfeucht--Fraïssé-peleistä.pdf (12 pages, 280070 byt
+Output written on Ehrenfeucht--Fraïssé-peleistä.pdf (12 pages, 280177 byt
 es).
 PDF statistics:
  214 PDF objects out of 1000 (max. 8388607)
