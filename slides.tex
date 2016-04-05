@@ -52,8 +52,9 @@ Ja toisinpäin, voidaan esittää jonkin laskennallisen vaativuusluokan kyselyit
 
 \begin{frame}
 \frametitle{Laskennan vaativuus}
-Laskennan vaativuusluokkien looginen selitys.
+Tarjoaa laskennan vaativuusluokkien loogisen karakterisoinnin ja mahdollistaa vaativuusteoreettisten tulosten todistamisen tätä kautta.
 \pause
+\\
 Esimerkiksi $P = NP$ -ongelma redusoituu kysymykseksi: onko kahdella kiintopistelogiikalla sama ilmaisuvoima äärellisissä malleissa 
 \end{frame}
 
@@ -390,13 +391,22 @@ Kierros 2:
 \end{frame}
 
 \begin{frame}
+Metodologia teoreema: Ei ole olemassa propositiologiikanlausetta joka ilmaisee ominaisuuden $P$, jos ja vain jos, kaikilla $n \in \mathbb{Z}_+$, on olemassa mallit $A_n$ ja $B_n$, joille pätee:
+\begin{itemize}
+\item<2-> Ominaisuus $P$ on totta $A_n$:ssä.
+\item<3-> Ominaisuus $P$ on epätotta $B_n$:ssä.
+\item<4-> $A \sim_n B$, eli Pelaaja II voittaa $n$-kierroksisen EF-pelin $A$:lla ja $B$:llä.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
 \frametitle{Esimerkki määrittelemättömyystuloksesta}
 Olkoon $A$ malli, joka sisältää vain vakioita. \pause Boolean kysely: onko $A$:ssa parillinen määrä alkioita? \pause \\ $A$:n ja $B$:n konstruktio on tällöin: $|A_n| \coloneqq \{a_1, \ldots, a_n\}$ ja $|B_n| \coloneqq \{b_1, \ldots, b_n+1\}$, mielivaltaisella $n \in \mathbb{Z}_+$.
 \end{frame}
 
 \begin{frame}
 \frametitle{Esimerkki jatkuu}
-Konstruoidaan voittostrategia Pelaajalle II \pause Jos Pelaaja I valitsee mielivaltaisella kierroksella $i$ alkion $a_i$, niin Pelaaja II yksinkertaisesti valitsee alkion $b_i$. \pause Eli Boolean kysely onko mallissa $A$ parillinen määrä alkioita ei ole määriteltävissä propositiologiikan lauseeksi, eikä siten myöskään relaatioalgebran kyselyksi.
+Konstruoidaan voittostrategia Pelaajalle II \pause Jos Pelaaja I valitsee mielivaltaisella kierroksella $i$ alkion $a_i$, niin Pelaaja II yksinkertaisesti valitsee alkion $b_i$. \pause Eli Boolean kysely onko mallissa $A$ parillinen määrä alkioita ei ole määriteltävissä propositiologiikan lauseeksi metodologia teoreeman nojalla, eikä siten myöskään relaatioalgebran kyselyksi.
 \end{frame}
 
 \end{document}
