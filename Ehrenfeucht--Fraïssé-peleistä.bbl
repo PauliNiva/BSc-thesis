@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
   \providebibliographyfont{name}{}%
   \providebibliographyfont{lastname}{}%
   \providebibliographyfont{title}{\emph}%
@@ -44,6 +44,22 @@
   '96. Proceedings., Eleventh Annual IEEE Symposium on}, \btxpageslong {}\
   108--117, \btxprintmonthyear{.}{Jul}{1996}{long}.
 
+\bibitem {Fag93}
+\btxnamefont {\btxlastnamefont {Fagin}, R.}, \btxnamefont {\btxlastnamefont
+  {Stockmeyer}, L.}\btxandcomma {} \btxandlong {}\ \btxnamefont
+  {\btxlastnamefont {Vardi}, M.\btxfnamespacelong Y.}\btxauthorcolon\
+  \btxtitlefont {\btxifchangecase {On monadic np vs. monadic co-np}{On monadic
+  NP vs. monadic co-NP}}.
+\newblock \Btxinlong {}\ \btxtitlefont {Structure in Complexity Theory
+  Conference, 1993., Proceedings of the Eighth Annual}, \btxpageslong {}\
+  19--30, \btxprintmonthyear{.}{May}{1993}{long}.
+
+\bibitem {Fag75}
+\btxnamefont {\btxlastnamefont {Fagin}, Ronald}\btxauthorcolon\ \btxjtitlefont
+  {\btxifchangecase {Monadic generalized spectra}{Monadic Generalized
+  Spectra}}.
+\newblock \btxjournalfont {Mathematical Logic Quarterly}, 21(1):89--96, 1975.
+
 \btxselectlanguage {fre}
 \bibitem {Fra54}
 \btxnamefont {\btxlastnamefont {Fraïssé}, Roland}\btxauthorcolon\
@@ -66,6 +82,15 @@
   -- 135. \btxpublisherfont {Elsevier}, 1982.
 \newblock {\latintext
   \btxurlfont{http://www.sciencedirect.com/science/article/pii/S0049237X08718792}}.
+
+\bibitem {Gra92}
+\btxnamefont {\btxlastnamefont {Gr{\"a}del}, Erich}\btxauthorcolon\
+  \btxtitlefont {Computer Science Logic: 5th Workshop, CSL '91 Berne,
+  Switzerland, October 7--11, 1991 Proceedings}, \btxchapterlong {}\ On
+  transitive closure logic, \btxpageslong {}\ 149--163.
+\newblock \btxpublisherfont {Springer Berlin Heidelberg}, Berlin, Heidelberg,
+  1992\ifbtxprintISBN {, \mbox{\btxISBN~\btxISBNfont {978-3-540-47285-8}}}.
+\newblock {\latintext \btxurlfont{http://dx.doi.org/10.1007/BFb0023764}}.
 
 \bibitem {Han65}
 \btxnamefont {\btxlastnamefont {Hanf}, William}\btxauthorcolon\ \btxtitlefont

@@ -427,8 +427,15 @@ Verkoilla on paljon ominaisuuksia jotka eivät ole ensimmäisen kertaluokan pred
 \item verkon yhtenäisyys
 \end{itemize}
 
-Näiden lisäksi on hyvin monia verkkojen ominaisuuksia, joihin ensimmäisen kertaluokan predikaattilogiikka ei pysty ilmaisemaan. Itse asiassa on osoitettu, että ensimmäisen kertaluokan predikaattilogiikka kykenee ilmaisemaan vain verkkojen lokaaleja ominaisuuksia\cite{Han65}. Hanf käytti tässä todistuksessaan EF-peliä, tarkemmin Fraïssén algebrallista versiota siitä. Sama lokaalisuus on osoitettu myöhemmin myös toisella metodilla, kvanttorien eliminoinnilla\cite{Gai82}. Tämä tulos on motivoinut pyrkimyksiä kehittämään ensimmäisen kertaluokan predikaattilogiikan laajennuksia verkoille, samoin kuin kehittämään näille omia EF-pelejä ilmaisuvoiman mittaamiseen.
+Näiden lisäksi on hyvin monia muitakin verkkojen ominaisuuksia, joita ensimmäisen kertaluokan predikaattilogiikka ei pysty ilmaisemaan. Itse asiassa on osoitettu, että ensimmäisen kertaluokan predikaattilogiikka kykenee ilmaisemaan vain verkkojen lokaaleja ominaisuuksia \cite{Han65}. Hanf käytti tässä todistuksessaan EF-peliä, tarkemmin Fraïssén algebrallista versiota siitä. Sama lokaalisuus on osoitettu myöhemmin myös toisella metodilla, kvanttorien eliminoinnilla \cite{Gai82}. Tämä tulos on motivoinut pyrkimyksiä kehittämään ensimmäisen kertaluokan predikaattilogiikan laajennuksia verkoille, samoin kuin kehittämään näille omia EF-pelejä ilmaisuvoiman mittaamiseen. Tällaisia mittauksia on tehty muun muassa monadiselle toisen kertaluokan predikaattilogiikalle \cite{Fag75} \cite{Fag93}, transitiivisen sulkeuman logiikalle \cite{Gra92} ja erilaisille kiintopistelogiikoille \cite{Bos93}.
 
+Vaikka ensimmäisen kertaluokan logiikka on hyvin rajoittunut kieli esimerkiksi verkkojen ominaisuuksien ilmaisemiseen, niin kuitenkin sillä voi joitain hyödyllisiäkin kyselyitä verkkojen suhteen ilmaista. Esimerkiksi seuraavat lauseet ovat ilmaistavissa ensimmäisen kertaluokan predikaattilogiikalla (oletetaan, että $E$ on relaatio joka ilmaisee verkon solmujen välistä kaarta ja symbolit $x, y, z_i$ ovat solmuja):
+
+\begin{itemize}
+\item ``solmulla $x$ on vähintään kaksi toisistaan eroavaa naapuria'' \[(\exists y)(\exists z)(\neg(y = z)\land E(x, y) \land E(x, z))\]
+\item ``jokaisella solmulla $x$ on vähintään kaksi toisistaan eroavaa naapuria'' \[(\forall x)(\exists y)(\exists z)(\neg(y = z)\land E(x, y) \land E(x, z))\]
+\item ``on olemassa polku solmusta $x$ solmuun $y$ jonka pituus on $3$'' \[(\exists z_1)(\exists z_2)(E(x, z_1)\land E(z_1, z_2) \land E(z_2, y))\]
+\end{itemize}
 
 
 % Write some science here.
