@@ -142,7 +142,7 @@ Tämä edestakaisin-menetelmä siis karakterisoi elementaarisen ekvivalenssin. I
 Tämän tutkielman tavoitteena on esitellä täsmällisesti, mutta kuitenkin samalla havainnollisesti EF-peliä ja sen hyödyllisyyttä matemaattisen logiikan ja tietojenkäsittelytieteen saralla. Tässä työssä esitellään joitain logiikan peruskäsitteitä, mutta työn seuraaminen edellyttää kuitenkin lukijalta yliopistotasoisen matematiikan perusteiden hallintaa ja joitain logiikan peruskäsitteiden tuntemista. Lukijan oletetaan esimerkiksi tuntevan joukon ja kuvauksien käsitteet.
 
 \section{Peruskäsitteitä}
-Tässä luvussa esitellään joitakin \textit{ensimmäisen kertaluvun predikaattilogiikan} peruskäsitteitä. Alaluku $2.1$ käsittelee relaatioita. Alaluvussa $2.2$ puolestaan määritellään mallin sekä alimallin käsite. $2.3$ keskittyy isomorfiaan ja osittaisisomorfiaan ja $2.4$ elementaariseen ekvivalenssiin. Peruskäsitteiden määrittelyssä seuraan karkeasti Wilfrid Hodgesia \cite{Hod97}.
+Tässä luvussa esitellään joitakin \textit{ensimmäisen kertaluvun predikaattilogiikan} peruskäsitteitä. Alaluku $2.1$ käsittelee relaatioita. Alaluvussa $2.2$ määritellään Alaluvussa $2.3$ puolestaan määritellään mallin sekä alimallin käsite. $2.4$ keskittyy isomorfiaan ja osittaisisomorfiaan ja $2.5$ elementaariseen ekvivalenssiin. Peruskäsitteiden määrittelyssä seuraan karkeasti Wilfrid Hodgesia \cite{Hod97}.
 
 \subsection{Relaatiot}
 Olkoon $X$ jokin joukko. Joukon $X$ $n$\textit{-kertainen karteesinen tulo} tarkoittaa kaikkien joukon $X$ alkioiden $n$-pituisten jonojen joukkoa. Tätä merkitään $X^n$ tai vaihtoehtoisesti $X \times X \times \ldots \times X$, $n$ kertaa. Esimerkiksi joukko $\mathbb{R}^2$ on järjestettyjen reaalilukuparien joukko. Sen geometrinen vastine on taso. $\mathbb{R}^3$ on järjestettyjen reaalilukukolmikoiden joukko. Sen geometrinen vastine on kolmiulotteinen avaruus. 
@@ -159,10 +159,45 @@ Joukon $X$ \textit{kaksipaikkainen relaatio} $R$ on mikä tahansa joukko joukon 
 \end{itemize}
 \end{maar}
 
-\subsection{Mallit}
-Tässä alaluvussa määritellään, mikä on \textit{malli} eli \textit{struktuuri}. Karkeasti ottaen se on joukko, jolla on jonkinlainen rakenne ja joka koostuu relaatioista, vakioista ja funktioista. Jotta mallin määrittely onnistuisi, aluksi tarvitaan nimiä malliemme objekteille. \textit{Aakkosto} on mikä tahansa joukko $L$, joka koostuu relaatiosymboleista, vakiosymboleista ja funktiosymboleista. Jokaiseen relaatioon $R$ liittyy \textit{paikkaluku} $\#R$, ilmaisemaan kuinka monipaikkainen kyseinen relaatio on. Samoin jokaiseen funktioon liittyy paikkaluku $\#f$ ilmaisemaan kuinka monipaikkainen funktio on kyseessä.
+\subsection{Kielet}
+Tässä alaluvussa määritellään aakkosto, termit, atomikaavat sekä ensimmäisen kertaluvun predikaattilogiikan kieli. Tarkemmin sanottuna, ei ole olemassa vain yhtä predikaattilogiikan kieltä, vaan jokaista aakkostoa kohden on oma kielensä, jolla voidaan puhua sen aakkoston malleista.
 
-\begin{maar} Olkoon $L$ aakkosto ja olkoon $M$ epätyhjä joukko. Tällöin $L$\textit{-malli} koostuu seuraavista:
+\begin{maar}[Aakkosto]
+Olkoon $l, m$ ja $n$ kardinaalilukuja. \textit{Aakkosto} on joukko $L = \{R_i \mid i < l\} \cup \{c_i \mid i < m\} \cup \{f_i \mid i < n\}$ joka sisältää $l$ relaatiosymbolia $R_i$, $m$ vakiosymbolia $c_i$ ja $n$ funktiosymbolia $f_i$
+\end{maar}
+Jokaiseen relaatioon $R$ liittyy \textit{paikkaluku} $\#R$, ilmaisemaan kuinka monipaikkainen kyseinen relaatio on. Samoin jokaiseen funktioon liittyy paikkaluku $\#f$ ilmaisemaan kuinka monipaikkainen funktio on kyseessä. Jos jokin kardinaaliluvuista on $0$, niin tällöin tätä vastaavia symboleja ei ole aakkostossa.
+
+\begin{maar}[Termit]
+Olkoon $R$ joukko relaatioita, $C$ joukko vakioita ja $F$ joukko funktioita jotka muodostavat aakkoston $L$. Olkoon $X$ joukko muuttujia. \textit{Termien} joukko $T$ yli aakkoston $L$ on joukko äärellisiä merkkijonoja joka määritellään seuraavasti:
+\begin{itemize}
+\item Jos $x \in X$, niin $x \in T$.
+\item Jos $c \in C$, niin $c \in T$.
+\item Jos $f \in F$, $\#f = n$, $n\in \mathbb{Z}_+$ ja $t_1, \ldots, t_n \in T$, niin $f(t_1, \ldots, t_n) \in T$.
+\end{itemize}
+\end{maar}
+
+\begin{maar}[Atomikaavat]
+Olkoon $R$ joukko relaatioita, $C$ joukko vakioita ja $F$ joukko funktioita jotka muodostavat aakkoston $L$. Olkoon $T$ termien joukko yli aakkoston $L$. \textit{Atomikaavojen} joukko $A$ on joukko äärellisiä merkkijonoja joka määritellään seuraavasti:
+\begin{itemize}
+\item Jos $s, t \in T$, niin $s = t \in A$. Toisin sanoen $s = t$ on atomikaava.
+\item Jos $r \in R$, $\#r = n$, $n\in \mathbb{Z}_+$ ja $t_1, \ldots, t_n \in T$, niin $r(t_1, \ldots, t_n) \in A$.
+\end{itemize}
+\end{maar}
+
+\begin{maar}[Kieli]
+Olkoon $A$ atomikaavojen joukko ja olkoon $X$ muuttujien joukko. \textit{Kieli} $K$ yli aakkoston $L$ on kokoelma merkkijonoja jotka muodostetaan rekursiivisesti atomikaavoista seuraavanlaisesti:
+\begin{itemize}
+\item Kaikki atomikaavat kuuluvat kieleen $K$, $A \subset K$.
+\item Jos $\psi$ ja $\varphi \in K$, niin $\neg \varphi \in K$, $(\psi \lor \varphi) \in K$, $(\psi \land \varphi) \in K$, $(\psi \to \varphi) \in K$, sekä $(\psi \leftrightarrow \varphi) \in K$.
+\item Jos $\varphi \in K$ ja $x \in X$, niin $\forall x(\varphi) \in K$ ja $\exists x(\varphi) \in K$
+\end{itemize}
+\end{maar}
+Kieli $K$ on \textit{ensimmäisen kertaluvun predikaattilogiikan} kieli, joka sisältää merkkijonoja. Näitä merkkijonoja kutsutaan usein kirjallisuudessa myös kaavoiksi. Kaavojen \textit{alikaavoja} ovat kaikki kaavan osat jotka itsekin ovat kaavoja. 
+
+\subsection{Mallit}
+Tässä alaluvussa määritellään, mikä on \textit{malli} eli \textit{struktuuri}. Karkeasti ottaen se on joukko, jolla on jonkinlainen rakenne ja joka koostuu relaatioista, vakioista ja funktioista. Malli ja struktuuri ovat synonyymeja. Näitä kahta sanaa käytetään rinnakkain konteksista riippuen sen mukaan kumpi soveltuu kyseiseen tilanteeseen. Sanaa malli käytetään yleensä tällaisessa kontekstissa ``Olkoon $M$ malli kaavalle $\varphi$'', joka tarkoittaa samaa kuin ``Olkoon M struktuuri siten että $M \models \varphi$'' Nämä konseptit määritellään myöhemmin tässä kappaleessa.
+
+\begin{maar}[Malli] Olkoon $L$ aakkosto ja olkoon $M$ epätyhjä joukko. Tällöin $L$\textit{-malli} koostuu seuraavista:
 \begin{itemize}
 \item Joukosta $M$.
 \item Relaatioista $R^M \subset M$, jokaiselle relaatiosymbolille $R \in L$, $\#R = n$, jossa $n\in \mathbb{Z}_+$.
@@ -177,7 +212,7 @@ Malli siis antaa aakkoston $L$ symboleille \textit{semantiikan} eli merkityksen 
 
 Relaatiosymbolin $R$ ja sen tulkinnan $R^M$ välistä eroa voidaan havainnollistaa esimerkiksi sanan ``tietokone'' ja tietokoneen välisellä erolla. Sana ``tietokone'' on suomen kieltä, joka koostuu yhdeksästä merkistä ja sitä voidaan käyttää muodostettaessa suomenkielisiä lauseita. Tietokone taas on fyysinen laite, joka käsittelee tietoa ohjelmointinsa mukaisesti, eikä sitä voida käyttää suomen kielen lauseiden osana. Lause ``Tietokoneeni on Mac'' on totta tai epätotta, riippuen siitä, mihin nimenomaiseen tietokoneeseen sana ``tietokone'' viittaa.
 
-\begin{maar}
+\begin{maar}[Alimalli]
 Oletaan, että $A$ on $L$-malli. $A$:n \textit{alimalli} $B$ on $L$-malli, jolle pätee
 \begin{itemize}
 \item $B \subset A$
@@ -192,7 +227,7 @@ Olkoon $A$ malli ja $B \subset A$. Tällöin $\langle B \rangle$ on pienin $A$:n
 \subsection{Isomorfia}
 Mallien kohdalla puhuttiin ``jonkinlaisesta rakenteesta'', eli struktuurista. Mallin objekteille annettiin nimiä, symboleja ja kaavoja, jotta tätä rakennetta voitiin kuvailla. Malleja joiden rakenne on samanlainen kutsutaan isomorfisiksi.
 
-\begin{maar}
+\begin{maar}[Isomorfismi]
 Oletetaan, että $L$ on aakkosto ja $A$ sekä $B$ ovat $L$-malleja. Kuvaus $g: A \rightarrow B$ on \textit{isomorfismi} mallista $A$ mallille $B$, jos
 \begin{itemize}
 \item $g$ on bijektio.
@@ -203,19 +238,37 @@ Oletetaan, että $L$ on aakkosto ja $A$ sekä $B$ ovat $L$-malleja. Kuvaus $g: A
 Jos on olemassa isomorfinen kuvaus $A \rightarrow B$, niin sanotaan, että $A$ ja $B$ ovat isomorfiset ja tätä merkitään $A \cong B$.
 \end{maar}
 
-Isomorfia mallien välillä on refleksiivinen, symmetrinen ja transitiivinen. Jotta mallien välillä voi olla isomorfia, niin mallien täytyy olla saman kokoiset, sillä muuten niiden välillä ei voi olla bijektiota, eikä siten isomorfiaakaan. EF-pelien kannalta tärkeä isomorfian ominaisuus on, että se säilyttää totuuden. Täten, jos $L$-mallit $A$ ja $B$ ovat isomorfiset, niin kaikille aakkoston $L$ muodostaman kielen lauseille $S$ pätee $A \vDash S \Longleftrightarrow B \vDash S$. Määritellään seuraavaksi osittaisisomorfia.
+Isomorfia mallien välillä on refleksiivinen, symmetrinen ja transitiivinen. Jotta mallien välillä voi olla isomorfia, niin mallien täytyy olla saman kokoiset, sillä muuten niiden välillä ei voi olla bijektiota, eikä siten isomorfiaakaan. EF-pelien kannalta tärkeä isomorfian ominaisuus on, että se säilyttää totuuden.
 
-\begin{maar}
+\begin{maar}[Osittaisisomorfismi]
 Olkoon $L$ aakkosto sekä olkoon $A$ ja $B$ kummatkin $L$-malleja. Olkoon $A' \subset A$ ja $B' \subset B$. Lisäksi olkoon $f: A' \rightarrow B'$. Jos on olemassa isomorfismi $g: \langle A' \rangle \rightarrow \langle B' \rangle$, siten että $g \restriction A' = f$ eli kuvaus $g$ on kuvauksen $f$ rajoittuma osajoukkoon $A'$. Tällöin kuvausta $f$ kutsutaan \textit{osittaisisomorfismiksi} $A \rightarrow B$ ja tätä merkitään $A \cong_p B$.
 \end{maar}
 
-Toisin kuin isomorfismissa, osittaisisomorfismissa totuus ei välttämättä säily. Joissain tilanteissa osittaisisomorfismi kuitenkin säilyttää totuuden. Erityisesti näin on \textit{relationaalisten} aakkostojen, eli aakkostojen jotka sisältävät vain relaatiosymboleja, tapauksessa.
+Toisin kuin isomorfismissa, osittaisisomorfismissa totuus ei välttämättä säily. Joissain tilanteissa osittaisisomorfismi kuitenkin säilyttää totuuden. Erityisesti näin on \textit{relationaalisten} aakkostojen, eli aakkostojen jotka sisältävät vain relaatiosymboleja ja vakioita, tapauksessa.
+
+Edellä puhuttiin paljon totuudesta ja määritellään seuraavaksi mitä sillä tarkalleen ottaen tarkoitetaan.
+
+\begin{maar}[Tarski]
+Oletetaan, että $A$ on $L$-malli ja olkoon $L$ aakkosto ja $K$ kieli. Määritellään rekursiivisesti että kielen $K$ kaava $\varphi$ on totta $A$:ssa, eli $A$ toteuttaa $\varphi$, eli $A \models \varphi$ seuraavasti:
+\begin{itemize}
+\item Jos $\varphi$ on kaava $s = t$ jossa $s$ ja $t$ ovat termejä, niin $A \models \varphi$ jos ja vain jos $s^A = t^A$.
+\item Jos $\varphi$ on kaava $R(t_1, \ldots, t_n)$, missä $R$ on $n$-paikkainen relaatiosymboli ja $t_1, \ldots, t_n$ ovat termejä, niin $A \models \varphi$ jos ja vain jos $(t_1^A, \ldots, t_n^A) \in R$.
+\item $A \models \neg \varphi$ jos ja vain jos $A \not \models \varphi$.
+\item $A \models (\varphi \land \psi)$ jos ja vain jos $A \models \varphi$ ja $A \models \psi$.
+\item $A \models (\varphi \lor \psi)$ jos ja vain jos $A \models \varphi$ tai $A \models \psi$.
+\item $A \models (\varphi \to \psi)$ jos ja vain jos $A \not \models \varphi$ tai $A \models \psi$.
+\item $A \models (\varphi \leftrightarrow \psi)$ jos ja vain jos $A \models \varphi$ ja $A \models \psi$ tai $A \not \models \varphi$ ja $A \not \models \psi$.
+\item $A \models \forall x(\varphi)$ jos ja vain jos jokaisella mallin $A$ alkiolla $a
+$ pätee $A \models \varphi$ kun muuttaja $x$ tulkitaan $a$:ksi.
+\item $A \models \exists x(\varphi)$ jos ja vain jos löytyy jokin mallin $A$ alkio $a$ jolla $A \models \varphi$ kun muuttuja $x$ tulkitaan $a$:ksi.
+\end{itemize}
+\end{maar}
 
 \subsection{Elementaarinen ekvivalenssi}
 Siinä missä isomorfismi kuvailee kahden mallin rakenteellista samanlaisuutta, niin elementaarinen ekvivalenssi puolestaan vertailee malleja suhteessa käytettyyn kieleen.
 
-\begin{maar}
-Olkoon $L$ aakkosto joka muodostaa kielen $K$. Olkoon $A$ ja $B$ kummatkin $L$-malleja. $A$:ta ja $B$:tä sanotaan \textit{elementaarisesti ekvivalenteiksi}, jos kaikilla lauseilla $S \in K$ pätee $A \vDash S \Longleftrightarrow B \vDash S$. Tätä merkitään $A \equiv B$
+\begin{maar}[Elementaarinen ekvivalenssi]
+Olkoon $L$ aakkosto joka muodostaa kielen $K$. Olkoon $A$ ja $B$ kummatkin $L$-malleja. $A$:ta ja $B$:tä sanotaan \textit{elementaarisesti ekvivalenteiksi}, jos kaikilla lauseilla $S \in K$ pätee $A \vDash S \Longleftrightarrow B \models S$. Tätä merkitään $A \equiv B$
 \end{maar}
 
 \begin{kor}
@@ -236,7 +289,7 @@ EF-pelissä ideana on, että peli on kahdelle pelaajalle, joita kutsutaan nimill
 \subsection{Pelin kulku}
 Pelin kulku kuvataan kirjallisuudessa lähes aina samalla tavalla. Määritellään aluksi mielivaltaisen kierroksen kulku ja kummankin pelaajan voittokriteerit.
 
-\begin{maar}
+\begin{maar}[Kierroksen kulku]
 Merkitään pelattavien kierrosten määrää luvulla $k \in \mathbb{Z}_+$. EF-peliä pituudeltaan $k$-kierrosta malleilla $A$ ja $B$ merkitään $EF_k(A, B)$. Pelin $EF_k(A, B)$ mielivaltaisen kierroksen $i \in \{1, \ldots, k\}$ kulku on seuraavanlainen: 
 \begin{itemize}
 \item Ensin Pelaaja I valitsee toisen malleista $A$ tai $B$ sekä jonkin alkion $a_i \in A$ tai $b_i \in B$ tästä mallista.
@@ -244,7 +297,7 @@ Merkitään pelattavien kierrosten määrää luvulla $k \in \mathbb{Z}_+$. EF-p
 \end{itemize}
 \end{maar}
 
-\begin{maar}
+\begin{maar}[Voittokriteeri]
 Olkoon $a = (a_1, \ldots, a_i)$ mallista $A$ valitut alkiot ja $b = (b_1, \ldots, b_i)$ mallista $B$ valitut alkiot mielivaltaisella kierroksella $i$. Pelaajan II voittaa jos ja vain jos jokaisella kierroksella $i \leq n$ pari $(a, b)$ määrää osittaisen isomorfismin $A \rightarrow B$ eli on olemassa kuvaus $h: A \rightarrow B$, siten että $a \in A \mapsto b \in B$ Muussa tapauksessa Pelaaja I voittaa.
 \end{maar}
 
@@ -260,7 +313,7 @@ Voittava strategia Pelaajalle II on valita aina sama alkio minkä Pelaaja I vali
 \item Symmetrisyys: $A \sim_k B \iff B \sim_k A$.\\
 EF-pelin määritelmä ei millään tavoin tee eroa pelien $EF_k(A, B)$:n ja $EF_k(B, A)$:n välillä. Täten jos $A \sim_k B$, niin Pelaaja II voi käyttää samaa voittostrategiaa myös pelissä $EF_k(B, A)$. Jos taas $B \sim_k A$, niin Pelaaja II voi käyttää samaa voittostrategiaa pelissä $EF_k(A, B)$. Siis $\sim_k$ on symmetrinen.
 \item Transitiivisuus: $A \sim_k C \land B \sim_k C \implies A \sim_k C$.\\
-Todistetaan väite käsittelemällä kaikki väitteen ja implikaation pelit samaan aikaan. Peli $EF_k(A, C)$ pelataan siten, että Pelaaja II tekee valintansa pelaamalla samaan aikaa kuvitteellsia pelejä $EF_k(A, B)$ ja $EF_k(B, C)$. Oletetaan, että peli $EF_k(A, C)$ alkaa Pelaajan II valinnalla $a_1 \in A$, jolloin Pelaaja II valitsee seuraavalla strategialla:
+Todistetaan väite käsittelemällä kaikki väitteen ja implikaation pelit samaan aikaan. Peli $EF_k(A, C)$ pelataan siten, että Pelaaja II tekee valintansa pelaamalla samaan aikaa kuvitteellisia pelejä $EF_k(A, B)$ ja $EF_k(B, C)$. Oletetaan, että peli $EF_k(A, C)$ alkaa Pelaajan II valinnalla $a_1 \in A$, jolloin Pelaaja II valitsee seuraavalla strategialla:
 
 Pelaaja II kuvittelee, että Pelaaja I valitsi alkion $a_1 \in A$ pelissä $EF_k(A, B)$, jolloin hän valitsee alkion $b_1 \in B$ pelin $EF_k(A, B)$ voittostrategian mukaisesti. Seuraavaksi Pelaaja II kuvittelee, että äskeinen valinta oli Pelaajan I valinta pelissä $EF_k(B, C)$ ja valitsee alkion $c_1 \in C$ pelin $EF_k(B, C)$ voittostrategian mukaisesti. Tämä valinta $c_1$ on Pelaajan II vastaus Pelaajan I valintaan $a_1$ pelissä $EF_k(A, C)$.
 
@@ -274,6 +327,7 @@ Koska relaatio $\sim_k$ on refleksiivinen, symmetrinen ja transitiivinen, niin s
 
 Kuten aikaisemmin todettiin, EF-pelistä on kehitetty monia erilaisia variaatioita, kuten esimerkiksi EF-peli verkoille (verkoilla voidaan esittää ensimmäisen kertaluokan predikaattilogiikan kaavoja. Verkon kaarethan ovat käytännössä relaatioita verkon pisteiden välillä). Havainnollistetaan nyt EF-pelin ideaa yksinkertaisella esimerkillä kahden kierroksen EF-pelillä verkoille $X$ ja $Y$, sekä esitetään samalla strategia $X \sim_k Y$, eli voittava strategia Pelaajalle II.
 
+\begin{esim}
 Tässä EF-pelissä verkoille ideana on, että rakennetaan pelaajien tekemistä valinnoista kahta uutta verkkoa $A$ ja $B$, siten että verkosta $X$ valittu solmu merkitään verkon $A$ solmuksi $a_i$ ja verkosta $Y$ valittu solmu verkon $B$ solmuksi $b_i$, jossa $i$ ilmaisee millä kierroksella valinta on tapahtunut.
 
 \begin {center}
@@ -325,6 +379,56 @@ Jos Pelaaja I olisi tehnyt toisellakin kierroksella valintansa verkosta $X$:
 \item Tällöin toisen kierroksen jälkeen tilanne olisi ollut $a_2 \coloneqq x_1, b_2 \coloneqq y_1$ tai $a_2 \coloneqq x_2, b_2 \coloneqq y_2$.
 \item Pelaaja II voittaa tässäkin skenaariossa, koska kuvaus $f$ verkolta $A$ verkolle $B$, $f(a_i) = b_i, i = 1, 2$ säilyttää naapuruussuhteet, eli $f$ on osittaisisomorfismi.
 \end{itemize}
+\end{esim}
+
+\section{Sovelluksia}
+EF-peli on teoreettisen tietojenkäsittelyn ja äärellisten mallien teorian työkalu jota pääasiassa käytetään määriteltävyyskysymyksiin ja todistusten apuna. Äärellisten mallien teoriaa ja sen menetelmää EF-peliä voidaan soveltaa tietojenkäsittelytieteessä muun muassa verifikoinnissa.
+
+Äärelliset mallit voidaan koodata verkkoina, puina tai merkkijonoina. Tällöin niitä voidaan käyttää laskennan olioina ja siten niillä voidaan kuvata äärellistilallisia systeemejä ja tutkia näiden toiminnan oikeellisuutta. 
+
+Yksi sovellusala on tietokantateoria, koska relationaalinen malli samaistaa tietokannan äärellisen relaationaalisen struktuurin kanssa. Formaalin kielen kaavat voidaan siis ajatella ohjelmina, jotta niiden merkitystä struktuurissa voidaan arvioida. Ja toisinpäin, voidaan esittää jonkin laskennallisen vaativuusluokan kyselyitä jollakin formaalilla kielellä.
+
+Muita tietojenkäsittelytieteen osa-alueita joihin EF-peliä voi soveltaa on esimerkiksi vaativuusteoria, koska äärelliset mallit tarjoavat laskennan vaativuusluokkien loogisen karakterisoinnin ja mahdollistavat vaativuusteoreettisten tulosten todistamisen tätä kautta. Esimerkiksi $P = NP$ -ongelma redusoituu kysymykseksi: onko kahdella kiintopistelogiikalla sama ilmaisuvoima äärellisissä malleissa? Määriteltävyystulosten todistuksissa seuraava teoreema on keskeinen:
+
+\begin{lau}[Metodologia teoreema]
+Ei ole olemassa ensimmäisen kertaluvun predikaattilogiikan lausetta joka ilmaisee ominaisuuden $P$, jos ja vain jos, kaikilla $n \in \mathbb{Z}_+$, on olemassa mallit $A$ ja $B$, joille pätee:
+\begin{itemize}
+\item Ominaisuus $P$ on totta $A$:ssä.
+\item Ominaisuus $P$ on epätotta $B$:ssä.
+\item $A \sim_n B$, eli Pelaaja II voittaa $n$-kierroksisen EF-pelin $A$:lla ja $B$:llä.
+\end{itemize}
+\end{lau}
+
+Esitetään yksinkertainen relaatioalgebran ongelma esimerkkinä siitä miten metodologia teoreemaa käytetään määärittelemättömyystuloksia todistettaessa. Tässä esimerkissä käytämme Boolen kyselyä, joten ensimmäiseksi määrittelemme tämä tarkasti.
+
+\begin{maar}[Boolen kysely]
+Olkoon $M$ malli. Tällöin \textit{Boolen kysely} $Q$ on kuvaus $Q: M \to \{0, 1\}$ joka säilyy isomorfismeissa. Siis jos $A \cong B$, niin $Q(A) = Q(B)$
+\end{maar}
+
+\begin{esim}
+Olkoon $A$ malli, joka sisältää vain vakioita. Boolen kysely: onko $A$:ssa parillinen määrä alkioita? Konstruoidaan mallit $A$ ja $B$ todistusta varten seuraavanlaisiksi: $|A_n| \coloneqq \{a_1, \ldots, a_n\}$ ja $|B_n| \coloneqq \{b_1, \ldots, b_{n + 1}\}$, mielivaltaisella $n \in \mathbb{Z}_+$. Eli toisessa mallissa on yksi alkio enemmän kuin toisessa. Täten toinen malleista sisältää parittoman määrän alkioita ja toinen parillisen määrän alkioita.
+
+Voittostrategia Pelaajalle II on sellainen, että jos Pelaaja I valitsee mielivaltaisella kierroksella $i$ alkion $a_i$, niin Pelaaja II yksinkertaisesti valitsee alkion $b_i$. Eli $A \sim_n B$ ja koska toisessa mallissa on parillinen ja toisessa pariton määrä alkioita, niin ominaisuus ``parillinen määrä alkioita'' on totta toisessa mallissa ja epätotta toisessa. Täten metodologia teoreeman nojalla Boolen kysely onko mallissa $A$ parillinen määrä alkioita ei ole määriteltävissä ensimmäisen kertaluvun predikaattilogiikan lauseeksia, eikä siten myöskään relaatioalgebran kyselyksi.
+\end{esim}
+
+Edellinen esimerkki toimii suoraan verkoille, kunhan käsittää mallit $A$ ja $B$ verkoiksi ja alkiot verkon solmuiksi siten, että $a_i$:sta on kaari $a_{i + 1}$:ssaan ja niin edelleen, sekä vastavuoroisesti $B$:n samalla tavalla. Eli verkoille ei ole olemassa ensimmäisen kertaluokan predikaattilogiikan lausetta jolla voisi esittää ominaisuuden, että verkko sisältää parillisen määrän solmuja.
+
+\subsection{Ensimmäisen kertaluokan predikaattilogiikan rajoitteet}
+Verkoilla on paljon ominaisuuksia jotka eivät ole ensimmäisen kertaluokan predikaattilogiikka määriteltäviä. Jos $G$ on äärellisten verkkojen luokka, niin esimerkiksi seuraavat kyselyt eivät ole ensimmäisen kertaluokan predikaattilogiikka määriteltävissä $G$:lle:
+
+\begin{itemize}
+\item transitiivinen sulkeuma
+\item tasoverkkoisuus
+\item Eulerilaisuus
+\item Hamiltonilaisuus
+\item $k$-värittyvyys, kaikilla $ k \geq 2$
+\item asyklisyys
+\item leikkaussolmu
+\item verkon yhtenäisyys
+\end{itemize}
+
+Näiden lisäksi on hyvin monia verkkojen ominaisuuksia, joihin ensimmäisen kertaluokan predikaattilogiikka ei pysty ilmaisemaan. Itse asiassa on osoitettu, että ensimmäisen kertaluokan predikaattilogiikka kykenee ilmaisemaan vain verkkojen lokaaleja ominaisuuksia\cite{Han65}. Hanf käytti tässä todistuksessaan EF-peliä, tarkemmin Fraïssén algebrallista versiota siitä. Sama lokaalisuus on osoitettu myöhemmin myös toisella metodilla, kvanttorien eliminoinnilla\cite{Gai82}. Tämä tulos on motivoinut pyrkimyksiä kehittämään ensimmäisen kertaluokan predikaattilogiikan laajennuksia verkoille, samoin kuin kehittämään näille omia EF-pelejä ilmaisuvoiman mittaamiseen.
+
 
 
 % Write some science here.

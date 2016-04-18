@@ -55,6 +55,27 @@
 \newblock {\latintext \btxurlfont{http://eudml.org/doc/81696}}.
 
 \expandafter\btxselectlanguage\expandafter {\btxfallbacklanguage}
+\bibitem {Gai82}
+\btxnamefont {\btxlastnamefont {Gaifman}, Haim}\btxauthorcolon\ \btxtitlefont
+  {\btxifchangecase {On local and non-local properties}{On Local and Non-Local
+  Properties}}.
+\newblock \Btxinlong {}\ \btxnamefont {\btxlastnamefont {Stern}, J.}\
+  (\btxeditorlong {}): \btxtitlefont {Proceedings of the Herbrand Symposium},
+  \btxvolumelong {}\ \btxvolumefont {107} \btxofserieslong {}\ \btxtitlefont
+  {Studies in Logic and the Foundations of Mathematics}, \btxpageslong {}\ 105
+  -- 135. \btxpublisherfont {Elsevier}, 1982.
+\newblock {\latintext
+  \btxurlfont{http://www.sciencedirect.com/science/article/pii/S0049237X08718792}}.
+
+\bibitem {Han65}
+\btxnamefont {\btxlastnamefont {Hanf}, William}\btxauthorcolon\ \btxtitlefont
+  {\btxifchangecase {Model-theoretic methods in the study of elementary
+  logic}{Model-Theoretic Methods in the Study of Elementary Logic}}.
+\newblock \Btxinlong {}\ \btxnamefont {\btxlastnamefont {Addison},
+  J.\btxfnamespacelong W.}\ (\btxeditorlong {}): \btxtitlefont {Journal of
+  Symbolic Logic}, \btxpageslong {}\ 132--145. \btxpublisherfont {Amsterdam,
+  North-Holland Pub. Co.}, 1965.
+
 \bibitem {Hod97}
 \btxnamefont {\btxlastnamefont {Hodges}, Wilfrid}\btxauthorcolon\ \btxtitlefont
   {A Shorter Model Theory}.
