@@ -10,8 +10,10 @@
 \contentsline {subsection}{\numberline {3.1}Pelin kulku}{6}{subsection.3.1}
 \contentsline {paragraph}{Todistus:}{7}{section*.2}
 \contentsline {section}{\numberline {4}Sovelluksia}{9}{section.4}
-\contentsline {subsection}{\numberline {4.1}Ensimm\IeC {\"a}isen kertaluokan predikaattilogiikan rajoitteet}{11}{subsection.4.1}
-\contentsline {section}{L\IeC {\"a}hteet}{13}{section*.3}
+\contentsline {subsection}{\numberline {4.1}Sovellusaloja}{10}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Ensimm\IeC {\"a}isen kertaluokan predikaattilogiikan rajoitteet}{11}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Kongruenssiapulauseet}{12}{subsection.4.3}
+\contentsline {section}{L\IeC {\"a}hteet}{14}{section*.3}
 \select@language {finnish}
 \select@language {finnish}
 \select@language {finnish}

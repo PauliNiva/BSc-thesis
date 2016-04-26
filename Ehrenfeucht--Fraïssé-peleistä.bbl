@@ -107,6 +107,35 @@
 \newblock \btxpublisherfont {Cambridge University Press}, 1997\ifbtxprintISBN
   {, \mbox{\btxISBN~\btxISBNfont {0-521-58713-1}}}.
 
+\bibitem {Lad77}
+\btxnamefont {\btxlastnamefont {Ladner}, Richard\btxfnamespacelong
+  E.}\btxauthorcolon\ \btxjtitlefont {\btxifchangecase {Application of model
+  theoretic games to discrete linear orders and finite automata}{Application of
+  model theoretic games to discrete linear orders and finite automata}}.
+\newblock \btxjournalfont {Information and Control}, 33(4):281 -- 303,
+  1977\ifbtxprintISSN {, \mbox{\btxISSN~\btxISSNfont {0019-9958}}}.
+\newblock {\latintext
+  \btxurlfont{http://www.sciencedirect.com/science/article/pii/S0019995877904430}}.
+
+\bibitem {Lip88}
+\btxnamefont {\btxlastnamefont {Lippert}, D.} \btxandlong {}\ \btxnamefont
+  {\btxlastnamefont {Thomas}, W.}\btxauthorcolon\ \btxtitlefont {Semigroups
+  Theory and Applications: Proceedings of a Conference held in Oberwolfach,
+  FRG, Feb. 23--Mar. 1, 1986}, \btxchapterlong {}\ Relativized star-free
+  expressions, first-order logic, and a concatenation game, \btxpageslong {}\
+  194--204.
+\newblock \btxpublisherfont {Springer Berlin Heidelberg}, Berlin, Heidelberg,
+  1988\ifbtxprintISBN {, \mbox{\btxISBN~\btxISBNfont {978-3-540-39225-5}}}.
+\newblock {\latintext \btxurlfont{http://dx.doi.org/10.1007/BFb0083433}}.
+
+\bibitem {McN71}
+\btxnamefont {\btxlastnamefont {McNaughton}, Robert} \btxandlong {}\
+  \btxnamefont {\btxlastnamefont {Papert}, Seymour\btxfnamespacelong
+  A.}\btxauthorcolon\ \btxtitlefont {Counter-Free Automata (M.I.T. Research
+  Monograph No. 65)}.
+\newblock \btxpublisherfont {The MIT Press}, 1971\ifbtxprintISBN {,
+  \mbox{\btxISBN~\btxISBNfont {0262130769}}}.
+
 \btxselectlanguage {ger}
 \bibitem {Tar35}
 \btxnamefont {\btxlastnamefont {Tarski}, Alfred}\btxauthorcolon\ \btxjtitlefont
@@ -116,6 +145,24 @@
 \newblock {\latintext \btxurlfont{http://eudml.org/doc/212807}}.
 
 \expandafter\btxselectlanguage\expandafter {\btxfallbacklanguage}
+\bibitem {Tho84}
+\btxnamefont {\btxlastnamefont {Thomas}, Wolfgang}\btxauthorcolon\
+  \btxjtitlefont {\btxifchangecase {An application of the
+  ehrenfeucht-fra{\"\i}ss{\'e} game in formal language theory}{An application
+  of the Ehrenfeucht-Fra{\"\i}ss{\'e} game in formal language theory}}.
+\newblock \btxjournalfont {M{\'e}moires de la Soci{\'e}t{\'e} Math{\'e}matique
+  de France}, 16:11--21, 1984.
+
+\bibitem {Tho87}
+\btxnamefont {\btxlastnamefont {Thomas}, Wolfgang}\btxauthorcolon\
+  \btxtitlefont {\btxifchangecase {Computation theory and logic}{Computation
+  Theory and Logic}}.
+\newblock \btxchapterlong {}\ A Concatenation Game and the Dot-depth Hierarchy,
+  \btxpageslong {}\ 415--426. \btxpublisherfont {Springer-Verlag}, London, UK,
+  UK, 1987\ifbtxprintISBN {, \mbox{\btxISBN~\btxISBNfont {0-387-18170-9}}}.
+\newblock {\latintext
+  \btxurlfont{http://dl.acm.org/citation.cfm?id=36545.36580}}.
+
 \bibitem {Vaa11}
 \btxnamefont {\btxlastnamefont {V{\"a}{\"a}n{\"a}nen}, J.}\btxauthorcolon\
   \btxtitlefont {Models and Games}.
