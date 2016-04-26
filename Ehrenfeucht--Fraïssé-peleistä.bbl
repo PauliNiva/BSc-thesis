@@ -136,6 +136,13 @@
 \newblock \btxpublisherfont {The MIT Press}, 1971\ifbtxprintISBN {,
   \mbox{\btxISBN~\btxISBNfont {0262130769}}}.
 
+\bibitem {She75}
+\btxnamefont {\btxlastnamefont {Shelah}, Saharon}\btxauthorcolon\
+  \btxjtitlefont {\btxifchangecase {The monadic theory of order}{The monadic
+  theory of order}}.
+\newblock \btxjournalfont {Annals of Mathematics}, \btxpageslong {}\ 379--419,
+  1975.
+
 \btxselectlanguage {ger}
 \bibitem {Tar35}
 \btxnamefont {\btxlastnamefont {Tarski}, Alfred}\btxauthorcolon\ \btxjtitlefont
