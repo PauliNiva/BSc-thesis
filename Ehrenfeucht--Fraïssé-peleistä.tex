@@ -424,15 +424,14 @@ Verkoilla on paljon ominaisuuksia jotka eivät ole ensimmäisen kertaluokan pred
 
 Todistetaan esimerkin vuoksi näistä epäsuorasti verkon yhtenäisyyden määrittelemättömyys.
 \begin{esim}
-Oletetaan että ensimmäisen kertaluokan predikaattilogiikan lause $\varphi$ määrittelee verkkojen yhtenäisyyden aakkostossa joka muodostuu binaarisesta relaatiosymbolista $E$.
-Määritellään seuraajarelaatio $S$ seuraavasti: \[S(x, y) \coloneqq (x < y) \land \forall z ((z \leq x) \lor (y \leq z))\]
+Oletetaan että ensimmäisen kertaluokan predikaattilogiikan lause $\varphi$ määrittelee verkkojen yhtenäisyyden aakkostossa joka muodostuu binaarisesta relaatiosymbolista $E$. Olkoon $L$ jokin lineaarijärjestys. Muodostestaan lineaarijärjestyksestä $L$ suunnattu verkko $G$ seuraavanlaisesti: Määritellään seuraajarelaatio $S$ lineaarijärjestyksestä $L$ seuraavasti: \[S(x, y) \coloneqq (x < y) \land \forall z ((z \leq x) \lor (y \leq z))\]
 Määritellään että ensimmäisen kertaluokan predikaattilogiikan kaava $\psi(x, y)$ siten että $\psi(x, y)$ on toteutuva jos ja vain jos jokin seuraavista on totta:
 \begin{itemize}
 \item $\exists z (S(x, z) \land S(z, y)$, toisin sanoen $y$ on $x$:n seuraajan seuraaja.
 \item $\forall u (y \leq u) \land (\exists z(S(x, z) \land \forall u(u \leq z)))$, toisin sanoen $x$ on viimeisen alkion edeltäjä ja $y$ on ensimmäinen alkio.
 \item $\forall u (u \leq x) \land (\exists z(S(z, y) \land \forall u(z \leq u)))$, toisin sanoen $x$ on viimeinen alkio ja $y$ on ensimmäisen alkion seuraaja.
 \end{itemize}
-Ensimmäisen kertaluokan predikaattilogiikan kaavan $\psi$ määräämä suunnattu verkko $G$ on yhtenäinen, tarkemmin sanoen se muodostuu yhdestä syklistä, jos sen solmujen määrä on pariton.
+Ensimmäisen kertaluokan predikaattilogiikan kaavan $\psi$ määräämä suunnattu verkko $G$ lineaarijärjestyksen $L$ alkioista on yhtenäinen, tarkemmin sanoen se muodostuu yhdestä syklistä, jos sen solmujen määrä on pariton.
 
 \begin {center}
 \begin {tikzpicture}[-latex ,auto ,node distance =2 cm and 2cm ,on grid ,
