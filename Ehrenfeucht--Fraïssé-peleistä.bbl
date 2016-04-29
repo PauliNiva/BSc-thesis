@@ -101,6 +101,16 @@
   Symbolic Logic}, \btxpageslong {}\ 132--145. \btxpublisherfont {Amsterdam,
   North-Holland Pub. Co.}, 1965.
 
+\bibitem {Hen80}
+\btxnamefont {\btxlastnamefont {Hennessy}, Matthew} \btxandlong {}\
+  \btxnamefont {\btxlastnamefont {Milner}, Robin}\btxauthorcolon\ \btxtitlefont
+  {Automata, Languages and Programming: Seventh Colloquium Noordwijkerhout, the
+  Netherlands July 14--18, 1980}, \btxchapterlong {}\ On observing
+  nondeterminism and concurrency, \btxpageslong {}\ 299--309.
+\newblock \btxpublisherfont {Springer Berlin Heidelberg}, Berlin, Heidelberg,
+  1980\ifbtxprintISBN {, \mbox{\btxISBN~\btxISBNfont {978-3-540-39346-7}}}.
+\newblock {\latintext \btxurlfont{http://dx.doi.org/10.1007/3-540-10003-2_79}}.
+
 \bibitem {Hod97}
 \btxnamefont {\btxlastnamefont {Hodges}, Wilfrid}\btxauthorcolon\ \btxtitlefont
   {A Shorter Model Theory}.
@@ -135,6 +145,15 @@
   Monograph No. 65)}.
 \newblock \btxpublisherfont {The MIT Press}, 1971\ifbtxprintISBN {,
   \mbox{\btxISBN~\btxISBNfont {0262130769}}}.
+
+\bibitem {Par81}
+\btxnamefont {\btxlastnamefont {Park}, David}\btxauthorcolon\ \btxtitlefont
+  {Theoretical Computer Science: 5th GI-Conference Karlsruhe, March 23--25,
+  1981}, \btxchapterlong {}\ Concurrency and automata on infinite sequences,
+  \btxpageslong {}\ 167--183.
+\newblock \btxpublisherfont {Springer Berlin Heidelberg}, Berlin, Heidelberg,
+  1981\ifbtxprintISBN {, \mbox{\btxISBN~\btxISBNfont {978-3-540-38561-5}}}.
+\newblock {\latintext \btxurlfont{http://dx.doi.org/10.1007/BFb0017309}}.
 
 \bibitem {She75}
 \btxnamefont {\btxlastnamefont {Shelah}, Saharon}\btxauthorcolon\

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.25)  28 APR 2016 19:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.25)  29 APR 2016 17:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1317,31 +1317,41 @@ Package babel Info: Redefining finnish shorthand "|
 Package babel Info: Redefining finnish shorthand "|
 (babel)             in language  on input line 427.
  [11]
+Overfull \hbox (3.20612pt too wide) in paragraph at lines 501--502
+ [] 
+ []
+
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 484.
+(babel)             in language  on input line 524.
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 484.
- [12]
+(babel)             in language  on input line 524.
+[12]
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 495.
+(babel)             in language  on input line 540.
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 502.
-Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 502.
+(babel)             in language  on input line 540.
  [13]
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 520.
+(babel)             in language  on input line 541.
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 522.
+(babel)             in language  on input line 563.
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 522.
+(babel)             in language  on input line 563.
  [14]
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 531.
+(babel)             in language  on input line 566.
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 531.
+(babel)             in language  on input line 583.
+Package babel Info: Redefining finnish shorthand "|
+(babel)             in language  on input line 583.
  [15]
-(./Ehrenfeucht--Fraïssé-peleistä.bbl
+Package babel Info: Redefining finnish shorthand "|
+(babel)             in language  on input line 612.
+Package babel Info: Redefining finnish shorthand "|
+(babel)             in language  on input line 623.
+Package babel Info: Redefining finnish shorthand "|
+(babel)             in language  on input line 623.
+ [16] (./Ehrenfeucht--Fraïssé-peleistä.bbl
 Package babel Info: Redefining finnish shorthand "|
 (babel)             in language  on input line 1.
 
@@ -1390,10 +1400,10 @@ The language fre hasn't been loaded by babel. Add it to the
 options of the \usepackage{babel} command or to the global options.
 
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 130.
+(babel)             in language  on input line 119.
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 130.
-[16]
+(babel)             in language  on input line 119.
+[17]
 
 ! Package babelbib Error: Language ger in bibliography not loaded by babel.
 
@@ -1401,33 +1411,33 @@ See the babelbib package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.146 \btxselectlanguage {ger}
+l.165 \btxselectlanguage {ger}
                               
 The language ger hasn't been loaded by babel. Add it to the
 options of the \usepackage{babel} command or to the global options.
 
 )
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 555.
+(babel)             in language  on input line 647.
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 555.
- [17]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 555.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 555.
+(babel)             in language  on input line 647.
+ [18]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 647.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 647.
  (./Ehrenfeucht--Fraïssé-peleistä.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 555.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 555.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 647.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 647.
 Package rerunfilecheck Info: File `Ehrenfeucht--Fraïssé-peleistä.out' has
  not changed.
-(rerunfilecheck)             Checksum: 4AAC157773741FB688C2E165EBF84C7F;956.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 555.
+(rerunfilecheck)             Checksum: 6038EC91E83C7C23B950071A08ADBA54;1018.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 647.
  ) 
 Here is how much of TeX's memory you used:
- 20415 strings out of 493089
- 370559 string characters out of 6134841
- 486063 words of memory out of 5000000
- 23237 multiletter control sequences out of 15000+600000
- 65723 words of font info for 143 fonts, out of 8000000 for 9000
+ 20462 strings out of 493089
+ 371231 string characters out of 6134841
+ 501558 words of memory out of 5000000
+ 23273 multiletter control sequences out of 15000+600000
+ 66113 words of font info for 146 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,8n,57p,1008b,906s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
@@ -1446,11 +1456,11 @@ type1/public/lm/lmr8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public
 local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texl
 ive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/
 texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Ehrenfeucht--Fraïssé-peleistä.pdf (20 pages, 320411 byt
+Output written on Ehrenfeucht--Fraïssé-peleistä.pdf (21 pages, 330706 byt
 es).
 PDF statistics:
- 335 PDF objects out of 1000 (max. 8388607)
- 295 compressed objects within 3 object streams
- 78 named destinations out of 1000 (max. 500000)
- 17555 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 355 PDF objects out of 1000 (max. 8388607)
+ 313 compressed objects within 4 object streams
+ 83 named destinations out of 1000 (max. 500000)
+ 17563 words of extra memory for PDF output out of 20736 (max. 10000000)
 

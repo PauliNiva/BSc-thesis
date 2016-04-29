@@ -8,48 +8,50 @@ Warning--empty language in Bos93
 Warning--empty language in Ete96
 Warning--empty language in Gai82
 Warning--can't use both author and editor fields in Gra92
+Warning--can't use both author and editor fields in Hen80
 Warning--can't use both author and editor fields in Lip88
+Warning--can't use both author and editor fields in Par81
 Warning--empty language in Tho84
 Warning--empty booktitle in Tho87
-You've used 18 entries,
+You've used 20 entries,
             2783 wiz_defined-function locations,
-            796 strings with 9279 characters,
-and the built_in function-call counts, 7680 in all, are:
-= -- 749
-> -- 163
-< -- 13
-+ -- 72
-- -- 48
-* -- 705
-:= -- 1042
-add.period$ -- 50
-call.type$ -- 18
-change.case$ -- 72
+            816 strings with 9803 characters,
+and the built_in function-call counts, 8709 in all, are:
+= -- 852
+> -- 183
+< -- 17
++ -- 80
+- -- 54
+* -- 798
+:= -- 1168
+add.period$ -- 56
+call.type$ -- 20
+change.case$ -- 79
 chr.to.int$ -- 0
-cite$ -- 25
-duplicate$ -- 421
-empty$ -- 777
-format.name$ -- 77
-if$ -- 1736
+cite$ -- 29
+duplicate$ -- 479
+empty$ -- 879
+format.name$ -- 87
+if$ -- 1977
 int.to.chr$ -- 0
-int.to.str$ -- 18
-missing$ -- 30
-newline$ -- 103
-num.names$ -- 40
-pop$ -- 116
+int.to.str$ -- 20
+missing$ -- 34
+newline$ -- 113
+num.names$ -- 44
+pop$ -- 131
 preamble$ -- 1
-purify$ -- 59
+purify$ -- 66
 quote$ -- 0
-skip$ -- 259
+skip$ -- 300
 stack$ -- 0
-substring$ -- 500
-swap$ -- 180
-text.length$ -- 13
+substring$ -- 574
+swap$ -- 212
+text.length$ -- 17
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 62
-warning$ -- 7
-while$ -- 70
-width$ -- 20
-write$ -- 234
-(There were 7 warnings)
+type$ -- 66
+warning$ -- 9
+while$ -- 80
+width$ -- 22
+write$ -- 262
+(There were 9 warnings)
