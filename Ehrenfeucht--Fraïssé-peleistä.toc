@@ -4,10 +4,10 @@
 \contentsline {subsection}{\numberline {2.1}Relaatiot}{2}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}Kielet}{2}{subsection.2.2}
 \contentsline {subsection}{\numberline {2.3}Mallit}{3}{subsection.2.3}
-\contentsline {subsection}{\numberline {2.4}Isomorfia}{4}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.4}Isomorfia}{5}{subsection.2.4}
 \contentsline {subsection}{\numberline {2.5}Elementaarinen ekvivalenssi}{6}{subsection.2.5}
 \contentsline {section}{\numberline {3}EF-peli}{6}{section.3}
-\contentsline {subsection}{\numberline {3.1}Pelin kulku}{6}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.1}Pelin kulku}{7}{subsection.3.1}
 \contentsline {paragraph}{Todistus:}{7}{section*.2}
 \contentsline {subsection}{\numberline {3.2}EF-pelin ominaisuuksia}{10}{subsection.3.2}
 \contentsline {section}{\numberline {4}Sovelluksia}{10}{section.4}

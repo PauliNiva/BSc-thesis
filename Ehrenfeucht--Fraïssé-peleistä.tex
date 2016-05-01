@@ -76,11 +76,17 @@
 \author{Pauli Niva}
 \date{\today}
 \level{Kandidaatintutkielma}
-\abstract{Kirjoitan tiivistelmän vasta sitten kun lopullinen työ alkaa olla valmis}
+\abstract{Tämä kirjallisuuskatsaus esittelee Ehfenfeucht--Fraïssé-pelin, sen ominaisuuksia sekä miten ja missä sitä käytetään. Ehfenfeucht--Fraïssé-peli on malliteorian työkalu jonka avulla voidaan määritellä toteuttavatko kaksi matemaattista rakennelmaa samat predikaattilogiikan lauseet, eli ovatko rakennelmat elementaarisesti ekvivalentit. Malliteoria on matemaattisen logiikan ja laskettavuuden teorian osa-alue, joka tutkii matemaattisia rakennelmia, struktuureja, eli malleja. Malli koostuu perusjoukosta ja tämän alkioiden välisiä suhteita kuvaavista relaatioista ja funktioista.
+
+Ehfenfeucht--Fraïssé-pelin kehittivät 1900-luvun puolivälissä ranskalainen loogikko Roland Fraïssé ja puolan amerikkalainen matemaatikko ja tietojenkäsittelytieteilijä Andrzej Ehrenfeucht. Tämän pelin pääsovellusalue on todistuksissa, että jokin määrätty mallin ominaisuus ei ole ilmaistavissa predikaattilogiikan kielellä.
+
+Ehfenfeucht--Fraïssé-pelistä on kehitetty monia erilaisia variaatioita eri tarpeisiin ja eri logiikoille. Nämä pelit ovat erityisen tärkeitä äärellisten mallien teoriassa ja sen sovelluksissa tietojenkäsittelytieteessä, koska Ehfenfeucht--Fraïssé-pelit ovat yksi harvoista malliteorian tekniikoista jotka toimivat kun rajoitutaan äärettömästä äärelliseen. Monet muut yleisesti käytetyt tekniikat, kuten kompaktiusteoreema, eivät toimi äärellisillä malleilla.
+
+}
 
 % The following can be used to specify keywords and classification of the paper:
 
-\keywords{Ehrenfeucht--Fraïssé-peli,  äärellisten mallien teoria}
+\keywords{Ehrenfeucht--Fraïssé-peli, äärellisten mallien teoria}
 
 % classification according to ACM Computing Classification System (http://www.acm.org/about/class/)
 % This is probably mostly relevant for computer scientists
@@ -150,14 +156,14 @@ Tässä luvussa esitellään joitakin \textit{ensimmäisen kertaluvun predikaatt
 Olkoon $X$ jokin joukko. Joukon $X$ $n$\textit{-kertainen karteesinen tulo} tarkoittaa kaikkien joukon $X$ alkioiden $n$-pituisten jonojen joukkoa. Tätä merkitään $X^n$ tai vaihtoehtoisesti $X \times X \times \ldots \times X$, $n$ kertaa. Esimerkiksi joukko $\mathbb{R}^2$ on järjestettyjen reaalilukuparien joukko. Sen geometrinen vastine on taso. $\mathbb{R}^3$ on järjestettyjen reaalilukukolmikoiden joukko. Sen geometrinen vastine on kolmiulotteinen avaruus. 
 
 \begin{maar}
-Joukon $X$ \textit{kaksipaikkainen relaatio} $R$ on mikä tahansa joukko joukon $X$ alkioista muodostettuja pareja $(x, y)$, joiden molemmat alkiot ovat joukossa $X$, eli $R \subset X^2$.  Jos $(x, y) \in R$, sanotaan, että $x$ on $y$:n kanssa \textit{relaatiossa} $R$. Joukon $X$ kaksipaikkaista relaatiota $R$ sanotaan
+Joukon $X$ \textit{kaksipaikkainen relaatio} $R$ on mikä tahansa joukko joukon $X$ alkioista muodostettuja pareja $(x, y)$, joiden molemmat alkiot ovat joukossa $X$, eli $R \subset X^2$.  Jos $(x, y) \in R$, sanotaan, että $x$ on $y$:n kanssa \textit{relaatiossa} $R$. Joukon $X$ kaksipaikkainen relaatio $R$ on:
 \begin{itemize}
-\item \textit{refleksiiviseksi}, jos $(x, x) \in R$, kaikilla $x \in X$
-\item \textit{irrefleksiiviseksi}, jos $(x, x) \notin R$, kaikilla $x \in X$
-\item \textit{symmetriseksi}, jos $(x, y) \in R$, aina kun $(y, x) \in R$
-\item \textit{antisymmetriseksi}, jos $(x, y) \in R$ ja $(y, x) \in R$, niin $x = y$
-\item \textit{transitiiviseksi}, jos $(x, y) \in R$ ja $(y, z) \in R$, niin $(x, z) \in R$
-\item \textit{vertailulliseksi}, jos $(x, y) \in R$ tai $(y, x) \in R$, kaikilla $x, y \in X$, $x \neq y$
+\item \textit{refleksiivinen}, jos $(x, x) \in R$, kaikilla $x \in X$
+\item \textit{irrefleksiivinen}, jos $(x, x) \notin R$, kaikilla $x \in X$
+\item \textit{symmetrinen}, jos $(x, y) \in R$, aina kun $(y, x) \in R$
+\item \textit{antisymmetrinen}, aina kun seuraava ehto toteutuu: jos $(x, y) \in R$ ja $(y, x) \in R$, niin $x = y$
+\item \textit{transitiivinen}, aina kun seuraava ehto toteutuu: jos $(x, y) \in R$ ja $(y, z) \in R$, niin $(x, z) \in R$
+\item \textit{vertailullinen}, jos $(x, y) \in R$ tai $(y, x) \in R$, kaikilla $x, y \in X$, $x \neq y$
 \end{itemize}
 \end{maar}
 
@@ -564,7 +570,7 @@ Kongruenssilemma sanoo, että mallin ominaisuudet määräytyvät osiensa ominai
 Predikaattilogiikan ja tähtivapaiden lausekkeiden ekvivalenssi on hyvin tunnettu. Thomas ja Lippert esittelevät tähtivapaiden säännöllisten lausekkeiden joissa ylimääräinen vakio kiinnitetään johonkin kieleen, eli relativoidut tähtivapaat lausekkeet (relativized star-free expressions) ja ensimmäisen kertaluokan predikaattilogiikan eroja EF-pelin muunnoksen, konkatenaatiopelin, avulla. Tässä työssään he näyttävät että relativoidut tähtivapaat lausekkeet ovat heikompia kuin vastaavat ensimmäisen kertaluokan predikaattilogiikan lauseet. \cite{Lip88}
 
 \subsection{Bisimulaatio}
-Yksi tärkeä malliteoreettisten pelien sovellus automaattien ja tilasiirtymäsysteemien teoriassa on Parkin esittelemä \textit{bisimulaation} käsite \cite{Par81}. Bisimulaatiota voi tarkastella eräänlaisena osittaisisomorfismien ``perheenä'', joka vastaa rajoitettua EF-peliä, jossa osittaisisomorfismia on heikennetty niin että kuvauksen ei tarvitse olla enää injektiivinen. Vaikka klassisen, tässä tutkielmassa määritellyn, EF-pelin ja bisimulaation välillä on hyvin läheinen kytkös, niin ne on kehitetty kuitenkin hyvin pitkälti erillään toisistaan. Bisimulaatiota käytetään Hennessyn ja Milnerin modaalilogiikassa \cite{Hen80}. 
+Yksi tärkeä malliteoreettisten pelien sovellus automaattien ja tilasiirtymäsysteemien teoriassa on Parkin esittelemä \textit{bisimulaation} käsite \cite{Par81}. Bisimulaatiota voi tarkastella eräänlaisena osittaisisomorfismien ``perheenä'', joka vastaa rajoitettua EF-peliä, jossa osittaisisomorfismia on heikennetty niin että kuvauksen ei tarvitse olla enää injektiivinen. Vaikka klassisen, tässä tutkielmassa määritellyn, EF-pelin ja bisimulaation välillä on hyvin läheinen kytkös, niin ne on kehitetty kuitenkin hyvin pitkälti erillään toisistaan. Bisimulaatiota käytetään esimerkiksi Hennessyn ja Milnerin modaalilogiikassa \cite{Hen80}. 
 
 \textit{Hennessy-Milner modaalilogiikkaa} käytetään tilasiirtymäsysteemien omaisuuksien määrittelyyn. Tilasiirtymäsysteemit ovat hyvin paljon automaatteja muistuttavia struktuureja. Määritellään seuraavaksi bisimulaatio.
 
@@ -608,6 +614,8 @@ draw,processblue , text=blue , minimum width =1 cm}]
 {Bisimilaariset tilat on yhdistetty katkonuolilla};
 \end{tikzpicture}
 \end{center}
+
+Bisimulaation käsite mahdollistaa sen tutkimisen että mitä mallien ominaisuuksia on mahdollista kuvailla modaalilogiikan avulla ja mitä taas ei ole mahdollista kuvailla. Bisimulaatio on yksi modaalilogiikan tärkeimpiä työkaluja ja sopii mainiosta ohjelmien verifiointiin. Se onkin yksi verifioinnin ja samanaikaisuusteorian kulmakivistä. Sille löytyy myös käyttöä tekoälytutkimuksessa, lingvistiikassa ja filosofiassa.
 
 \section{Yhteenveto}
 Tässä tutkielmassa on tarkasteltu Ehrenfeucht--Fraïssé-pelejä ja näiden sovelluksia eri näkökulmista. Teoreettiselta kannalta tutkielmassa esiteltiin EF-peli, sen säännöt ja esiteltiin esimerkin avulla miten EF-peliä käytännössä pelataan. Lisäksi todistettiin, että Pelaajan II voittostrategia on ekvivalenssirelaatio joten voittostrategian avulla voidaan jakaa malleja ekvivalenssiluokkiin ja täten tarvittaessa samaistaa nämä mallit yhdeksi malliksi. Käytännön kannalta tutkielmassa on esimerkkien avulla esitelty miten EF-peliä sovelletaan määriteltävyyskysymyksissä ja todistuksissa. Kirjallisuutta ja tutkimuksia on esitelty syvällistä aiheeseen tutustumista helpottamaan.
