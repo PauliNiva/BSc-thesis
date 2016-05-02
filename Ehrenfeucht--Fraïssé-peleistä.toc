@@ -15,14 +15,8 @@
 \contentsline {subsection}{\numberline {4.2}Ensimm\IeC {\"a}isen kertaluokan predikaattilogiikan rajoitteet}{11}{subsection.4.2}
 \contentsline {subsection}{\numberline {4.3}Kongruenssiapulauseet}{14}{subsection.4.3}
 \contentsline {subsection}{\numberline {4.4}Bisimulaatio}{15}{subsection.4.4}
-\contentsline {section}{\numberline {5}Yhteenveto}{16}{section.5}
-\contentsline {section}{L\IeC {\"a}hteet}{17}{section*.3}
-\select@language {finnish}
-\select@language {finnish}
-\select@language {finnish}
-\select@language {finnish}
-\select@language {finnish}
-\select@language {finnish}
+\contentsline {section}{\numberline {5}Yhteenveto}{17}{section.5}
+\contentsline {section}{L\IeC {\"a}hteet}{18}{section*.3}
 \select@language {finnish}
 \select@language {finnish}
 \select@language {finnish}

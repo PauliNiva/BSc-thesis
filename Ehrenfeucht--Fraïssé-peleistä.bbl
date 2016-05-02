@@ -16,33 +16,28 @@
 \bibitem {Bos93}
 \btxnamefont {\btxlastnamefont {Bosse}, Uwe}\btxauthorcolon\ \btxtitlefont
   {\btxifchangecase {An ehrenfeucht-fraïssé game for fixpoint logic and
-  stratified fixpoint logic}{An Ehrenfeucht-Fraïssé Game for Fixpoint Logic
-  and Stratified Fixpoint Logic}}.
+  stratified fixpoint logic}{An Ehrenfeucht-Fraïssé game for fixpoint logic
+  and stratified fixpoint logic}}.
 \newblock \Btxinlong {}\ \btxtitlefont {Selected Papers from the Workshop on
-  Computer Science Logic}, CSL '92, \btxpageslong {}\ 100--114, London, UK, UK,
+  Computer Science Logic}, CSL '92, \btxpageslong {}\ 100--114, London, UK,
   1993. \btxpublisherfont {Springer-Verlag}\ifbtxprintISBN {,
   \mbox{\btxISBN~\btxISBNfont {3-540-56992-8}}}.
-\newblock {\latintext
-  \btxurlfont{http://dl.acm.org/citation.cfm?id=647842.736408}}.
 
-\btxselectlanguage {eng}
 \bibitem {Ehr61}
 \btxnamefont {\btxlastnamefont {Ehrenfeucht}, Andrzej}\btxauthorcolon\
   \btxjtitlefont {\btxifchangecase {An application of games to the completeness
   problem for formalized theories}{An application of games to the completeness
   problem for formalized theories}}.
 \newblock \btxjournalfont {Fundamenta Mathematicae}, 49(2):129--141, 1961.
-\newblock {\latintext \btxurlfont{http://eudml.org/doc/213582}}.
 
-\expandafter\btxselectlanguage\expandafter {\btxfallbacklanguage}
 \bibitem {Ete96}
 \btxnamefont {\btxlastnamefont {Etessami}, K.} \btxandlong {}\ \btxnamefont
   {\btxlastnamefont {Wilke}, T.}\btxauthorcolon\ \btxtitlefont
-  {\btxifchangecase {An until hierarchy for temporal logic}{An Until hierarchy
+  {\btxifchangecase {An until hierarchy for temporal logic}{An until hierarchy
   for temporal logic}}.
 \newblock \Btxinlong {}\ \btxtitlefont {Logic in Computer Science, 1996. LICS
-  '96. Proceedings., Eleventh Annual IEEE Symposium on}, \btxpageslong {}\
-  108--117, \btxprintmonthyear{.}{Jul}{1996}{long}.
+  '96. Proceedings., Eleventh Annual IEEE Symposium}, \btxpageslong {}\
+  108--117, 1996.
 
 \bibitem {Fag93}
 \btxnamefont {\btxlastnamefont {Fagin}, R.}, \btxnamefont {\btxlastnamefont
@@ -52,15 +47,14 @@
   NP vs. monadic co-NP}}.
 \newblock \Btxinlong {}\ \btxtitlefont {Structure in Complexity Theory
   Conference, 1993., Proceedings of the Eighth Annual}, \btxpageslong {}\
-  19--30, \btxprintmonthyear{.}{May}{1993}{long}.
+  19--30, 1993.
 
 \bibitem {Fag75}
 \btxnamefont {\btxlastnamefont {Fagin}, Ronald}\btxauthorcolon\ \btxjtitlefont
-  {\btxifchangecase {Monadic generalized spectra}{Monadic Generalized
-  Spectra}}.
+  {\btxifchangecase {Monadic generalized spectra}{Monadic generalized
+  spectra}}.
 \newblock \btxjournalfont {Mathematical Logic Quarterly}, 21(1):89--96, 1975.
 
-\btxselectlanguage {fre}
 \bibitem {Fra54}
 \btxnamefont {\btxlastnamefont {Fraïssé}, Roland}\btxauthorcolon\
   \btxjtitlefont {\btxifchangecase {Sur l'extension aux relations de quelques
@@ -68,34 +62,34 @@
   propriétés des ordres}}.
 \newblock \btxjournalfont {Annales scientifiques de l'École Normale
   Supérieure}, 71(4):363--388, 1954.
-\newblock {\latintext \btxurlfont{http://eudml.org/doc/81696}}.
 
-\expandafter\btxselectlanguage\expandafter {\btxfallbacklanguage}
 \bibitem {Gai82}
 \btxnamefont {\btxlastnamefont {Gaifman}, Haim}\btxauthorcolon\ \btxtitlefont
-  {\btxifchangecase {On local and non-local properties}{On Local and Non-Local
-  Properties}}.
+  {\btxifchangecase {On local and non-local properties}{On local and non-local
+  properties}}.
 \newblock \Btxinlong {}\ \btxnamefont {\btxlastnamefont {Stern}, J.}\
   (\btxeditorlong {}): \btxtitlefont {Proceedings of the Herbrand Symposium},
   \btxvolumelong {}\ \btxvolumefont {107} \btxofserieslong {}\ \btxtitlefont
-  {Studies in Logic and the Foundations of Mathematics}, \btxpageslong {}\ 105
-  -- 135. \btxpublisherfont {Elsevier}, 1982.
-\newblock {\latintext
-  \btxurlfont{http://www.sciencedirect.com/science/article/pii/S0049237X08718792}}.
+  {Studies in Logic and the Foundations of Mathematics}, \btxpageslong {}\
+  105--135. \btxpublisherfont {Elsevier}, 1982.
 
 \bibitem {Gra92}
 \btxnamefont {\btxlastnamefont {Gr{\"a}del}, Erich}\btxauthorcolon\
-  \btxtitlefont {Computer Science Logic: 5th Workshop, CSL '91 Berne,
-  Switzerland, October 7--11, 1991 Proceedings}, \btxchapterlong {}\ On
-  transitive closure logic, \btxpageslong {}\ 149--163.
-\newblock \btxpublisherfont {Springer Berlin Heidelberg}, Berlin, Heidelberg,
+  \btxtitlefont {\btxifchangecase {On transitive closure logic}{On transitive
+  closure logic}}.
+\newblock \Btxinlong {}\ \btxnamefont {\btxlastnamefont {B{\"o}rger}, Egon},
+  \btxnamefont {\btxlastnamefont {J{\"a}ger}, Gerhard}, \btxnamefont
+  {\btxlastnamefont {Kleine~B{\"u}ning}, Hans}\btxandcomma {} \btxandlong {}\
+  \btxnamefont {\btxlastnamefont {Richter}, Michael\btxfnamespacelong M.}\
+  (\btxeditorslong {}): \btxtitlefont {Computer Science Logic: 5th Workshop,
+  CSL '91 Berne, Switzerland, October 7--11, 1991 Proceedings}, \btxpageslong
+  {}\ 149--163. \btxpublisherfont {Springer Berlin Heidelberg},
   1992\ifbtxprintISBN {, \mbox{\btxISBN~\btxISBNfont {978-3-540-47285-8}}}.
-\newblock {\latintext \btxurlfont{http://dx.doi.org/10.1007/BFb0023764}}.
 
 \bibitem {Han65}
 \btxnamefont {\btxlastnamefont {Hanf}, William}\btxauthorcolon\ \btxtitlefont
   {\btxifchangecase {Model-theoretic methods in the study of elementary
-  logic}{Model-Theoretic Methods in the Study of Elementary Logic}}.
+  logic}{Model-theoretic methods in the study of elementary logic}}.
 \newblock \Btxinlong {}\ \btxnamefont {\btxlastnamefont {Addison},
   J.\btxfnamespacelong W.}\ (\btxeditorlong {}): \btxtitlefont {Journal of
   Symbolic Logic}, \btxpageslong {}\ 132--145. \btxpublisherfont {Amsterdam,
@@ -104,12 +98,14 @@
 \bibitem {Hen80}
 \btxnamefont {\btxlastnamefont {Hennessy}, Matthew} \btxandlong {}\
   \btxnamefont {\btxlastnamefont {Milner}, Robin}\btxauthorcolon\ \btxtitlefont
-  {Automata, Languages and Programming: Seventh Colloquium Noordwijkerhout, the
-  Netherlands July 14--18, 1980}, \btxchapterlong {}\ On observing
-  nondeterminism and concurrency, \btxpageslong {}\ 299--309.
-\newblock \btxpublisherfont {Springer Berlin Heidelberg}, Berlin, Heidelberg,
+  {\btxifchangecase {On observing nondeterminism and concurrency}{On observing
+  nondeterminism and concurrency}}.
+\newblock \Btxinlong {}\ \btxnamefont {\btxlastnamefont {Bakker}, Jaco~de}
+  \btxandlong {}\ \btxnamefont {\btxlastnamefont {Leeuwen}, Jan~van}\
+  (\btxeditorslong {}): \btxtitlefont {Automata, Languages and Programming:
+  Seventh Colloquium Noordwijkerhout, the Netherlands July 14--18, 1980},
+  \btxpageslong {}\ 299--309. \btxpublisherfont {Springer Berlin Heidelberg},
   1980\ifbtxprintISBN {, \mbox{\btxISBN~\btxISBNfont {978-3-540-39346-7}}}.
-\newblock {\latintext \btxurlfont{http://dx.doi.org/10.1007/3-540-10003-2_79}}.
 
 \bibitem {Hod97}
 \btxnamefont {\btxlastnamefont {Hodges}, Wilfrid}\btxauthorcolon\ \btxtitlefont
@@ -122,21 +118,23 @@
   E.}\btxauthorcolon\ \btxjtitlefont {\btxifchangecase {Application of model
   theoretic games to discrete linear orders and finite automata}{Application of
   model theoretic games to discrete linear orders and finite automata}}.
-\newblock \btxjournalfont {Information and Control}, 33(4):281 -- 303,
+\newblock \btxjournalfont {Information and Control}, 33(4):281--303,
   1977\ifbtxprintISSN {, \mbox{\btxISSN~\btxISSNfont {0019-9958}}}.
-\newblock {\latintext
-  \btxurlfont{http://www.sciencedirect.com/science/article/pii/S0019995877904430}}.
 
 \bibitem {Lip88}
 \btxnamefont {\btxlastnamefont {Lippert}, D.} \btxandlong {}\ \btxnamefont
-  {\btxlastnamefont {Thomas}, W.}\btxauthorcolon\ \btxtitlefont {Semigroups
-  Theory and Applications: Proceedings of a Conference held in Oberwolfach,
-  FRG, Feb. 23--Mar. 1, 1986}, \btxchapterlong {}\ Relativized star-free
-  expressions, first-order logic, and a concatenation game, \btxpageslong {}\
-  194--204.
-\newblock \btxpublisherfont {Springer Berlin Heidelberg}, Berlin, Heidelberg,
-  1988\ifbtxprintISBN {, \mbox{\btxISBN~\btxISBNfont {978-3-540-39225-5}}}.
-\newblock {\latintext \btxurlfont{http://dx.doi.org/10.1007/BFb0083433}}.
+  {\btxlastnamefont {Thomas}, W.}\btxauthorcolon\ \btxtitlefont
+  {\btxifchangecase {Relativized star-free expressions, first-order logic, and
+  a concatenation game}{Relativized star-free expressions, first-order logic,
+  and a concatenation game}}.
+\newblock \Btxinlong {}\ \btxnamefont {\btxlastnamefont {J{\"u}rgensen},
+  Helmut}, \btxnamefont {\btxlastnamefont {Lallement}, G{\'e}rard}\btxandcomma
+  {} \btxandlong {}\ \btxnamefont {\btxlastnamefont {Weinert},
+  Hanns\btxfnamespacelong Joachim}\ (\btxeditorslong {}): \btxtitlefont
+  {Semigroups Theory and Applications: Proceedings of a Conference held in
+  Oberwolfach, FRG, Feb. 23--Mar. 1, 1986}, \btxpageslong {}\ 194--204.
+  \btxpublisherfont {Springer Berlin Heidelberg}, 1988\ifbtxprintISBN {,
+  \mbox{\btxISBN~\btxISBNfont {978-3-540-39225-5}}}.
 
 \bibitem {McN71}
 \btxnamefont {\btxlastnamefont {McNaughton}, Robert} \btxandlong {}\
@@ -148,12 +146,13 @@
 
 \bibitem {Par81}
 \btxnamefont {\btxlastnamefont {Park}, David}\btxauthorcolon\ \btxtitlefont
-  {Theoretical Computer Science: 5th GI-Conference Karlsruhe, March 23--25,
-  1981}, \btxchapterlong {}\ Concurrency and automata on infinite sequences,
-  \btxpageslong {}\ 167--183.
-\newblock \btxpublisherfont {Springer Berlin Heidelberg}, Berlin, Heidelberg,
-  1981\ifbtxprintISBN {, \mbox{\btxISBN~\btxISBNfont {978-3-540-38561-5}}}.
-\newblock {\latintext \btxurlfont{http://dx.doi.org/10.1007/BFb0017309}}.
+  {\btxifchangecase {Concurrency and automata on infinite
+  sequences}{Concurrency and automata on infinite sequences}}.
+\newblock \Btxinlong {}\ \btxnamefont {\btxlastnamefont {Deussen}, Peter}\
+  (\btxeditorlong {}): \btxtitlefont {Theoretical Computer Science: 5th
+  GI-Conference Karlsruhe, March 23--25, 1981}, \btxpageslong {}\ 167--183.
+  \btxpublisherfont {Springer Berlin Heidelberg}, 1981\ifbtxprintISBN {,
+  \mbox{\btxISBN~\btxISBNfont {978-3-540-38561-5}}}.
 
 \bibitem {She75}
 \btxnamefont {\btxlastnamefont {Shelah}, Saharon}\btxauthorcolon\
@@ -162,15 +161,12 @@
 \newblock \btxjournalfont {Annals of Mathematics}, \btxpageslong {}\ 379--419,
   1975.
 
-\btxselectlanguage {ger}
 \bibitem {Tar35}
 \btxnamefont {\btxlastnamefont {Tarski}, Alfred}\btxauthorcolon\ \btxjtitlefont
   {\btxifchangecase {Grundzüge der systemenkalküls i}{Grundzüge der
-  Systemenkalküls I}}.
+  systemenkalküls I}}.
 \newblock \btxjournalfont {Fundamenta Mathematicae}, 25(1):503--526, 1935.
-\newblock {\latintext \btxurlfont{http://eudml.org/doc/212807}}.
 
-\expandafter\btxselectlanguage\expandafter {\btxfallbacklanguage}
 \bibitem {Tho84}
 \btxnamefont {\btxlastnamefont {Thomas}, Wolfgang}\btxauthorcolon\
   \btxjtitlefont {\btxifchangecase {An application of the
@@ -178,16 +174,6 @@
   of the Ehrenfeucht-Fra{\"\i}ss{\'e} game in formal language theory}}.
 \newblock \btxjournalfont {M{\'e}moires de la Soci{\'e}t{\'e} Math{\'e}matique
   de France}, 16:11--21, 1984.
-
-\bibitem {Tho87}
-\btxnamefont {\btxlastnamefont {Thomas}, Wolfgang}\btxauthorcolon\
-  \btxtitlefont {\btxifchangecase {Computation theory and logic}{Computation
-  Theory and Logic}}.
-\newblock \btxchapterlong {}\ A Concatenation Game and the Dot-depth Hierarchy,
-  \btxpageslong {}\ 415--426. \btxpublisherfont {Springer-Verlag}, London, UK,
-  UK, 1987\ifbtxprintISBN {, \mbox{\btxISBN~\btxISBNfont {0-387-18170-9}}}.
-\newblock {\latintext
-  \btxurlfont{http://dl.acm.org/citation.cfm?id=36545.36580}}.
 
 \bibitem {Vaa11}
 \btxnamefont {\btxlastnamefont {V{\"a}{\"a}n{\"a}nen}, J.}\btxauthorcolon\

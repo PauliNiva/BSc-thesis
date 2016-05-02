@@ -84,7 +84,7 @@ Ehfenfeucht--Fraïssé-peliä pelataan kahden pelaajan kesken kahdella mallilla.
 
 Kierroksen kulku on seuraavanlainen: Ensin pelaaja, joka pyrkii osoittamaan mallit erilaisiksi, valitsee malleista toisen ja sieltä jonkin alkion. Tämän jälkeen toinen pelaaja valitsee kuluvalla kierroksella valitsematta jääneestä mallista alkion. Toisena valitsevan pelaajan tarkoituksena on valita sellainen alkio, joka on ominaisuuksiltaan samanlainen kuin ensimmäisenä valinneen pelaajan valitsema alkio. Toisena valintansa tekevä pelaaja voittaa pelin, jos viimeisen kierroksen jälkeen kaikkien eri malleista valittujen alkioiden välillä on olemassa osittaisisomorfia. Muussa tapauksessa ensimmäisenä valinnut pelaaja voittaa.
 
-Ehrenfeucht--Fraïssé pelit ovat erityisen tärkeitä äärellisten mallien teoriassa ja sen sovelluksissa tietojenkäsittelytieteessä, koska Ehrenfeucht--Fraïssé-pelit ovat yksi harvoista malliteorian tekniikoista, jotka toimivat rajoituttaessa äärettömästä äärelliseen. Monet muut yleisesti käytetyt tekniikat, kuten kompaktiusteoreema, eivät toimi äärellisillä malleilla.}
+Ehrenfeucht--Fraïssé pelit ovat erityisen tärkeitä äärellisten mallien teoriassa ja sen sovelluksissa tietojenkäsittelytieteessä, koska Ehrenfeucht--Fraïssé-pelit ovat yksi harvoista malliteorian tekniikoista, jotka toimivat rajoituttaessa äärettömästä äärelliseen. Monet muut yleisesti käytetyt tekniikat, kuten kompaktisuusteoreema, eivät toimi äärellisillä malleilla.}
 
 % The following can be used to specify keywords and classification of the paper:
 
@@ -338,7 +338,7 @@ Koska relaatio $\sim_k$ on refleksiivinen, symmetrinen ja transitiivinen, niin s
 Kuten aikaisemmin todettiin, EF-pelistä on kehitetty monia erilaisia variaatioita, kuten esimerkiksi EF-peli verkoille (verkoilla voidaan esittää ensimmäisen kertaluokan predikaattilogiikan kaavoja. Verkon kaarethan ovat käytännössä relaatioita verkon pisteiden välillä). Havainnollistetaan nyt EF-pelin ideaa yksinkertaisella esimerkillä kahden kierroksen EF-pelillä verkoille $X$ ja $Y$, sekä esitetään samalla strategia $X \sim_k Y$, eli voittava strategia Pelaajalle II.
 
 \begin{esim}
-Tässä EF-pelissä verkoille ideana on, että rakennetaan pelaajien tekemistä valinnoista kahta uutta verkkoa $A$ ja $B$, siten että verkosta $X$ valittu solmu merkitään verkon $A$ solmuksi $a_i$ ja verkosta $Y$ valittu solmu verkon $B$ solmuksi $b_i$, jossa $i$ ilmaisee millä kierroksella valinta on tapahtunut. Uudet verkot $A$ ja $B$ rakennetaan helpottamaan tehtyjen valintojen ja näiden relaatioiden muodostaman kokonaisuuden hahmottamista ja hallintaa.
+Tässä EF-pelissä verkoille ideana on, että rakennetaan pelaajien tekemistä valinnoista kahta uutta verkkoa $A$ ja $B$, siten että verkosta $X$ valittu solmu merkitään verkon $A$ solmuksi $a_i$ ja verkosta $Y$ valittu solmu verkon $B$ solmuksi $b_i$, jossa $i$ ilmaisee millä kierroksella valinta on tapahtunut. Uudet verkot $A$ ja $B$ rakennetaan puhtaasti helpottamaan tehtyjen valintojen ja näiden relaatioiden muodostaman kokonaisuuden hahmottamista ja hallintaa.
 
 \begin{center}
 \begin{tikzpicture}[-latex ,auto ,node distance =4 cm and 5cm ,on grid ,
@@ -395,16 +395,18 @@ Jos Pelaaja I olisi tehnyt toisellakin kierroksella valintansa verkosta $X$:
 
 
 \section{Sovelluksia}
-EF-peli on teoreettisen tietojenkäsittelyn ja äärellisten mallien teorian työkalu jota pääasiassa käytetään määriteltävyyskysymyksiin ja todistusten apuna. Äärellisten mallien teoriaa ja sen menetelmää EF-peliä voidaan soveltaa tietojenkäsittelytieteessä muun muassa verifikoinnissa.
+EF-peli on teoreettisen tietojenkäsittelyn ja äärellisten mallien teorian työkalu jota pääasiassa käytetään määriteltävyyskysymyksiin ja todistusten apuna. Äärellisten mallien teoriaa ja sen menetelmää EF-peliä voidaan soveltaa tietojenkäsittelytieteessä muun muassa verifikoinnissa. 
+
+Alaluvussa 4.1 esitellään EF-pelin yleisiä sovellusaloja. Lisäksi esitellään metodologiateoreema sekä määritellään Boolen kysely ja esimerkin avulla havainnollistetaan miten metodologiateoreemaa käytetään sovelluksissa. Alaluvussa 4.2 käsitellään mitä ensimmäisen kertaluokan predikaattilogiikalla voi ilmaista ja mitä rajoitteita sillä on. Alaluvussa 4.3 määritellään kvanttoriaste ja esitellään miten EF-pelejä sovelletaan kongruenssiapulauseiden saamiseen. Alaluvussa 4.4 määritellään ja esitellään bisimulaatio, joka on eräänlainen heikennetty versio EF-pelistä.
 
 \subsection{Sovellusaloja}
 Äärelliset mallit voidaan koodata verkkoina, puina tai merkkijonoina. Tällöin niitä voidaan käyttää laskennan olioina ja siten niillä voidaan kuvata äärellistilallisia systeemejä ja tutkia näiden toiminnan oikeellisuutta. 
 
 Yksi sovellusala on tietokantateoria, koska relationaalinen malli samaistaa tietokannan äärellisen relaationaalisen struktuurin kanssa. Formaalin kielen kaavat voidaan siis ajatella ohjelmina, jotta niiden merkitystä struktuurissa voidaan arvioida. Ja toisinpäin, voidaan esittää jonkin laskennallisen vaativuusluokan kyselyitä jollakin formaalilla kielellä.
 
-Muita tietojenkäsittelytieteen osa-alueita joihin EF-peliä voi soveltaa on esimerkiksi vaativuusteoria, koska äärelliset mallit tarjoavat laskennan vaativuusluokkien loogisen karakterisoinnin ja mahdollistavat vaativuusteoreettisten tulosten todistamisen tätä kautta. Esimerkiksi $P = NP$ -ongelma redusoituu kysymykseksi: onko kahdella kiintopistelogiikalla sama ilmaisuvoima äärellisissä malleissa? Määriteltävyystulosten todistuksissa seuraava teoreema on keskeinen:
+Muita tietojenkäsittelytieteen osa-alueita joihin EF-peliä voi soveltaa on esimerkiksi vaativuusteoria, koska äärelliset mallit tarjoavat laskennan vaativuusluokkien loogisen karakterisoinnin ja mahdollistavat vaativuusteoreettisten tulosten todistamisen tätä kautta. Esimerkiksi $\mathrm{P} = \mathrm{NP}$ -ongelma redusoituu kysymykseksi: onko kahdella kiintopistelogiikalla sama ilmaisuvoima äärellisissä malleissa? Määriteltävyystulosten todistuksissa seuraava teoreema on keskeinen:
 
-\begin{lau}[Metodologia teoreema]
+\begin{lau}[Metodologiateoreema]
 Ei ole olemassa ensimmäisen kertaluvun predikaattilogiikan lausetta joka ilmaisee ominaisuuden $P$, jos ja vain jos, kaikilla $n \in \mathbb{Z}_+$, on olemassa mallit $A$ ja $B$, joille pätee:
 \begin{itemize}
 \item Ominaisuus $P$ on totta $A$:ssä.
@@ -413,7 +415,7 @@ Ei ole olemassa ensimmäisen kertaluvun predikaattilogiikan lausetta joka ilmais
 \end{itemize}
 \end{lau}
 
-Esitetään yksinkertainen relaatioalgebran ongelma esimerkkinä siitä miten metodologia teoreemaa käytetään määärittelemättömyystuloksia todistettaessa. Tässä esimerkissä käytämme Boolen kyselyä, joten ensimmäiseksi määrittelemme tämä tarkasti.
+Esitetään yksinkertainen relaatioalgebran ongelma esimerkkinä siitä miten metodologia teoreemaa käytetään määärittelemättömyystuloksia todistettaessa. Tässä esimerkissä käytämme Boolen kyselyä, joten ensimmäiseksi määrittelemme tämän tarkasti.
 
 \begin{maar}[Boolen kysely]
 Olkoon $M$ malli. Tällöin \textit{Boolen kysely} $Q$ on kuvaus $Q: M \to \{0, 1\}$ joka säilyy isomorfismeissa. Siis jos $A \cong B$, niin $Q(A) = Q(B)$
@@ -534,27 +536,27 @@ draw,processblue , text=blue , minimum width =1 cm}]
 Sijoittamalla kaavan $\psi$ relaatiosymbolin $E$ ilmentymien tilalle lauseessa $\neg \varphi$ voidaan nyt testata verkon $G$ parillisuutta. Edellisen esimerkin Boolen kyselyn ja sen yleistämisen verkoille perusteella tiedetään, ettei kyseinen testaus ole mahdollista, joten päädymme ristiriitaan. Täten ei ole olemassa ensimmäisen kertaluokan predikaattilogiikan lausetta $\varphi$ joka määrittelisi verkkojen yhtenäisyyden.
 \end{esim}
 
-Näiden lisäksi on hyvin monia muitakin verkkojen ominaisuuksia, joita ensimmäisen kertaluokan predikaattilogiikka ei pysty ilmaisemaan. Itse asiassa on osoitettu, että ensimmäisen kertaluokan predikaattilogiikka kykenee ilmaisemaan vain verkkojen lokaaleja ominaisuuksia \cite{Han65}. Hanf käytti tässä todistuksessaan EF-peliä, tarkemmin Fraïssén algebrallista versiota siitä. Sama lokaalisuus on osoitettu myöhemmin myös toisella metodilla, kvanttorien eliminoinnilla \cite{Gai82}. Nämä tulokset ovat motivoineet pyrkimyksiä kehittää ensimmäisen kertaluokan predikaattilogiikan laajennuksia verkoille, samoin kuin kehittämään näille omia EF-pelejä ilmaisuvoiman mittaamiseen. Tällaisia mittauksia on tehty muun muassa monadiselle toisen kertaluokan predikaattilogiikalle \cite{Fag75} \cite{Fag93}, transitiivisen sulkeuman logiikalle \cite{Gra92} ja erilaisille kiintopistelogiikoille \cite{Bos93}.
+Näiden lisäksi on hyvin monia muitakin verkkojen ominaisuuksia, joita ensimmäisen kertaluokan predikaattilogiikka ei pysty ilmaisemaan. Itse asiassa on osoitettu, että ensimmäisen kertaluokan predikaattilogiikka kykenee ilmaisemaan vain verkkojen lokaaleja ominaisuuksia \cite{Han65}. Hanf käytti tässä todistuksessaan EF-peliä, tarkemmin Fraïssén algebrallista versiota siitä. Sama lokaalisuus on osoitettu myöhemmin myös toisella metodilla, kvanttorien eliminoinnilla \cite{Gai82}. Nämä tulokset ovat motivoineet pyrkimyksiä kehittää ensimmäisen kertaluokan predikaattilogiikan laajennuksia verkoille, samoin kuin kehittämään näille omia EF-pelejä ilmaisuvoiman tutkimiseen. Tällaisia tutkimuksia on tehty muun muassa monadiselle toisen kertaluokan predikaattilogiikalle \cite{Fag75} \cite{Fag93}, transitiivisen sulkeuman logiikalle \cite{Gra92} ja erilaisille kiintopistelogiikoille \cite{Bos93}.
 
-Vaikka ensimmäisen kertaluokan logiikka on hyvin rajoittunut kieli esimerkiksi verkkojen ominaisuuksien ilmaisemiseen, niin kuitenkin sillä voi joitain hyödyllisiäkin kyselyitä verkkojen suhteen ilmaista. Esimerkiksi seuraavat lauseet ovat ilmaistavissa ensimmäisen kertaluokan predikaattilogiikalla (oletetaan, että $E$ on relaatio joka ilmaisee verkon solmujen välistä kaarta ja symbolit $x, y, z_i$ ovat solmuja):
+Vaikka ensimmäisen kertaluokan logiikka on hyvin rajoittunut kieli esimerkiksi verkkojen ominaisuuksien ilmaisemiseen, niin kuitenkin sillä voi joitain hyödyllisiäkin kyselyitä verkkojen suhteen ilmaista. Esimerkiksi seuraavat lauseet ovat ilmaistavissa ensimmäisen kertaluokan predikaattilogiikalla (oletetaan, että $E$ on relaatio joka ilmaisee verkon solmujen välistä kaarta ja symbolit $x, y, z_i, q$ ovat solmuja):
 
 \begin{itemize}
-\item ``solmulla $x$ on vähintään kaksi toisistaan eroavaa naapuria'' \[(\exists y)(\exists z)(\neg(y = z)\land E(x, y) \land E(x, z))\]
-\item ``jokaisella solmulla $x$ on vähintään kaksi toisistaan eroavaa naapuria'' \[(\forall x)(\exists y)(\exists z)(\neg(y = z)\land E(x, y) \land E(x, z))\]
+\item ``solmulla $x$ on vähintään kaksi toisistaan eroavaa naapuria'' \[(\exists y)(\exists q)(\neg(y = q) \land E(x, y) \land E(x, q))\]
+\item ``jokaisella solmulla $x$ on vähintään kaksi toisistaan eroavaa naapuria'' \[(\forall x)(\exists y)(\exists q)(\neg(y = q)\land E(x, y) \land E(x, q))\]
 \item ``on olemassa polku solmusta $x$ solmuun $y$ jonka pituus on $3$'' \[(\exists z_1)(\exists z_2)(E(x, z_1)\land E(z_1, z_2) \land E(z_2, y))\]
 \end{itemize}
 
-Verkkojen ohella EF-pelit ovat olleet hyödyllisiä ensimmäisen kertaluokan predikaattilogiikan ja formaalien kielten teorian määriteltävyyskysymysten välisen suhteen tutkimisessa. Erityisesti tähtivapaat säännölliset kielet (star-free regular languages) ovat olleet mielenkiinnon kohteena.
+Verkkojen ohella EF-pelit ovat olleet hyödyllisiä ensimmäisen kertaluokan predikaattilogiikan ja formaalien kielten teorian määriteltävyyskysymysten välisen suhteen tutkimisessa. Erityisesti \textit{ähtivapaat säännölliset kielet} (star-free regular languages) ovat olleet mielenkiinnon kohteena.
 
 \subsection{Kongruenssiapulauseet}
-Kieltä kutsutaan tähtivapaaaksi, jos sen pystyy kuvailemaan säännöllisenä lausekkeena joka on konstruoitu aakkoston symboleista, tyhjän joukon symbolista ja kaikista muista loogisista operaatioista, kuten konkatenaatiosta ja komplementista paitsi Kleenen tähdestä. Hyvin tunnettu tulos formaalien kielten teoriassa on, että kieli on ensimmäinen kertaluokka predikaattilogiikkamääriteltävä jos ja vain jos se on tähtivapaa \cite{McN71}. Tämän todistuksessa käytetään yleensä induktiota kvanttorisyvyyden suhteen kuten esimerkiksi Ladner tekee \cite{Lad77}.
+Kieltä kutsutaan \textit{tähtivapaaaksi}, jos sen pystyy kuvailemaan säännöllisenä lausekkeena joka on konstruoitu aakkoston symboleista, tyhjän joukon symbolista ja kaikista muista loogisista operaatioista, kuten konkatenaatiosta ja komplementista paitsi Kleenen tähdestä. Hyvin tunnettu tulos formaalien kielten teoriassa on, että kieli on määriteltävissä ensimmäinen kertaluokan predikaattilogiikan keinoin jos ja vain jos se on tähtivapaa \cite{McN71}. Tämän todistuksessa käytetään yleensä induktiota kvanttorisyvyyden suhteen kuten esimerkiksi Ladner tekee \cite{Lad77}.
 
 \begin{maar}[Kvanttoriaste]
 Ensimmäisen kertaluokan predikaattilogiikan kaavan $\varphi$ \textit{kvanttoriaste} $qr(\varphi)$ on sisäkkäisten kvanttorien syvyys ja se määritellään seuraavasti:
 \begin{itemize}
 \item Jos $\varphi$ on atomikaava, niin $qr(\varphi) = 0$.
 \item $qr(\neg \varphi) = qr(\varphi)$.
-\item $qr(\varphi_1 \land \varphi_2) = qr(\varphi_1 \lor \varphi_2) = max\{qr(\varphi_1, qr(\varphi_2)\}$
+\item $qr(\varphi_1 \land \varphi_2) = qr(\varphi_1 \lor \varphi_2) = max\{qr(\varphi_1), qr(\varphi_2)\}$
 \item $qr(\forall x \varphi) = qr(\exists x \varphi) = qr(\varphi) + 1$.
 \end{itemize}
 \end{maar}
@@ -562,14 +564,15 @@ Ensimmäisen kertaluokan predikaattilogiikan kaavan $\varphi$ \textit{kvanttoria
 Tähtivapaan kielen ja kielen ensimmäisen kertaluokkalogiikan määriteltävyyden välisen loogisen ekvivalenssin todistuksen induktioaskeleen kriittinen kohta on seuraava väite:
 
 \begin{lem}[Kongruenssilemma]
-Olkoon $s, s', t, t'$ sanoja yli aakkoston $\Sigma$ ja olkoon $S, S', T , T'$ näitä kuvailevia malleja. Tällöin: \[ S \cong_m S' \land T \cong_m T' \Longrightarrow S \cdot T \cong_m S' \cdot T' \]
+Sanan $w$ yli aakkoston $\Sigma$ voi esittää mallina $W = (\{1, \ldots, |w|\}, < R_1, \ldots, R_k$, jossa $R$ on yksipaikkainen relaatio, jossa $j \in R_i$ jos ja vain jos $j$:s kirjain sanasta $w$ kuuluu aakkostoon $\Sigma$. Olkoon $s, s', t, t'$ sanoja yli aakkoston $\Sigma$ ja olkoon $S, S', T , T'$ näitä kuvailevia malleja. Tällöin: \[ S \cong_p S' \land T \cong_p T' \Longrightarrow S \cdot T \cong_p S' \cdot T' \]
 \end{lem}
+Eli jos mallien $S$ ja $S'$ välillä on osittaisisomorfismi sekä mallien $T$ ja $T'$ välillä on osittaisisomorfismi, niin tällöin mallien $S$ ja $T$ konkatenaation ja mallien $S'$ ja $T'$ konkatenaation välillä on osittaisisomorfismi.
 
 Lemman todistus on EF-peliä käyttämällä hyvin suoraviivainen. Oletuksen nojalla Pelaajalla II on voittostrategia peleissä $EF_m(S, S')$ ja $EF_m(T, T')$. Pelaajan II voittostrategia pelille $EF_m(S \cdot T, S' \cdot T')$ on kompositio kummastakin oletuksen voittostrategiasta. Siis osille $S$ ja $S'$ käytetään ensimmäisen pelin voittostrategiaa ja osille $T$ ja $T'$ toisen pelin voittostrategiaa.
 
-Kongruenssilemma sanoo, että mallin ominaisuudet määräytyvät osiensa ominaisuuksien mukaan. Täten mallit voidaan myös rakentaa osista ja näiden ominaisuuksista. Kongruenssilemmat ovat tyypillisiä EF-pelien sovelluksia. Näitä on todistettu monille muille logiikoilla sekä sanoja monimutkaisemmille malleille. Esimerkiksi Shelah esittelee esimerkkejä monadisen logiikan kongruenssilemmoista lineaarijärjestyksille \cite{She75}. Thomas käyttää EF-pelejä todistaakseen kongruenssilemman ensimmäisen kertaluokan predikaattilogiikan muunnokselle jossa kaavat ovat prenex-normaalimuodossa ja kvanttorit määrätynlaisessa prefiksimuodossa \cite{Tho84}, sekä tähtivapaille säännöllisille lausekkeille \cite{Tho87}.
+Kongruenssilemma sanoo, että mallin ominaisuudet määräytyvät osiensa ominaisuuksien mukaan. Täten mallit voidaan myös rakentaa osista ja näiden ominaisuuksista. Kongruenssilemmat ovat tyypillisiä EF-pelien sovelluksia. Näitä on todistettu monille muille logiikoilla sekä sanoja monimutkaisemmille malleille. Esimerkiksi Shelah esittelee esimerkkejä monadisen logiikan kongruenssilemmoista lineaarijärjestyksille \cite{She75}. Wolfgang Thomas käyttää EF-pelejä todistaakseen kongruenssilemman ensimmäisen kertaluokan predikaattilogiikan muunnokselle, jossa kaavat ovat \textit{prenex-normaalimuodossa}, eli kaavat on muokattu niin, että kvanttorit ovat jonona kaavan alussa määrätynlaisessa järjestyksessä, jonka jälkeen seuraa kvanttoreilla sitomaton osuus\cite{Tho84}.
 
-Predikaattilogiikan ja tähtivapaiden lausekkeiden ekvivalenssi on hyvin tunnettu. Thomas ja Lippert esittelevät tähtivapaiden säännöllisten lausekkeiden joissa ylimääräinen vakio kiinnitetään johonkin kieleen, eli relativoidut tähtivapaat lausekkeet (relativized star-free expressions) ja ensimmäisen kertaluokan predikaattilogiikan eroja EF-pelin muunnoksen, konkatenaatiopelin, avulla. Tässä työssään he näyttävät että relativoidut tähtivapaat lausekkeet ovat heikompia kuin vastaavat ensimmäisen kertaluokan predikaattilogiikan lauseet. \cite{Lip88}
+Predikaattilogiikan ja tähtivapaiden lausekkeiden ekvivalenssi on hyvin tunnettu. Thomas ja Lippert esittelevät tähtivapaiden säännöllisten lausekkeiden joissa ylimääräinen vakio kiinnitetään johonkin kieleen, eli relativoidut tähtivapaat lausekkeet (relativized star-free expressions) ja ensimmäisen kertaluokan predikaattilogiikan eroja EF-pelin muunnoksen, konkatenaatiopelin, avulla. Tässä työssään he näyttävät että relativoidut tähtivapaat lausekkeet ovat heikompia kuin vastaavat ensimmäisen kertaluokan predikaattilogiikan lauseet \cite{Lip88}. 
 
 \subsection{Bisimulaatio}
 Yksi tärkeä malliteoreettisten pelien sovellus automaattien ja tilasiirtymäsysteemien teoriassa on Parkin esittelemä \textit{bisimulaation} käsite \cite{Par81}. Bisimulaatiota voi tarkastella eräänlaisena osittaisisomorfismien ``perheenä'', joka vastaa rajoitettua EF-peliä, jossa osittaisisomorfismia on heikennetty niin että kuvauksen ei tarvitse olla enää injektiivinen. Vaikka klassisen, tässä tutkielmassa määritellyn, EF-pelin ja bisimulaation välillä on hyvin läheinen kytkös, niin ne on kehitetty kuitenkin hyvin pitkälti erillään toisistaan. Bisimulaatiota käytetään esimerkiksi Hennessyn ja Milnerin modaalilogiikassa \cite{Hen80}. 
