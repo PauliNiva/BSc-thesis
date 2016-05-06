@@ -76,13 +76,9 @@
 \author{Pauli Niva}
 \date{\today}
 \level{Kandidaatintutkielma}
-\abstract{Tämä kirjallisuuskatsaus esittelee Ehrenfeucht--Fraïssé-pelin, sen ominaisuuksia sekä sitä, miten ja missä sitä käytetään. Ehrenfeucht--Fraïssé-peli on malliteorian työkalu, jonka avulla voidaan määritellä, toteuttavatko kaksi matemaattista rakennelmaa samat predikaattilogiikan lauseet eli ovatko rakennelmat elementaarisesti ekvivalentit. Malliteoria on matemaattisen logiikan ja laskettavuuden teorian osa-alue, joka tutkii matemaattisia rakennelmia. Näitä rakennelmia kutsutaan myös struktuureiksi tai malleiksi. Malli koostuu perusjoukosta ja tämän alkioiden välisiä suhteita kuvaavista relaatioista ja funktioista.
+\abstract{Tämä kirjallisuuskatsaus esittelee Ehrenfeucht--Fraïssé-pelin, sen ominaisuuksia sekä sitä, miten ja missä sitä käytetään. Ehrenfeucht--Fraïssé-peli on malliteorian työkalu, jonka avulla voidaan määritellä, toteuttavatko kaksi matemaattista rakennelmaa samat predikaattilogiikan lauseet eli ovatko rakennelmat elementaarisesti ekvivalentit. Malliteoria on matemaattisen logiikan ja laskettavuuden teorian osa-alue, joka tutkii matemaattisia rakennelmia. Näitä rakennelmia kutsutaan myös struktuureiksi tai malleiksi.
 
-Ehrenfeucht--Fraïssé-pelin ovat kehittäneet 1900-luvun puolivälissä ranskalainen loogikko Roland Fraïssé ja puolanamerikkalainen matemaatikko ja tietojenkäsittelytieteilijä Andrzej Ehrenfeucht. Pelin pääsovellusalue on todistuksissa, joissa osoitetaan, että jokin määrätty mallin ominaisuus ei ole ilmaistavissa predikaattilogiikan kielellä. Ehrenfeucht--Fraïssé-pelistä on kehitetty monia variaatioita eri tarpeisiin ja eri logiikoille.
-
-Ehfenfeucht--Fraïssé-peliä pelataan kahden pelaajan kesken kahdella mallilla. Toinen pelaajista pyrkii osoittamaan, että mallit ovat erilaiset. Toinen taas pyrkii osoittamaan, että mallit ovat elementaarisesti ekvivalentit. Peliä pelataan kierroksittain ja kierroksia on ennalta sovittu määrä.
-
-Kierroksen kulku on seuraavanlainen: Ensin pelaaja, joka pyrkii osoittamaan mallit erilaisiksi, valitsee malleista toisen ja sieltä jonkin alkion. Tämän jälkeen toinen pelaaja valitsee kuluvalla kierroksella valitsematta jääneestä mallista alkion. Toisena valitsevan pelaajan tarkoituksena on valita sellainen alkio, joka on ominaisuuksiltaan samanlainen kuin ensimmäisenä valinneen pelaajan valitsema alkio. Toisena valintansa tekevä pelaaja voittaa pelin, jos viimeisen kierroksen jälkeen kaikkien eri malleista valittujen alkioiden välillä on olemassa osittaisisomorfia. Muussa tapauksessa ensimmäisenä valinnut pelaaja voittaa.
+Pelin pääsovellusalue on todistuksissa, joissa osoitetaan, että jokin määrätty mallin ominaisuus ei ole ilmaistavissa predikaattilogiikan kielellä. Ehrenfeucht--Fraïssé-pelistä on kehitetty monia variaatioita eri tarpeisiin ja eri logiikoille.
 
 Ehrenfeucht--Fraïssé pelit ovat erityisen tärkeitä äärellisten mallien teoriassa ja sen sovelluksissa tietojenkäsittelytieteessä, koska Ehrenfeucht--Fraïssé-pelit ovat yksi harvoista malliteorian tekniikoista, jotka toimivat rajoituttaessa äärettömästä äärelliseen. Monet muut yleisesti käytetyt tekniikat, kuten kompaktisuusteoreema, eivät toimi äärellisillä malleilla.}
 
@@ -149,10 +145,10 @@ Tämä edestakaisin-menetelmä siis karakterisoi elementaarisen ekvivalenssin. I
 
 Tämän tutkielman tavoitteena on esitellä täsmällisesti, mutta kuitenkin samalla havainnollisesti EF-peliä ja sen hyödyllisyyttä matemaattisen logiikan ja tietojenkäsittelytieteen saralla. Tässä työssä esitellään joitain logiikan peruskäsitteitä, mutta työn seuraaminen edellyttää kuitenkin lukijalta yliopistotasoisen matematiikan perusteiden hallintaa ja joitain logiikan peruskäsitteiden tuntemista. Lukijan oletetaan esimerkiksi tuntevan joukon ja kuvauksien käsitteet.
 
-Luvussa kaksi esitellään lyhyesti peruskäsitteistö, kuten relaatiot, isomorfian, kielet ja mallit. Kolmannessa luvussa esittelen itse EF-pelin, sen kulun ja voittokriteerit ja -strategian, sekä todistetaan että toisen pelaajan voittostrategian avulla saadaan mallit jaettua \textit{ekvivalenssiluokkiin}. Lisäksi kolmannessa luvussa havainnollistetaan esimerkkin avulla miten peliä pelataan ja esitellään voittava samalla voittostrategia toiselle pelaajalle kyseisessä pelissä. Neljännessä kappaleessa esitellään EF-pelin sovellusaloja ja muutamia konkreettisia esimerkkejä siitä miten EF-peliä sovelletaan.
+Luvussa kaksi esitellään lyhyesti peruskäsitteistö, kuten relaatiot, isomorfian, kielet ja mallit. Kolmannessa luvussa esitellään itse EF-pelin, sen kulku ja voittokriteerit ja -strategia, sekä todistetaan että toisen pelaajan voittostrategian avulla saadaan mallit jaettua ekvivalenssiluokkiin. Neljännessä luvussa esitellään EF-pelin sovellusaloja ja muutamia konkreettisia esimerkkejä siitä miten EF-peliä sovelletaan.
 
 \section{Peruskäsitteitä}
-Tässä luvussa esitellään joitakin \textit{ensimmäisen kertaluvun predikaattilogiikan} peruskäsitteitä. Alaluku $2.1$ käsittelee relaatioita. Alaluvussa $2.2$ määritellään kieli ja sen alakäsitteet aakkosto, termit ja atomikaavat. Alaluvussa $2.3$ puolestaan määritellään mallin sekä alimallin käsitteet. $2.4$ keskittyy isomorfiaan ja osittaisisomorfiaan. Lisäksi kappaleessa esitellään Tarskin totuusmääritelmä. Alaluvussa $2.5$ määritellään elementaarinen ekvivalenssi ja tuodaan esiin isomorfian ja elementaarisen ekvivalenssin keskinäistä suhdetta. Peruskäsitteiden määrittelyssä seuraan karkeasti Wilfrid Hodgesia \cite{Hod97}.
+Tässä luvussa esitellään joitakin \textit{ensimmäisen kertaluvun predikaattilogiikan} peruskäsitteitä. Alaluku $2.1$ käsittelee relaatioita. Alaluvussa $2.2$ määritellään kieli ja sen alakäsitteet aakkosto, termit ja atomikaavat. Alaluvussa $2.3$ puolestaan määritellään mallin sekä alimallin käsitteet. Alaluku $2.4$ keskittyy isomorfiaan ja osittaisisomorfiaan. Lisäksi alaluvussa esitellään Tarskin totuusmääritelmä. Alaluvussa $2.5$ määritellään elementaarinen ekvivalenssi ja tuodaan esiin isomorfian ja elementaarisen ekvivalenssin keskinäistä suhdetta. Peruskäsitteiden määrittelyssä seuraan karkeasti Wilfrid Hodgesia \cite{Hod97}.
 
 \subsection{Relaatiot}
 Olkoon $X$ jokin joukko. Joukon $X$ $n$\textit{-kertainen karteesinen tulo} tarkoittaa kaikkien joukon $X$ alkioiden $n$-pituisten jonojen joukkoa. Tätä merkitään $X^n$ tai vaihtoehtoisesti $X \times X \times \ldots \times X$, $n$ kertaa. Esimerkiksi joukko $\mathbb{R}^2$ on järjestettyjen reaalilukuparien joukko. Sen geometrinen vastine on taso. $\mathbb{R}^3$ on järjestettyjen reaalilukukolmikoiden joukko. Sen geometrinen vastine on kolmiulotteinen avaruus. 
@@ -163,8 +159,8 @@ Joukon $X$ \textit{kaksipaikkainen relaatio} $R$ on mikä tahansa joukko joukon 
 \item \textit{refleksiivinen}, jos $(x, x) \in R$, kaikilla $x \in X$
 \item \textit{irrefleksiivinen}, jos $(x, x) \notin R$, kaikilla $x \in X$
 \item \textit{symmetrinen}, jos $(x, y) \in R$, aina kun $(y, x) \in R$
-\item \textit{antisymmetrinen}, aina kun seuraava ehto toteutuu: jos $(x, y) \in R$ ja $(y, x) \in R$, niin $x = y$
-\item \textit{transitiivinen}, aina kun seuraava ehto toteutuu: jos $(x, y) \in R$ ja $(y, z) \in R$, niin $(x, z) \in R$
+\item \textit{antisymmetrinen}, jos seuraava ehto toteutuu: jos $(x, y) \in R$ ja $(y, x) \in R$, niin $x = y$
+\item \textit{transitiivinen}, jos seuraava ehto toteutuu: jos $(x, y) \in R$ ja $(y, z) \in R$, niin $(x, z) \in R$
 \item \textit{vertailullinen}, jos $(x, y) \in R$ tai $(y, x) \in R$, kaikilla $x, y \in X$, $x \neq y$
 \end{itemize}
 \end{maar}
@@ -173,9 +169,9 @@ Joukon $X$ \textit{kaksipaikkainen relaatio} $R$ on mikä tahansa joukko joukon 
 Tässä alaluvussa määritellään aakkosto, termit, atomikaavat sekä ensimmäisen kertaluvun predikaattilogiikan kieli. Tarkemmin sanottuna, ei ole olemassa vain yhtä predikaattilogiikan kieltä, vaan jokaista aakkostoa kohden on oma kielensä, jolla voidaan puhua sen aakkoston malleista.
 
 \begin{maar}[Aakkosto]
-Olkoon $l, m$ ja $n$ kardinaalilukuja. \textit{Aakkosto} on joukko $L = \{R_i \mid i < l\} \cup \{c_i \mid i < m\} \cup \{f_i \mid i < n\}$ joka sisältää $l$ relaatiosymbolia $R_i$, $m$ vakiosymbolia $c_i$ ja $n$ funktiosymbolia $f_i$
+Olkoon $l, m$ ja $n$ kardinaalilukuja. \textit{Aakkosto} on joukko $L = \{R_i \mid i < l\} \cup \{c_i \mid i < m\} \cup \{f_i \mid i < n\}$, joka sisältää $l$ relaatiosymbolia $R_i$, $m$ vakiosymbolia $c_i$ ja $n$ funktiosymbolia $f_i$.
 \end{maar}
-Jokaiseen relaatioon $R$ liittyy \textit{paikkaluku} $\#R$, ilmaisemaan kuinka monipaikkainen kyseinen relaatio on. Samoin jokaiseen funktioon liittyy paikkaluku $\#f$ ilmaisemaan kuinka monipaikkainen funktio on kyseessä. Jos jokin kardinaaliluvuista on $0$, niin tällöin tätä vastaavia symboleja ei ole aakkostossa.
+Jokaiseen relaatioon $R$ liittyy \textit{paikkaluku} $\#R$ ilmaisemaan kuinka monipaikkainen kyseinen relaatio on. Samoin jokaiseen funktioon liittyy paikkaluku $\#f$ ilmaisemaan kuinka monipaikkainen funktio on kyseessä. Jos jokin kardinaaliluvuista on $0$, niin tällöin tätä vastaavia symboleja ei ole aakkostossa.
 
 \begin{maar}[Termit]
 Olkoon $R$ joukko relaatioita, $C$ joukko vakioita ja $F$ joukko funktioita jotka muodostavat aakkoston $L$. Olkoon $X$ joukko muuttujia. \textit{Termien} joukko $T$ yli aakkoston $L$ on joukko äärellisiä merkkijonoja joka määritellään seuraavasti:
@@ -197,7 +193,7 @@ Olkoon $R$ joukko relaatioita, $C$ joukko vakioita ja $F$ joukko funktioita jotk
 \begin{maar}[Kieli]
 Olkoon $A$ atomikaavojen joukko ja olkoon $X$ muuttujien joukko. \textit{Kieli} $K$ yli aakkoston $L$ on kokoelma merkkijonoja jotka muodostetaan rekursiivisesti atomikaavoista seuraavanlaisesti:
 \begin{itemize}
-\item Kaikki atomikaavat kuuluvat kieleen $K$, $A \subset K$.
+\item Kaikki atomikaavat kuuluvat kieleen $K$ eli $A \subset K$.
 \item Jos $\psi$ ja $\varphi \in K$, niin $\neg \varphi \in K$, $(\psi \lor \varphi) \in K$, $(\psi \land \varphi) \in K$, $(\psi \to \varphi) \in K$, sekä $(\psi \leftrightarrow \varphi) \in K$.
 \item Jos $\varphi \in K$ ja $x \in X$, niin $\forall x(\varphi) \in K$ ja $\exists x(\varphi) \in K$
 \end{itemize}
@@ -210,7 +206,7 @@ Tässä alaluvussa määritellään, mikä on \textit{malli} eli \textit{struktu
 \begin{maar}[Malli] Olkoon $L$ aakkosto ja olkoon $M$ epätyhjä joukko. Tällöin $L$\textit{-malli} koostuu seuraavista:
 \begin{itemize}
 \item Joukosta $M$.
-\item Relaatioista $R^M \subset M$, jokaiselle relaatiosymbolille $R \in L$, $\#R = n$, jossa $n\in \mathbb{Z}_+$.
+\item Relaatioista $R^M \subset M^n$, jokaiselle relaatiosymbolille $R \in L$, $\#R = n$, jossa $n\in \mathbb{Z}_+$.
 \item Vakioista $c^M \in M$, jokaiselle vakiosymbolille $c \in L$.
 \item Funktioista $f^M: M^m \rightarrow M$, jokaiselle funktiosymbolille $f \in L$, $\#f = m$, jossa $m\in \mathbb{Z}_+$.
 \end{itemize}
@@ -227,7 +223,7 @@ Oletaan, että $A$ on $L$-malli. $A$:n \textit{alimalli} $B$ on $L$-malli, jolle
 \begin{itemize}
 \item $B \subset A$
 \item jos $R \in L$ on relaatiosymboli ja $\#R = n \in \mathbb{Z}_+$, niin tällöin $R^B = R^A \cap B^n$
-\item jos $c \in L$ on vakiosymboli, niin tällöin $c^B = c^A$ ja $c^b \in B$
+\item jos $c \in L$ on vakiosymboli, niin tällöin $c^B = c^A$ ja $c^B \in B$
 \item jos $f \in L$ on funktiosymboli ja $\#f = n \in \mathbb{Z}_+$, niin tällöin $f^A(B^n) \subset B$ ja $f^B = f^A \restriction B^n$ eli $f^B$ on $f^A$:n rajoittuma osajoukkoon $B^n$. Siis $B$ on suljettu $f^A$:n suhteen.
 \end{itemize}
 \end{maar}
@@ -259,7 +255,7 @@ Toisin kuin isomorfismissa, osittaisisomorfismissa totuus ei välttämättä sä
 Edellä puhuttiin paljon totuudesta ja määritellään seuraavaksi mitä sillä tarkalleen ottaen tarkoitetaan.
 
 \begin{maar}[Tarski]
-Oletetaan, että $A$ on $L$-malli ja olkoon $L$ aakkosto ja $K$ kieli. Määritellään rekursiivisesti että kielen $K$ kaava $\varphi$ on totta $A$:ssa, eli $A$ toteuttaa $\varphi$, eli $A \models \varphi$ seuraavasti:
+Oletetaan, että $A$ on $L$-malli ja olkoon $L$ aakkosto ja $K$ kieli. Määritellään rekursiivisesti että kielen $K$ kaava $\varphi$ on totta $A$:ssa, eli $A$ toteuttaa $\varphi$:n, eli $A \models \varphi$ seuraavasti:
 \begin{itemize}
 \item Jos $\varphi$ on kaava $s = t$ jossa $s$ ja $t$ ovat termejä, niin $A \models \varphi$ jos ja vain jos $s^A = t^A$.
 \item Jos $\varphi$ on kaava $R(t_1, \ldots, t_n)$, missä $R$ on $n$-paikkainen relaatiosymboli ja $t_1, \ldots, t_n$ ovat termejä, niin $A \models \varphi$ jos ja vain jos $(t_1^A, \ldots, t_n^A) \in R$.
@@ -278,7 +274,7 @@ $ pätee $A \models \varphi$ kun muuttaja $x$ tulkitaan $a$:ksi.
 Siinä missä isomorfismi kuvailee kahden mallin rakenteellista samanlaisuutta, niin elementaarinen ekvivalenssi puolestaan vertailee malleja suhteessa käytettyyn kieleen.
 
 \begin{maar}[Elementaarinen ekvivalenssi]
-Olkoon $L$ aakkosto joka muodostaa kielen $K$. Olkoon $A$ ja $B$ kummatkin $L$-malleja. $A$:ta ja $B$:tä sanotaan \textit{elementaarisesti ekvivalenteiksi}, jos kaikilla lauseilla $S \in K$ pätee $A \vDash S \Longleftrightarrow B \models S$. Tätä merkitään $A \equiv B$
+Olkoon $L$ aakkosto joka muodostaa kielen $K$. Olkoon $A$ ja $B$ kummatkin $L$-malleja. $A$:ta ja $B$:tä sanotaan \textit{elementaarisesti ekvivalenteiksi}, jos kaikilla lauseilla $S \in K$ pätee $A \models S \Longleftrightarrow B \models S$. Tätä merkitään $A \equiv B$
 \end{maar}
 
 \begin{kor}
@@ -288,13 +284,11 @@ Jos $L$-mallit $A$ ja $B$ ovat isomorfiset, niin ne ovat elementaarisesti ekviva
 On huomattava, että tämä ei päde toisinpäin. Mallien $A$ ja $B$ välinen elementaarinen ekvivalenssi ei kerro mitään mallien isomorfisuudesta. 
 
 \section{EF-peli}
-\begin{huom}
-Jatkossa aakkostolla tarkoitetaan aina relationaalista aakkostoa, ellei toisin mainita.
-\end{huom}
-
 Tässä kappaleessa esitellään EF-peli, sen säännöt, strategian ja voittavan strategian käsitteet, joissa seuraan pitkälti Jouko Väänästä \cite{Vaa11} ja havainnollistetaan EF-peliä esimerkillä kahdelle verkolle.
 
-EF-pelissä ideana on, että peli on kahdelle pelaajalle, joita kutsutaan nimillä Pelaaja I ja Pelaaja II. Peliä pelataan kahdella mallilla $A$ ja $B$, joilla on sama aakkosto. Pelaaja II haluaa osoittaa, että kyseiset mallit ovat jossain määrin samankaltaiset, kun taas Pelaaja I haluaa osoittaa, että mallit ovat erilaiset. Pelissä on äärellinen määrä vuoroja ja vuorojen määrä on alussa sovittu.
+EF-pelissä ideana on, että peli on kahdelle pelaajalle, joita kutsutaan nimillä Pelaaja I ja Pelaaja II. Peliä pelataan kahdella mallilla $A$ ja $B$, joilla on sama relationaalinen aakkosto. \begin{huom}
+Jatkossa aakkostolla tarkoitetaan aina relationaalista aakkostoa, ellei toisin mainita.
+\end{huom} Pelaaja II haluaa osoittaa, että kyseiset mallit ovat jossain määrin samankaltaiset, kun taas Pelaaja I haluaa osoittaa, että mallit ovat erilaiset. Pelissä on äärellinen määrä vuoroja ja vuorojen määrä on alussa sovittu.
 
 \subsection{Pelin kulku}
 Pelin kulku kuvataan kirjallisuudessa lähes aina samalla tavalla. Määritellään aluksi mielivaltaisen kierroksen kulku ja kummankin pelaajan voittokriteerit.
@@ -308,7 +302,7 @@ Merkitään pelattavien kierrosten määrää luvulla $k \in \mathbb{Z}_+$. EF-p
 \end{maar}
 
 \begin{maar}[Voittokriteeri]
-Olkoon $a = (a_1, \ldots, a_i)$ mallista $A$ valitut alkiot ja $b = (b_1, \ldots, b_i)$ mallista $B$ valitut alkiot mielivaltaisella kierroksella $i$. Pelaajan II voittaa jos ja vain jos jokaisella kierroksella $i \leq n$ pari $(a, b)$ määrää osittaisen isomorfismin $A \rightarrow B$ eli on olemassa kuvaus $h: A \rightarrow B$, siten että $a \in A \mapsto b \in B$ Muussa tapauksessa Pelaaja I voittaa.
+Olkoon $a = (a_1, \ldots, a_i)$ mallista $A$ valitut alkiot ja $b = (b_1, \ldots, b_i)$ mallista $B$ valitut alkiot mielivaltaisella kierroksella $i$. Pelaajan II voittaa jos ja vain jos jokaisella kierroksella $i \leq n$ pari $(a_i, b_i)$ määrää osittaisen isomorfismin $A \rightarrow B$ eli on olemassa kuvaus $h: A \rightarrow B$, siten että $a_i \in A \mapsto b_i \in B$ Muussa tapauksessa Pelaaja I voittaa.
 \end{maar}
 
 \textit{Strategia} on joukko sääntöjä, joiden mukaan pelaaja tekee valintansa toisen pelaajan valinnasta riippuen. EF-pelissä kummallakin pelaajalla on koko ajan tiedossa mallit, niiden rakenne ja jo tehdyt valinnat, eli peli on \textit{täydellisen informaation peli}. Strategiaa, jota seuraamalla pelaaja voittaa pelin riippumatta mitä valintoja toinen pelajaa tekee kutsutaan \textit{voittavaksi strategiaksi}. Jos Pelaaja II:lla on voittava strategia EF-pelissä $EF_k(A, B)$, niin tätä merkitään $A \sim_k B$.
@@ -335,7 +329,7 @@ Koska relaatio $\sim_k$ on refleksiivinen, symmetrinen ja transitiivinen, niin s
 \end{tod}
 \\
 
-Kuten aikaisemmin todettiin, EF-pelistä on kehitetty monia erilaisia variaatioita, kuten esimerkiksi EF-peli verkoille (verkoilla voidaan esittää ensimmäisen kertaluokan predikaattilogiikan kaavoja. Verkon kaarethan ovat käytännössä relaatioita verkon pisteiden välillä). Havainnollistetaan nyt EF-pelin ideaa yksinkertaisella esimerkillä kahden kierroksen EF-pelillä verkoille $X$ ja $Y$, sekä esitetään samalla strategia $X \sim_k Y$, eli voittava strategia Pelaajalle II.
+Kuten aikaisemmin todettiin, EF-pelistä on kehitetty monia erilaisia variaatioita, kuten esimerkiksi EF-peli verkoille. Verkoilla voidaan esittää ensimmäisen kertaluokan predikaattilogiikan kaavoja. Verkon kaaret ovat relaatioita verkon pisteiden välillä. Havainnollistetaan nyt EF-pelin ideaa yksinkertaisella esimerkillä kahden kierroksen EF-pelillä verkoille $X$ ja $Y$, sekä esitetään samalla strategia $X \sim_k Y$, eli voittava strategia Pelaajalle II.
 
 \begin{esim}
 Tässä EF-pelissä verkoille ideana on, että rakennetaan pelaajien tekemistä valinnoista kahta uutta verkkoa $A$ ja $B$, siten että verkosta $X$ valittu solmu merkitään verkon $A$ solmuksi $a_i$ ja verkosta $Y$ valittu solmu verkon $B$ solmuksi $b_i$, jossa $i$ ilmaisee millä kierroksella valinta on tapahtunut. Uudet verkot $A$ ja $B$ rakennetaan puhtaasti helpottamaan tehtyjen valintojen ja näiden relaatioiden muodostaman kokonaisuuden hahmottamista ja hallintaa.
@@ -400,11 +394,11 @@ EF-peli on teoreettisen tietojenkäsittelyn ja äärellisten mallien teorian ty�
 Alaluvussa 4.1 esitellään EF-pelin yleisiä sovellusaloja. Lisäksi esitellään metodologiateoreema sekä määritellään Boolen kysely ja esimerkin avulla havainnollistetaan miten metodologiateoreemaa käytetään sovelluksissa. Alaluvussa 4.2 käsitellään mitä ensimmäisen kertaluokan predikaattilogiikalla voi ilmaista ja mitä rajoitteita sillä on. Alaluvussa 4.3 määritellään kvanttoriaste ja esitellään miten EF-pelejä sovelletaan kongruenssiapulauseiden saamiseen. Alaluvussa 4.4 määritellään ja esitellään bisimulaatio, joka on eräänlainen heikennetty versio EF-pelistä.
 
 \subsection{Sovellusaloja}
-Äärelliset mallit voidaan koodata verkkoina, puina tai merkkijonoina. Tällöin niitä voidaan käyttää laskennan olioina ja siten niillä voidaan kuvata äärellistilallisia systeemejä ja tutkia näiden toiminnan oikeellisuutta. 
+Kaikki äärelliset mallit voidaan koodata verkkoina, puina tai merkkijonoina \cite{Ebb99}. Tällöin niitä voidaan käyttää laskennan olioina ja siten niillä voidaan kuvata äärellistilallisia systeemejä ja tutkia näiden toiminnan oikeellisuutta. 
 
-Yksi sovellusala on tietokantateoria, koska relationaalinen malli samaistaa tietokannan äärellisen relaationaalisen struktuurin kanssa. Formaalin kielen kaavat voidaan siis ajatella ohjelmina, jotta niiden merkitystä struktuurissa voidaan arvioida. Ja toisinpäin, voidaan esittää jonkin laskennallisen vaativuusluokan kyselyitä jollakin formaalilla kielellä.
+Yksi sovellusala on tietokantateoria, koska relationaalinen malli samaistaa tietokannan äärellisen relaationaalisen struktuurin kanssa \cite{Luo10}. Formaalin kielen kaavat voidaan siis ajatella ohjelmina, jotta niiden merkitystä struktuurissa voidaan arvioida. Ja toisinpäin, voidaan esittää jonkin laskennallisen vaativuusluokan kyselyitä jollakin formaalilla kielellä.
 
-Muita tietojenkäsittelytieteen osa-alueita joihin EF-peliä voi soveltaa on esimerkiksi vaativuusteoria, koska äärelliset mallit tarjoavat laskennan vaativuusluokkien loogisen karakterisoinnin ja mahdollistavat vaativuusteoreettisten tulosten todistamisen tätä kautta. Esimerkiksi $\mathrm{P} = \mathrm{NP}$ -ongelma redusoituu kysymykseksi: onko kahdella kiintopistelogiikalla sama ilmaisuvoima äärellisissä malleissa? Määriteltävyystulosten todistuksissa seuraava teoreema on keskeinen:
+Muita tietojenkäsittelytieteen osa-alueita joihin EF-peliä voi soveltaa on esimerkiksi vaativuusteoria, koska äärelliset mallit tarjoavat laskennan vaativuusluokkien loogisen karakterisoinnin ja mahdollistavat vaativuusteoreettisten tulosten todistamisen tätä kautta. Esimerkiksi $\mathrm{P} \neq \mathrm{NP}$ -ongelma redusoituu kysymykseksi: onko kolmella värillä väritettävien suunnattujen verkkojen luokka määriteltävissä pienimmän kiintopisteen logiikassa \cite{Imm86}? Määriteltävyystulosten todistuksissa seuraava teoreema on keskeinen:
 
 \begin{lau}[Metodologiateoreema]
 Ei ole olemassa ensimmäisen kertaluvun predikaattilogiikan lausetta joka ilmaisee ominaisuuden $P$, jos ja vain jos, kaikilla $n \in \mathbb{Z}_+$, on olemassa mallit $A$ ja $B$, joille pätee:
@@ -418,24 +412,24 @@ Ei ole olemassa ensimmäisen kertaluvun predikaattilogiikan lausetta joka ilmais
 Esitetään yksinkertainen relaatioalgebran ongelma esimerkkinä siitä miten metodologia teoreemaa käytetään määärittelemättömyystuloksia todistettaessa. Tässä esimerkissä käytämme Boolen kyselyä, joten ensimmäiseksi määrittelemme tämän tarkasti.
 
 \begin{maar}[Boolen kysely]
-Olkoon $M$ malli. Tällöin \textit{Boolen kysely} $Q$ on kuvaus $Q: M \to \{0, 1\}$ joka säilyy isomorfismeissa. Siis jos $A \cong B$, niin $Q(A) = Q(B)$
+Olkoon $M$ malli. Tällöin \textit{Boolen kysely} $Q$ on kuvaus $Q: M \to \{0, 1\}$ joka säilyy isomorfismeissa. Siis jos $A \cong B$, niin $Q(A) = Q(B)$. Kuvauksen maalijoukon alkioista $1$ merkitsee totuusarvoa ``tosi'' ja $0$ totuusarvoa ``epätosi''.
 \end{maar}
 
 \begin{esim}
-Olkoon $A$ malli, joka sisältää vain vakioita. Tutkitaan Boolen kyselyä: onko $A$:ssa parillinen määrä alkioita? Konstruoidaan mallit $A$ ja $B$ todistusta varten seuraavanlaisiksi: $A_n \coloneqq \{a_1, \ldots, a_n\}$ ja $B_n \coloneqq \{b_1, \ldots, b_{n + 1}\}$, mielivaltaisella $n \in \mathbb{Z}_+$. Eli toisessa mallissa on yksi alkio enemmän kuin toisessa. Täten toinen malleista sisältää parittoman määrän alkioita ja toinen parillisen määrän alkioita.
+Olkoon $A$ malli, joka sisältää vain vakioita. Tutkitaan Boolen kyselyä: onko $A$:ssa parillinen määrä alkioita? Konstruoidaan mallit $A$ ja $B$ todistusta varten seuraavanlaisiksi: $A \coloneqq \{a_1, \ldots, a_n\}$ ja $B \coloneqq \{b_1, \ldots, b_{n + 1}\}$, mielivaltaisella $n \in \mathbb{Z}_+$. Eli toisessa mallissa on yksi alkio enemmän kuin toisessa. Täten toinen malleista sisältää parittoman määrän alkioita ja toinen parillisen määrän alkioita.
 
-Voittostrategia Pelaajalle II on sellainen, että jos Pelaaja I valitsee mielivaltaisella kierroksella $i$ alkion $a_i$, niin Pelaaja II yksinkertaisesti valitsee alkion $b_i$. Eli $A \sim_n B$ ja koska toisessa mallissa on parillinen ja toisessa pariton määrä alkioita, niin ominaisuus ``parillinen määrä alkioita'' on totta toisessa mallissa ja epätotta toisessa. Täten metodologia teoreeman nojalla Boolen kysely onko mallissa $A$ parillinen määrä alkioita ei ole määriteltävissä ensimmäisen kertaluvun predikaattilogiikan lauseeksi, eikä siten myöskään relaatioalgebran kyselyksi.
+Voittostrategia Pelaajalle II on sellainen, että Pelaaja I:den valitessa mielivaltaisella kierroksella $i$ alkion jommasta kummasta mallista, Pelaaja II yksinkertaisesti valitsee alkion toisesta mallista. Tämä strategia toimii, koska mallissa $B$ on yksi alkio enemmän kuin mikä pelattavien kierroksien määrä on, eikä mallien alkioilla ole mitään relaatioita keskenään. Koska $A \sim_n B$ ja koska toisessa mallissa on parillinen ja toisessa pariton määrä alkioita, niin ominaisuus ``parillinen määrä alkioita'' on totta toisessa mallissa ja epätotta toisessa. Täten metodologiateoreeman nojalla Boolen kysely onko mallissa $A$ parillinen määrä alkioita ei ole määriteltävissä ensimmäisen kertaluvun predikaattilogiikan lauseeksi, eikä siten myöskään relaatioalgebran kyselyksi.
 \end{esim}
 
-Edellinen esimerkki toimii suoraan verkoille, kunhan käsittää mallit $A$ ja $B$ verkoiksi ja alkiot verkon solmuiksi siten, että $a_i$:sta on kaari $a_{i + 1}$:ssaan ja niin edelleen, sekä vastavuoroisesti $B$:n samalla tavalla. Eli verkoille ei ole olemassa ensimmäisen kertaluokan predikaattilogiikan lausetta jolla voisi esittää ominaisuuden, että verkko sisältää parillisen määrän solmuja.
+Edellinen esimerkki voidaan muuttaa koskemaan verkkoja lisäämällä malleihin kaarirelaatio $R$. Mallin $A$alkiot ovat verkon solmuja siten, että solmusta $a_i$ on kaari solmuun $a_{i + 1}$ ja edelleen solmusta $a_{i + 1}$ on kaari solmuun $a_{i + 2}$ ja niin edelleen, kunnes saavutaan viimeiseen solmuun. Lisäksi viimeisestä solmusta on kaari takaisin ensimmäiseen solmuun. Vastavuoroisesti $B$ muodostetaan samalla tavalla. Eli verkoille ei ole olemassa ensimmäisen kertaluokan predikaattilogiikan lausetta jolla voisi esittää ominaisuuden, että verkko sisältää parillisen määrän solmuja.
 
 \subsection{Ensimmäisen kertaluokan predikaattilogiikan rajoitteet}
 Verkoilla on paljon ominaisuuksia jotka eivät ole ensimmäisen kertaluokan predikaattilogiikka määriteltäviä. Jos $G$ on äärellisten verkkojen luokka, niin esimerkiksi seuraavat kyselyt eivät ole ensimmäisen kertaluokan predikaattilogiikka määriteltävissä $G$:lle: transitiivinen sulkeuma, tasoverkkoisuus, Eulerilaisuus, Hamiltonilaisuus, $k$-värittyvyys, kaikilla $ k \geq 2$, asyklisyys, leikkaussolmu ja verkon yhtenäisyys.
 
 Todistetaan esimerkin vuoksi näistä epäsuorasti verkon yhtenäisyyden määrittelemättömyys.
 \begin{esim}
-Oletetaan että ensimmäisen kertaluokan predikaattilogiikan lause $\varphi$ määrittelee verkkojen yhtenäisyyden aakkostossa joka muodostuu binaarisesta relaatiosymbolista $E$. Olkoon $L$ jokin lineaarijärjestys. Muodostestaan lineaarijärjestyksestä $L$ suunnattu verkko $G$ seuraavanlaisesti: Määritellään seuraajarelaatio $S$ lineaarijärjestyksestä $L$ seuraavasti: \[S(x, y) \coloneqq (x < y) \land \forall z ((z \leq x) \lor (y \leq z))\]
-Määritellään että ensimmäisen kertaluokan predikaattilogiikan kaava $\psi(x, y)$ siten että $\psi(x, y)$ on toteutuva jos ja vain jos jokin seuraavista on totta:
+Oletetaan, että ensimmäisen kertaluokan predikaattilogiikan lause $\varphi$ määrittelee verkkojen yhtenäisyyden aakkostossa, joka muodostuu kaksipaikkaisesta relaatiosymbolista $E$. Olkoon $L$ jokin lineaarijärjestys. Muodostestaan lineaarijärjestyksestä $L$ suunnattu verkko $G$ seuraavanlaisesti: Määritellään ensimmäiseksi seuraajarelaatio $S$ lineaarijärjestyksestä $L$ \[S(x, y) \coloneqq (x < y) \land \forall z ((z \leq x) \lor (y \leq z))\]
+Määritellään ensimmäisen kertaluokan predikaattilogiikan kaava $\psi(x, y)$ siten, että $\psi(x, y)$ on toteutuva jos ja vain jos jokin seuraavista on totta:
 \begin{itemize}
 \item $\exists z (S(x, z) \land S(z, y)$, toisin sanoen $y$ on $x$:n seuraajan seuraaja.
 \item $\forall u (y \leq u) \land (\exists z(S(x, z) \land \forall u(u \leq z)))$, toisin sanoen $x$ on viimeisen alkion edeltäjä ja $y$ on ensimmäinen alkio.
@@ -546,10 +540,10 @@ Vaikka ensimmäisen kertaluokan logiikka on hyvin rajoittunut kieli esimerkiksi 
 \item ``on olemassa polku solmusta $x$ solmuun $y$ jonka pituus on $3$'' \[(\exists z_1)(\exists z_2)(E(x, z_1)\land E(z_1, z_2) \land E(z_2, y))\]
 \end{itemize}
 
-Verkkojen ohella EF-pelit ovat olleet hyödyllisiä ensimmäisen kertaluokan predikaattilogiikan ja formaalien kielten teorian määriteltävyyskysymysten välisen suhteen tutkimisessa. Erityisesti \textit{ähtivapaat säännölliset kielet} (star-free regular languages) ovat olleet mielenkiinnon kohteena.
+Verkkojen ohella EF-pelit ovat olleet hyödyllisiä ensimmäisen kertaluokan predikaattilogiikan ja formaalien kielten teorian määriteltävyyskysymysten välisen suhteen tutkimisessa. Erityisesti \textit{tähtivapaat säännölliset kielet} (star-free regular languages) ovat olleet mielenkiinnon kohteena.
 
 \subsection{Kongruenssiapulauseet}
-Kieltä kutsutaan \textit{tähtivapaaaksi}, jos sen pystyy kuvailemaan säännöllisenä lausekkeena joka on konstruoitu aakkoston symboleista, tyhjän joukon symbolista ja kaikista muista loogisista operaatioista, kuten konkatenaatiosta ja komplementista paitsi Kleenen tähdestä. Hyvin tunnettu tulos formaalien kielten teoriassa on, että kieli on määriteltävissä ensimmäinen kertaluokan predikaattilogiikan keinoin jos ja vain jos se on tähtivapaa \cite{McN71}. Tämän todistuksessa käytetään yleensä induktiota kvanttorisyvyyden suhteen kuten esimerkiksi Ladner tekee \cite{Lad77}.
+Kieltä kutsutaan \textit{tähtivapaaaksi}, jos sen pystyy kuvailemaan säännöllisenä lausekkeena, joka on konstruoitu aakkoston symboleista, tyhjän joukon symbolista ja kaikista muista loogisista operaatioista, kuten konkatenaatiosta ja komplementista paitsi Kleenen tähdestä. Hyvin tunnettu tulos formaalien kielten teoriassa on, että kieli on määriteltävissä ensimmäinen kertaluokan predikaattilogiikan keinoin jos ja vain jos se on tähtivapaa \cite{McN71}. Tämän todistuksessa käytetään yleensä induktiota kvanttorisyvyyden suhteen kuten esimerkiksi Ladner tekee \cite{Lad77}.
 
 \begin{maar}[Kvanttoriaste]
 Ensimmäisen kertaluokan predikaattilogiikan kaavan $\varphi$ \textit{kvanttoriaste} $qr(\varphi)$ on sisäkkäisten kvanttorien syvyys ja se määritellään seuraavasti:
@@ -561,26 +555,26 @@ Ensimmäisen kertaluokan predikaattilogiikan kaavan $\varphi$ \textit{kvanttoria
 \end{itemize}
 \end{maar}
 
-Tähtivapaan kielen ja kielen ensimmäisen kertaluokkalogiikan määriteltävyyden välisen loogisen ekvivalenssin todistuksen induktioaskeleen kriittinen kohta on seuraava väite:
+Esitellään miten EF-peliä käytetään tähtivapaan kielen ja kielen ensimmäisen kertaluokkalogiikan määriteltävyyden välisen loogisen ekvivalenssin todistamiseen. Edellä mainitun ekvivalenssin todistuksen induktioaskeleen kriittinen kohta on seuraava väite:
 
 \begin{lem}[Kongruenssilemma]
-Sanan $w$ yli aakkoston $\Sigma$ voi esittää mallina $W = (\{1, \ldots, |w|\}, < R_1, \ldots, R_k$, jossa $R$ on yksipaikkainen relaatio, jossa $j \in R_i$ jos ja vain jos $j$:s kirjain sanasta $w$ kuuluu aakkostoon $\Sigma$. Olkoon $s, s', t, t'$ sanoja yli aakkoston $\Sigma$ ja olkoon $S, S', T , T'$ näitä kuvailevia malleja. Tällöin: \[ S \cong_p S' \land T \cong_p T' \Longrightarrow S \cdot T \cong_p S' \cdot T' \]
+Sanan $w$ yli aakkoston $\Sigma = \{s_1, \ldots, s_k\}$ voi esittää mallina $W = (\{1, \ldots, |w|\}, <, R_1, \ldots, R_k)$, jossa $R_i$ on yksipaikkainen relaatio ja $j \in R_i$ jos ja vain jos $j$:s kirjain sanasta $w$ on $s_i$. Olkoon $s, s', t, t'$ sanoja yli aakkoston $\Sigma$ ja olkoon $S, S', T , T'$ näitä kuvailevia malleja. Tällöin: \[ S \cong_p S' \land T \cong_p T' \Longrightarrow S \cdot T \cong_p S' \cdot T' \]
 \end{lem}
-Eli jos mallien $S$ ja $S'$ välillä on osittaisisomorfismi sekä mallien $T$ ja $T'$ välillä on osittaisisomorfismi, niin tällöin mallien $S$ ja $T$ konkatenaation ja mallien $S'$ ja $T'$ konkatenaation välillä on osittaisisomorfismi.
+Eli jos mallien $S$ ja $S'$ välillä on osittaisisomorfismi sekä mallien $T$ ja $T'$ välillä on osittaisisomorfismi, niin tällöin mallien $S$ ja $T$ konkatenaation ja mallien $S'$ ja $T'$ konkatenaation välillä on osittaisisomorfismi. Mallien konkatenaation voi käsittää tässä tavalliseksi sanojen konkatenaatioksi, koska mallit ovat vain sanojen esitysmuotoja.
 
-Lemman todistus on EF-peliä käyttämällä hyvin suoraviivainen. Oletuksen nojalla Pelaajalla II on voittostrategia peleissä $EF_m(S, S')$ ja $EF_m(T, T')$. Pelaajan II voittostrategia pelille $EF_m(S \cdot T, S' \cdot T')$ on kompositio kummastakin oletuksen voittostrategiasta. Siis osille $S$ ja $S'$ käytetään ensimmäisen pelin voittostrategiaa ja osille $T$ ja $T'$ toisen pelin voittostrategiaa.
+Lemman todistus on EF-peliä käyttämällä hyvin suoraviivainen. Oletuksen nojalla Pelaajalla II on voittostrategia peleissä $EF_m(S, S')$ ja $EF_m(T, T')$, joten Pelaajan II voittostrategia pelille $EF_m(S \cdot T, S' \cdot T')$ on kompositio kummastakin oletuksen voittostrategiasta. Siis osille $S$ ja $S'$ käytetään ensimmäisen pelin voittostrategiaa ja osille $T$ ja $T'$ toisen pelin voittostrategiaa.
 
-Kongruenssilemma sanoo, että mallin ominaisuudet määräytyvät osiensa ominaisuuksien mukaan. Täten mallit voidaan myös rakentaa osista ja näiden ominaisuuksista. Kongruenssilemmat ovat tyypillisiä EF-pelien sovelluksia. Näitä on todistettu monille muille logiikoilla sekä sanoja monimutkaisemmille malleille. Esimerkiksi Shelah esittelee esimerkkejä monadisen logiikan kongruenssilemmoista lineaarijärjestyksille \cite{She75}. Wolfgang Thomas käyttää EF-pelejä todistaakseen kongruenssilemman ensimmäisen kertaluokan predikaattilogiikan muunnokselle, jossa kaavat ovat \textit{prenex-normaalimuodossa}, eli kaavat on muokattu niin, että kvanttorit ovat jonona kaavan alussa määrätynlaisessa järjestyksessä, jonka jälkeen seuraa kvanttoreilla sitomaton osuus\cite{Tho84}.
+Kongruenssilemma sanoo, että mallin ominaisuudet määräytyvät osiensa ominaisuuksien mukaan. Täten mallit voidaan myös rakentaa osista ja näiden ominaisuuksista. Kongruenssilemmat ovat tyypillisiä EF-pelien sovelluksia. Näitä on todistettu monille muille logiikoilla sekä sanoja monimutkaisemmille malleille. Esimerkiksi Shelah esittelee esimerkkejä monadisen logiikan kongruenssilemmoista lineaarijärjestyksille \cite{She75}. Wolfgang Thomas käyttää EF-pelejä todistaakseen kongruenssilemman ensimmäisen kertaluokan predikaattilogiikan muunnokselle, jossa kaavat ovat \textit{prenex-normaalimuodossa}, eli kaavat on muokattu niin, että kvanttorit ovat jonona kaavan alussa määrätynlaisessa järjestyksessä, jonka jälkeen seuraa kvanttoreilla sitomaton osuus \cite{Tho84}.
 
-Predikaattilogiikan ja tähtivapaiden lausekkeiden ekvivalenssi on hyvin tunnettu. Thomas ja Lippert esittelevät tähtivapaiden säännöllisten lausekkeiden joissa ylimääräinen vakio kiinnitetään johonkin kieleen, eli relativoidut tähtivapaat lausekkeet (relativized star-free expressions) ja ensimmäisen kertaluokan predikaattilogiikan eroja EF-pelin muunnoksen, konkatenaatiopelin, avulla. Tässä työssään he näyttävät että relativoidut tähtivapaat lausekkeet ovat heikompia kuin vastaavat ensimmäisen kertaluokan predikaattilogiikan lauseet \cite{Lip88}. 
+Predikaattilogiikan ja tähtivapaiden lausekkeiden ekvivalenssi on hyvin tunnettu. Thomas ja Lippert esittelevät EF-pelin muunnoksen, konkatenaatiopelin, jonka avulla he esittelevät ensimmäisen kertaluokan predikaattilogiikan ja \textit{relativoitujen tähtivapaiden säännöllisten lausekkeiden} (relativized star-free expressions) välisiä eroja. Tähtivapaa säännöllinen lauseke on relativoitu, jos siihen on lisätty ylimääräinen vakio ja tämä vakio kiinnitetään johonkin kieleen. Tässä työssään he näyttävät että relativoidut tähtivapaat lausekkeet ovat heikompia kuin vastaavat ensimmäisen kertaluokan predikaattilogiikan lauseet \cite{Lip88}.
 
 \subsection{Bisimulaatio}
 Yksi tärkeä malliteoreettisten pelien sovellus automaattien ja tilasiirtymäsysteemien teoriassa on Parkin esittelemä \textit{bisimulaation} käsite \cite{Par81}. Bisimulaatiota voi tarkastella eräänlaisena osittaisisomorfismien ``perheenä'', joka vastaa rajoitettua EF-peliä, jossa osittaisisomorfismia on heikennetty niin että kuvauksen ei tarvitse olla enää injektiivinen. Vaikka klassisen, tässä tutkielmassa määritellyn, EF-pelin ja bisimulaation välillä on hyvin läheinen kytkös, niin ne on kehitetty kuitenkin hyvin pitkälti erillään toisistaan. Bisimulaatiota käytetään esimerkiksi Hennessyn ja Milnerin modaalilogiikassa \cite{Hen80}. 
 
-\textit{Hennessy-Milner modaalilogiikkaa} käytetään tilasiirtymäsysteemien omaisuuksien määrittelyyn. Tilasiirtymäsysteemit ovat hyvin paljon automaatteja muistuttavia struktuureja. Määritellään seuraavaksi bisimulaatio.
+\textit{Hennessy-Milner modaalilogiikkaa} käytetään tilasiirtymäsysteemien omaisuuksien määrittelyyn. Tilasiirtymäsysteemit ovat hyvin paljon automaatteja muistuttavia struktuureja. Modaalilogiikka on propositiologiikan laajennus jossa propositiologiikan kieleen on lisätty uusia operaattoreita, joita kutsutaan \textit{modaalioperaattoreiksi} tai \textit{modaliteeteiksi}. Modaliteetti tarkoittaa jonkin asian tai tapahtuman laatua eli niiden tapaa olla. Modaalilogiikassa sen voi ajatella määrittävän tavan, jolla väite on tosi. Modaliteetin tarkempi määrittely ei ole tämän tutkielman kontekstissa oleellista. Määritellään seuraavaksi bisimulaatio.
 
 \begin{maar}[Bisimulaatio]
-Olkoon $M$ ja $M'$ malleja, jotka koostuvat solmujen (tilojen) joukosta $W$, solmujen välisestä Relaatiosta (kaarista) $R$ ja funktiosta $V$, joka liittää jokaiseen propositiosymboliin $p_i$ joukon $W$ osajoukon $V(p_i)$. Intuitiivisesti ajatellen joukko $V(p_i)$ on niiden tilojen joukko, jossa $p_i$ on tosi. \textit{Bisimulaatio} mallien $M$ ja $M'$ välillä on epätyhjä relaatio $B \subseteq W \times W'$, jolle pätee kaikilla $(w, w') \in B$ seuraavat ehdot:
+Olkoon $M$ ja $M'$ malleja, jotka koostuvat solmujen (tilojen) joukosta $W$, solmujen välisistä relaatioista (kaarista) $R$ ja funktiosta $V$, joka liittää jokaiseen propositiosymboliin $p_i$ joukon $W$ osajoukon $V(p_i)$. Intuitiivisesti ajatellen joukko $V(p_i)$ on niiden tilojen joukko, jossa $p_i$ on tosi. \textit{Bisimulaatio} mallien $M$ ja $M'$ välillä on epätyhjä relaatio $B \subseteq W \times W'$, jolle pätee kaikilla $(w, w') \in B$ seuraavat ehdot:
 \begin{itemize}
 \item Tilat $w$ ja $w'$ toteuttavat samat propositiosymbolit.
 \item Jos $(w, v) \in R$, niin on olemassa $v' \in W'$, jolle pätee $(w', v') \in R'$ ja $(v, v') \in B$.
@@ -589,7 +583,7 @@ Olkoon $M$ ja $M'$ malleja, jotka koostuvat solmujen (tilojen) joukosta $W$, sol
 Jos on olemassa jokin bisimulaatio $B$ mallien $M$ ja $M'$ välillä ja $(w, w') \in B$ niin sanotaan, että tilat ovat bisimilaarisia.
 \end{maar}
 
-Kaksi tilaa ovat siis bisimilaarisia, jos ja vain jos niiden toteuttamat propositiosymbolit sekä tilojen mahdolliset tilasiirtymät vastaavat toisiaan. Seuraava kuva havainnollistaa tilojen bisimilaarisuutta:
+Kaksi tilaa ovat siis bisimilaarisia, jos ja vain jos niiden toteuttamat propositiosymbolit sekä tilojen mahdolliset tilasiirtymät vastaavat toisiaan. Yleensä tilat nimetään siten, että niistä ilmenee tilan nimi, sekä tilan mahdollisesti toteuttamat propositiosymbolit. Seuraava kuva havainnollistaa tilojen bisimilaarisuutta:
 
 \begin{center}
 \begin{tikzpicture}[-latex ,auto ,node distance =2 cm and 2cm ,on grid ,
@@ -620,7 +614,7 @@ draw,processblue , text=blue , minimum width =1 cm}]
 \end{tikzpicture}
 \end{center}
 
-Bisimulaation käsite mahdollistaa sen tutkimisen että mitä mallien ominaisuuksia on mahdollista kuvailla modaalilogiikan avulla ja mitä taas ei ole mahdollista kuvailla. Bisimulaatio on yksi modaalilogiikan tärkeimpiä työkaluja ja sopii mainiosta ohjelmien verifiointiin. Se onkin yksi verifioinnin ja samanaikaisuusteorian kulmakivistä. Sille löytyy myös käyttöä tekoälytutkimuksessa, lingvistiikassa ja filosofiassa.
+Bisimulaation käsite mahdollistaa sen tutkimisen että mitä mallien ominaisuuksia on mahdollista kuvailla modaalilogiikan avulla ja mitä taas ei ole mahdollista kuvailla. Bisimulaatio on yksi modaalilogiikan tärkeimpiä työkaluja ja sopii mainiosta ohjelmien verifiointiin \cite{Bla01}. Se onkin yksi verifioinnin ja samanaikaisuusteorian kulmakivistä. Sille löytyy myös käyttöä tekoälytutkimuksessa, lingvistiikassa ja filosofiassa \cite{Bla06}.
 
 \section{Yhteenveto}
 Tässä tutkielmassa on tarkasteltu Ehrenfeucht--Fraïssé-pelejä ja näiden sovelluksia eri näkökulmista. Teoreettiselta kannalta tutkielmassa esiteltiin EF-peli, sen säännöt ja esiteltiin esimerkin avulla miten EF-peliä käytännössä pelataan. Lisäksi todistettiin, että Pelaajan II voittostrategia on ekvivalenssirelaatio joten voittostrategian avulla voidaan jakaa malleja ekvivalenssiluokkiin ja täten tarvittaessa samaistaa nämä mallit yhdeksi malliksi. Käytännön kannalta tutkielmassa on esimerkkien avulla esitelty miten EF-peliä sovelletaan määriteltävyyskysymyksissä ja todistuksissa. Kirjallisuutta ja tutkimuksia on esitelty syvällistä aiheeseen tutustumista helpottamaan.

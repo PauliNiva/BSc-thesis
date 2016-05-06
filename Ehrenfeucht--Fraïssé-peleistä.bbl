@@ -13,6 +13,24 @@
   \expandafter\btxselectlanguage\expandafter {\btxfallbacklanguage}
 
 \expandafter\btxselectlanguage\expandafter {\btxfallbacklanguage}
+\bibitem {Bla06}
+\btxnamefont {\btxlastnamefont {Blackburn}, Patrick}, \btxnamefont
+  {\btxlastnamefont {Benthem}, Johan\btxfnamespacelong F.\btxfnamespacelong
+  A.\btxfnamespacelong K.\btxfnamespacelong van}\btxandcomma {} \btxandlong {}\
+  \btxnamefont {\btxlastnamefont {Wolter}, Frank}\btxauthorcolon\ \btxtitlefont
+  {Handbook of Modal Logic, Volume 3 (Studies in Logic and Practical
+  Reasoning)}.
+\newblock \btxpublisherfont {Elsevier Science Inc.}, New York, NY, USA,
+  2006\ifbtxprintISBN {, \mbox{\btxISBN~\btxISBNfont {0444516905}}}.
+
+\bibitem {Bla01}
+\btxnamefont {\btxlastnamefont {Blackburn}, Patrick}, \btxnamefont
+  {\btxlastnamefont {Rijke}, Maarten~de}\btxandcomma {} \btxandlong {}\
+  \btxnamefont {\btxlastnamefont {Venema}, Yde}\btxauthorcolon\ \btxtitlefont
+  {Modal Logic, Cambridge Tracts in Theoretical Computer Science}.
+\newblock \btxpublisherfont {Cambridge University Press}, New York, NY, USA,
+  2001\ifbtxprintISBN {, \mbox{\btxISBN~\btxISBNfont {0-521-80200-8}}}.
+
 \bibitem {Bos93}
 \btxnamefont {\btxlastnamefont {Bosse}, Uwe}\btxauthorcolon\ \btxtitlefont
   {\btxifchangecase {An ehrenfeucht-fraïssé game for fixpoint logic and
@@ -22,6 +40,13 @@
   Computer Science Logic}, CSL '92, \btxpageslong {}\ 100--114, London, UK,
   1993. \btxpublisherfont {Springer-Verlag}\ifbtxprintISBN {,
   \mbox{\btxISBN~\btxISBNfont {3-540-56992-8}}}.
+
+\bibitem {Ebb99}
+\btxnamefont {\btxlastnamefont {Ebbinghaus}, Heinz\btxfnamespacelong Dieter}
+  \btxandlong {}\ \btxnamefont {\btxlastnamefont {Flum}, Jörg}\btxauthorcolon\
+  \btxtitlefont {Finite Model Theory}.
+\newblock \btxpublisherfont {Springer}, Berlin, 1999\ifbtxprintISBN {,
+  \mbox{\btxISBN~\btxISBNfont {3-540-65758-4}}}.
 
 \bibitem {Ehr61}
 \btxnamefont {\btxlastnamefont {Ehrenfeucht}, Andrzej}\btxauthorcolon\
@@ -35,9 +60,8 @@
   {\btxlastnamefont {Wilke}, T.}\btxauthorcolon\ \btxtitlefont
   {\btxifchangecase {An until hierarchy for temporal logic}{An until hierarchy
   for temporal logic}}.
-\newblock \Btxinlong {}\ \btxtitlefont {Logic in Computer Science, 1996. LICS
-  '96. Proceedings., Eleventh Annual IEEE Symposium}, \btxpageslong {}\
-  108--117, 1996.
+\newblock \Btxinlong {}\ \btxtitlefont {Logic in Computer Science, Proceedings
+  of Eleventh Annual IEEE Symposium}, \btxpageslong {}\ 108--117, 1996.
 
 \bibitem {Fag93}
 \btxnamefont {\btxlastnamefont {Fagin}, R.}, \btxnamefont {\btxlastnamefont
@@ -45,9 +69,9 @@
   {\btxlastnamefont {Vardi}, M.\btxfnamespacelong Y.}\btxauthorcolon\
   \btxtitlefont {\btxifchangecase {On monadic np vs. monadic co-np}{On monadic
   NP vs. monadic co-NP}}.
-\newblock \Btxinlong {}\ \btxtitlefont {Structure in Complexity Theory
-  Conference, 1993., Proceedings of the Eighth Annual}, \btxpageslong {}\
-  19--30, 1993.
+\newblock \Btxinlong {}\ \btxtitlefont {Proceedings of 1993 IEEE 8th Annual
+  Conference on Structure in Complexity Theory}, \btxpageslong {}\ 19--30,
+  1993.
 
 \bibitem {Fag75}
 \btxnamefont {\btxlastnamefont {Fagin}, Ronald}\btxauthorcolon\ \btxjtitlefont
@@ -82,9 +106,9 @@
   {\btxlastnamefont {Kleine~B{\"u}ning}, Hans}\btxandcomma {} \btxandlong {}\
   \btxnamefont {\btxlastnamefont {Richter}, Michael\btxfnamespacelong M.}\
   (\btxeditorslong {}): \btxtitlefont {Computer Science Logic: 5th Workshop,
-  CSL '91 Berne, Switzerland, October 7--11, 1991 Proceedings}, \btxpageslong
-  {}\ 149--163. \btxpublisherfont {Springer Berlin Heidelberg},
-  1992\ifbtxprintISBN {, \mbox{\btxISBN~\btxISBNfont {978-3-540-47285-8}}}.
+  Berne, Switzerland}, \btxpageslong {}\ 149--163. \btxpublisherfont {Springer
+  Berlin Heidelberg}, 1992\ifbtxprintISBN {, \mbox{\btxISBN~\btxISBNfont
+  {978-3-540-47285-8}}}.
 
 \bibitem {Han65}
 \btxnamefont {\btxlastnamefont {Hanf}, William}\btxauthorcolon\ \btxtitlefont
@@ -103,15 +127,21 @@
 \newblock \Btxinlong {}\ \btxnamefont {\btxlastnamefont {Bakker}, Jaco~de}
   \btxandlong {}\ \btxnamefont {\btxlastnamefont {Leeuwen}, Jan~van}\
   (\btxeditorslong {}): \btxtitlefont {Automata, Languages and Programming:
-  Seventh Colloquium Noordwijkerhout, the Netherlands July 14--18, 1980},
-  \btxpageslong {}\ 299--309. \btxpublisherfont {Springer Berlin Heidelberg},
-  1980\ifbtxprintISBN {, \mbox{\btxISBN~\btxISBNfont {978-3-540-39346-7}}}.
+  Seventh Colloquium Noordwijkerhout}, \btxpageslong {}\ 299--309.
+  \btxpublisherfont {Springer Berlin Heidelberg}, 1980\ifbtxprintISBN {,
+  \mbox{\btxISBN~\btxISBNfont {978-3-540-39346-7}}}.
 
 \bibitem {Hod97}
 \btxnamefont {\btxlastnamefont {Hodges}, Wilfrid}\btxauthorcolon\ \btxtitlefont
   {A Shorter Model Theory}.
 \newblock \btxpublisherfont {Cambridge University Press}, 1997\ifbtxprintISBN
   {, \mbox{\btxISBN~\btxISBNfont {0-521-58713-1}}}.
+
+\bibitem {Imm86}
+\btxnamefont {\btxlastnamefont {Immerman}, Neil}\btxauthorcolon\ \btxjtitlefont
+  {\btxifchangecase {Relational queries computable in polynomial
+  time}{Relational Queries Computable in Polynomial Time}}.
+\newblock \btxjournalfont {Information and Control}, 68:86--104, 1986.
 
 \bibitem {Lad77}
 \btxnamefont {\btxlastnamefont {Ladner}, Richard\btxfnamespacelong
@@ -132,9 +162,15 @@
   {} \btxandlong {}\ \btxnamefont {\btxlastnamefont {Weinert},
   Hanns\btxfnamespacelong Joachim}\ (\btxeditorslong {}): \btxtitlefont
   {Semigroups Theory and Applications: Proceedings of a Conference held in
-  Oberwolfach, FRG, Feb. 23--Mar. 1, 1986}, \btxpageslong {}\ 194--204.
-  \btxpublisherfont {Springer Berlin Heidelberg}, 1988\ifbtxprintISBN {,
-  \mbox{\btxISBN~\btxISBNfont {978-3-540-39225-5}}}.
+  Oberwolfach}, \btxpageslong {}\ 194--204. \btxpublisherfont {Springer Berlin
+  Heidelberg}, 1988\ifbtxprintISBN {, \mbox{\btxISBN~\btxISBNfont
+  {978-3-540-39225-5}}}.
+
+\bibitem {Luo10}
+\btxnamefont {\btxlastnamefont {Luosto}, Kerkko}\btxauthorcolon\
+  \btxpublisherfont {\btxtitlefont {Äärellisten mallien teoria,
+  kurssimateriaali}}.
+\newblock 2010.
 
 \bibitem {McN71}
 \btxnamefont {\btxlastnamefont {McNaughton}, Robert} \btxandlong {}\
@@ -150,8 +186,8 @@
   sequences}{Concurrency and automata on infinite sequences}}.
 \newblock \Btxinlong {}\ \btxnamefont {\btxlastnamefont {Deussen}, Peter}\
   (\btxeditorlong {}): \btxtitlefont {Theoretical Computer Science: 5th
-  GI-Conference Karlsruhe, March 23--25, 1981}, \btxpageslong {}\ 167--183.
-  \btxpublisherfont {Springer Berlin Heidelberg}, 1981\ifbtxprintISBN {,
+  GI-Conference Karlsruhe}, \btxpageslong {}\ 167--183. \btxpublisherfont
+  {Springer Berlin Heidelberg}, 1981\ifbtxprintISBN {,
   \mbox{\btxISBN~\btxISBNfont {978-3-540-38561-5}}}.
 
 \bibitem {She75}
