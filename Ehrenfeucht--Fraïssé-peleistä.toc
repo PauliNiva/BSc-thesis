@@ -4,19 +4,19 @@
 \contentsline {subsection}{\numberline {2.1}Relaatiot}{2}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}Kielet}{2}{subsection.2.2}
 \contentsline {subsection}{\numberline {2.3}Mallit}{3}{subsection.2.3}
-\contentsline {subsection}{\numberline {2.4}Isomorfia}{4}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.4}Isomorfia}{5}{subsection.2.4}
 \contentsline {subsection}{\numberline {2.5}Elementaarinen ekvivalenssi}{6}{subsection.2.5}
-\contentsline {section}{\numberline {3}EF-peli}{6}{section.3}
-\contentsline {subsection}{\numberline {3.1}Pelin kulku}{6}{subsection.3.1}
-\contentsline {paragraph}{Todistus:}{7}{section*.2}
+\contentsline {section}{\numberline {3}EF-peli}{7}{section.3}
+\contentsline {subsection}{\numberline {3.1}Pelin kulku}{7}{subsection.3.1}
+\contentsline {paragraph}{Todistus:}{8}{section*.2}
 \contentsline {subsection}{\numberline {3.2}EF-pelin ominaisuuksia}{10}{subsection.3.2}
-\contentsline {section}{\numberline {4}Sovelluksia}{10}{section.4}
-\contentsline {subsection}{\numberline {4.1}Sovellusaloja}{10}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Ensimm\IeC {\"a}isen kertaluokan predikaattilogiikan rajoitteet}{12}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Kongruenssiapulauseet}{14}{subsection.4.3}
-\contentsline {subsection}{\numberline {4.4}Bisimulaatio}{16}{subsection.4.4}
-\contentsline {section}{\numberline {5}Yhteenveto}{17}{section.5}
-\contentsline {section}{L\IeC {\"a}hteet}{18}{section*.3}
+\contentsline {section}{\numberline {4}Sovelluksia}{11}{section.4}
+\contentsline {subsection}{\numberline {4.1}Sovellusaloja}{12}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Ensimm\IeC {\"a}isen kertaluokan predikaattilogiikan rajoitteet}{13}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Kongruenssiapulauseet}{16}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Bisimulaatio}{17}{subsection.4.4}
+\contentsline {section}{\numberline {5}Yhteenveto}{18}{section.5}
+\contentsline {section}{L\IeC {\"a}hteet}{20}{section*.3}
 \select@language {finnish}
 \select@language {finnish}
 \select@language {finnish}

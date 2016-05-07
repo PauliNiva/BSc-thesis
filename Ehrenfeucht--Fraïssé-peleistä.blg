@@ -6,45 +6,45 @@ Database file #1: references-fi.bib
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Warning--empty language in Bla06
 Warning--empty publisher in Luo10
-You've used 24 entries,
+You've used 25 entries,
             2783 wiz_defined-function locations,
-            825 strings with 9652 characters,
-and the built_in function-call counts, 10090 in all, are:
-= -- 957
-> -- 276
+            832 strings with 9832 characters,
+and the built_in function-call counts, 10507 in all, are:
+= -- 997
+> -- 289
 < -- 11
-+ -- 112
-- -- 82
-* -- 952
-:= -- 1385
-add.period$ -- 56
-call.type$ -- 24
-change.case$ -- 100
++ -- 117
+- -- 86
+* -- 997
+:= -- 1445
+add.period$ -- 58
+call.type$ -- 25
+change.case$ -- 105
 chr.to.int$ -- 0
-cite$ -- 26
-duplicate$ -- 565
-empty$ -- 1012
-format.name$ -- 140
-if$ -- 2233
+cite$ -- 27
+duplicate$ -- 583
+empty$ -- 1052
+format.name$ -- 147
+if$ -- 2320
 int.to.chr$ -- 0
-int.to.str$ -- 24
-missing$ -- 39
-newline$ -- 112
-num.names$ -- 60
-pop$ -- 174
+int.to.str$ -- 25
+missing$ -- 41
+newline$ -- 116
+num.names$ -- 62
+pop$ -- 179
 preamble$ -- 1
-purify$ -- 83
+purify$ -- 87
 quote$ -- 0
-skip$ -- 330
+skip$ -- 340
 stack$ -- 0
-substring$ -- 598
-swap$ -- 246
+substring$ -- 634
+swap$ -- 252
 text.length$ -- 11
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 82
+type$ -- 86
 warning$ -- 2
-while$ -- 98
-width$ -- 26
-write$ -- 273
+while$ -- 102
+width$ -- 27
+write$ -- 283
 (There were 2 warnings)

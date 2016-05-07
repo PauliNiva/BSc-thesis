@@ -56,28 +56,28 @@
 \newblock \btxjournalfont {Fundamenta Mathematicae}, 49(2):129--141, 1961.
 
 \bibitem {Ete96}
-\btxnamefont {\btxlastnamefont {Etessami}, K.} \btxandlong {}\ \btxnamefont
-  {\btxlastnamefont {Wilke}, T.}\btxauthorcolon\ \btxtitlefont
+\btxnamefont {\btxlastnamefont {Etessami}, Kousha} \btxandlong {}\ \btxnamefont
+  {\btxlastnamefont {Thomas}, Wilke}\btxauthorcolon\ \btxtitlefont
   {\btxifchangecase {An until hierarchy for temporal logic}{An until hierarchy
   for temporal logic}}.
 \newblock \Btxinlong {}\ \btxtitlefont {Logic in Computer Science, Proceedings
   of Eleventh Annual IEEE Symposium}, \btxpageslong {}\ 108--117, 1996.
-
-\bibitem {Fag93}
-\btxnamefont {\btxlastnamefont {Fagin}, R.}, \btxnamefont {\btxlastnamefont
-  {Stockmeyer}, L.}\btxandcomma {} \btxandlong {}\ \btxnamefont
-  {\btxlastnamefont {Vardi}, M.\btxfnamespacelong Y.}\btxauthorcolon\
-  \btxtitlefont {\btxifchangecase {On monadic np vs. monadic co-np}{On monadic
-  NP vs. monadic co-NP}}.
-\newblock \Btxinlong {}\ \btxtitlefont {Proceedings of 1993 IEEE 8th Annual
-  Conference on Structure in Complexity Theory}, \btxpageslong {}\ 19--30,
-  1993.
 
 \bibitem {Fag75}
 \btxnamefont {\btxlastnamefont {Fagin}, Ronald}\btxauthorcolon\ \btxjtitlefont
   {\btxifchangecase {Monadic generalized spectra}{Monadic generalized
   spectra}}.
 \newblock \btxjournalfont {Mathematical Logic Quarterly}, 21(1):89--96, 1975.
+
+\bibitem {Fag93}
+\btxnamefont {\btxlastnamefont {Fagin}, Ronald}, \btxnamefont {\btxlastnamefont
+  {Stockmeyer}, Larry\btxfnamespacelong J.}\btxandcomma {} \btxandlong {}\
+  \btxnamefont {\btxlastnamefont {Vardi}, Moshe\btxfnamespacelong
+  Y.}\btxauthorcolon\ \btxtitlefont {\btxifchangecase {On monadic np vs.
+  monadic co-np}{On monadic NP vs. monadic co-NP}}.
+\newblock \Btxinlong {}\ \btxtitlefont {Proceedings of 1993 IEEE 8th Annual
+  Conference on Structure in Complexity Theory}, \btxpageslong {}\ 19--30,
+  1993.
 
 \bibitem {Fra54}
 \btxnamefont {\btxlastnamefont {Fraïssé}, Roland}\btxauthorcolon\
@@ -114,10 +114,9 @@
 \btxnamefont {\btxlastnamefont {Hanf}, William}\btxauthorcolon\ \btxtitlefont
   {\btxifchangecase {Model-theoretic methods in the study of elementary
   logic}{Model-theoretic methods in the study of elementary logic}}.
-\newblock \Btxinlong {}\ \btxnamefont {\btxlastnamefont {Addison},
-  J.\btxfnamespacelong W.}\ (\btxeditorlong {}): \btxtitlefont {Journal of
-  Symbolic Logic}, \btxpageslong {}\ 132--145. \btxpublisherfont {Amsterdam,
-  North-Holland Pub. Co.}, 1965.
+\newblock \Btxinlong {}\ \btxnamefont {\btxlastnamefont {Addison}, J.W.}\
+  (\btxeditorlong {}): \btxtitlefont {Journal of Symbolic Logic}, \btxpageslong
+  {}\ 132--145. \btxpublisherfont {Amsterdam, North-Holland Pub. Co.}, 1965.
 
 \bibitem {Hen80}
 \btxnamefont {\btxlastnamefont {Hennessy}, Matthew} \btxandlong {}\
@@ -136,6 +135,14 @@
   {A Shorter Model Theory}.
 \newblock \btxpublisherfont {Cambridge University Press}, 1997\ifbtxprintISBN
   {, \mbox{\btxISBN~\btxISBNfont {0-521-58713-1}}}.
+
+\bibitem {Hyt11}
+\btxnamefont {\btxlastnamefont {Hyttinen}, Tapani} \btxandlong {}\ \btxnamefont
+  {\btxlastnamefont {Kulikov}, Vadim}\btxauthorcolon\ \btxjtitlefont
+  {\btxifchangecase {Weak ehrenfeucht-fra{\"\i}ss{\'e} games}{Weak
+  Ehrenfeucht-Fra{\"\i}ss{\'e} games}}.
+\newblock \btxjournalfont {Transactions of the American Mathematical Society},
+  363(6):3309--3334, 2011.
 
 \bibitem {Imm86}
 \btxnamefont {\btxlastnamefont {Immerman}, Neil}\btxauthorcolon\ \btxjtitlefont
@@ -212,7 +219,7 @@
   de France}, 16:11--21, 1984.
 
 \bibitem {Vaa11}
-\btxnamefont {\btxlastnamefont {V{\"a}{\"a}n{\"a}nen}, J.}\btxauthorcolon\
+\btxnamefont {\btxlastnamefont {V{\"a}{\"a}n{\"a}nen}, Jouko}\btxauthorcolon\
   \btxtitlefont {Models and Games}.
 \newblock Cambridge Studies in Advanced Mathematics. \btxpublisherfont
   {Cambridge University Press}, 2011\ifbtxprintISBN {,

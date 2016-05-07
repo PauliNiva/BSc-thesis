@@ -139,9 +139,9 @@ Ehrenfeucht--Fraïssé pelit ovat erityisen tärkeitä äärellisten mallien teo
 %Peliteorian katsotaan yleisesti kuitenkin syntyneen omana alanaan kun John von Neumann julkaisi vuonna 1928 sarjan artikkeleita. Von Neumannin työ peliteorian saralla kulminoitui vuonna 1944 kirjaan \textit{Theory of Games and Economic Behavior}, jonka hän kirjoitti yhdessä Oscar Morgensternin kanssa. Kirjassa esitellään menetelmä optimaalisen ratkaisun löytämiseksi kahden henkilön nollasummapeleissä. Logiikkaan pelit ilmestyivät 1950 -luvulla, kun Leon Henkin ehdotti pelien käyttöä antamaan äärettömille kielille semantiikoita.
 Tässä tutkielmassa tarkastellaan Ehrenfeucht--Fraïssé-pelejä, joita sovelletaan logiikan määrittelemättömyystulosten todistamisessa ja tietojenkäsittelytieteessä esimerkiksi tietokantakielien ilmaisuvoiman mittaamisessa tai verkkojen tutkimisessa. Alunperin Ehrenfeucht--Fraïssé-peli määriteltiin ensimmäisen kertaluvun predikaattilogiikalle, mutta tästä pelistä kehitettiin nopeasti erilaisia variaatioita monille muille logiikoille, kuten esimerkiksi kiintopistelogiikalle (fixpoint logic) \cite{Bos93} ja lineaariselle temporaalilogiikalle (linear temporal logic) \cite{Ete96}.
 
-Ensimmäisen kerran \textit{elementaarinen ekvivalenssi} eli se, että täsmälleen samat ensimmäisen kertaluokan lauseet ovat tosia $A$:ssa ja $B$:ssä, esiintyy kirjallisuudessa Alfred Tarskin artikkelissa Grundzüge der Systemenkalküls 1 vuodelta 1935 \cite{Tar35}. Roland Fraïssé käytti väitöskirjatyössään \cite{Fra54} vuonna 1954 \textit{edestakaisin-menetelmää} osoittaakseen, että kaksi \textit{malliteoreettista struktuuria} ovat elementaarisesti ekvivalentit. Andrzej Ehrenfeucht muokkasi tästä Fraïssén menetelmästä peliteoreettisen version, joka julkaistiin vuonna 1961 Fundamenta Mathematicae:ssa \cite{Ehr61}. Nykyisin nämä pelit tunnetaan nimeltä \textit{Ehrenfeucht--Fraïssé-pelit} (jatkossa EF-pelit), joskus niitä kutsutaan myös edestakaisin-peleiksi.
+Ensimmäisen kerran \textit{elementaarisen ekvivalenssin} käsite eli sen, että täsmälleen samat ensimmäisen kertaluokan predikaattilogiikan lauseet ovat tosia \textit{malliteoreettisissa struktuureissa} $A$ ja $B$, esiintyy kirjallisuudessa Alfred Tarskin artikkelissa Grundzüge der Systemenkalküls 1 vuodelta 1935 \cite{Tar35}. Roland Fraïssé käytti väitöskirjatyössään \cite{Fra54} vuonna 1954 \textit{osittaisisomorfismia} osoittaakseen, että kaksi malliteoreettista struktuuria ovat elementaarisesti ekvivalentit. Andrzej Ehrenfeucht muokkasi tästä Fraïssén menetelmästä peliteoreettisen version, joka julkaistiin vuonna 1961 Fundamenta Mathematicae:ssa \cite{Ehr61}. Nykyisin nämä pelit tunnetaan nimeltä \textit{Ehrenfeucht--Fraïssé-pelit} (jatkossa EF-pelit), joskus niitä kutsutaan myös edestakaisin-peleiksi.
 
-Tämä edestakaisin-menetelmä siis karakterisoi elementaarisen ekvivalenssin. Ideana on, että \textit{isomorfismeja} tutkitaan yksi kerrallaan ja katsotaan, kuinka niitä voisi laajentaa suuremmille äärellisille isomorfismeille.
+Tämä osittaisisomorfismi siis karakterisoi elementaarisen ekvivalenssin. Tässä ideana on, että osittaisisomorfismeja tutkitaan yksi kerrallaan ja katsotaan, kuinka niitä voisi laajentaa suuremmille äärellisille isomorfismeille.
 
 Tämän tutkielman tavoitteena on esitellä täsmällisesti, mutta kuitenkin samalla havainnollisesti EF-peliä ja sen hyödyllisyyttä matemaattisen logiikan ja tietojenkäsittelytieteen saralla. Tässä työssä esitellään joitain logiikan peruskäsitteitä, mutta työn seuraaminen edellyttää kuitenkin lukijalta yliopistotasoisen matematiikan perusteiden hallintaa ja joitain logiikan peruskäsitteiden tuntemista. Lukijan oletetaan esimerkiksi tuntevan joukon ja kuvauksien käsitteet.
 
@@ -171,7 +171,7 @@ Tässä alaluvussa määritellään aakkosto, termit, atomikaavat sekä ensimmä
 \begin{maar}[Aakkosto]
 Olkoon $l, m$ ja $n$ kardinaalilukuja. \textit{Aakkosto} on joukko $L = \{R_i \mid i < l\} \cup \{c_i \mid i < m\} \cup \{f_i \mid i < n\}$, joka sisältää $l$ relaatiosymbolia $R_i$, $m$ vakiosymbolia $c_i$ ja $n$ funktiosymbolia $f_i$.
 \end{maar}
-Jokaiseen relaatioon $R$ liittyy \textit{paikkaluku} $\#R$ ilmaisemaan kuinka monipaikkainen kyseinen relaatio on. Samoin jokaiseen funktioon liittyy paikkaluku $\#f$ ilmaisemaan kuinka monipaikkainen funktio on kyseessä. Jos jokin kardinaaliluvuista on $0$, niin tällöin tätä vastaavia symboleja ei ole aakkostossa.
+Jokaiseen relaatiosymboliin $R$ liittyy \textit{paikkaluku} $\#R$ ilmaisemaan kuinka monipaikkainen kyseinen relaatio on. Samoin jokaiseen funktiosymboliin liittyy paikkaluku $\#f$ ilmaisemaan kuinka monipaikkainen funktio on kyseessä. Jos jokin kardinaaliluvuista on $0$, niin tällöin tätä vastaavia symboleja ei ole aakkostossa. Aakkostoa kutsutaan \textit{relationaaliseksi}, jos se ei sisällä funktiosymboleja tai vakiosymboleja.
 
 \begin{maar}[Termit]
 Olkoon $R$ joukko relaatioita, $C$ joukko vakioita ja $F$ joukko funktioita jotka muodostavat aakkoston $L$. Olkoon $X$ joukko muuttujia. \textit{Termien} joukko $T$ yli aakkoston $L$ on joukko äärellisiä merkkijonoja joka määritellään seuraavasti:
@@ -206,9 +206,9 @@ Tässä alaluvussa määritellään, mikä on \textit{malli} eli \textit{struktu
 \begin{maar}[Malli] Olkoon $L$ aakkosto ja olkoon $M$ epätyhjä joukko. Tällöin $L$\textit{-malli} koostuu seuraavista:
 \begin{itemize}
 \item Joukosta $M$.
-\item Relaatioista $R^M \subset M^n$, jokaiselle relaatiosymbolille $R \in L$, $\#R = n$, jossa $n\in \mathbb{Z}_+$.
+\item Relaatioista $R^M \subset M^n$, jokaiselle relaatiosymbolille $R \in L$, $\#R = n$, missä $n\in \mathbb{Z}_+$.
 \item Vakioista $c^M \in M$, jokaiselle vakiosymbolille $c \in L$.
-\item Funktioista $f^M: M^m \rightarrow M$, jokaiselle funktiosymbolille $f \in L$, $\#f = m$, jossa $m\in \mathbb{Z}_+$.
+\item Funktioista $f^M: M^m \rightarrow M$, jokaiselle funktiosymbolille $f \in L$, $\#f = m$, missä $m\in \mathbb{Z}_+$.
 \end{itemize}
 
 Relaatiota $R^M$ sanotaan relaatiosymbolin $R$ \textit{tulkinnaksi mallissa} $M$, funktiota $f^M$ sanotaan funktiosymbolin $f$ \textit{tulkinnaksi mallissa} $M$, ja alkiota $c^M$ kutsutaan vakiosymbolin $c$ \textit{tulkinnaksi mallissa} $M$.
@@ -219,7 +219,7 @@ Malli siis antaa aakkoston $L$ symboleille \textit{semantiikan} eli merkityksen 
 Relaatiosymbolin $R$ ja sen tulkinnan $R^M$ välistä eroa voidaan havainnollistaa esimerkiksi sanan ``tietokone'' ja tietokoneen välisellä erolla. Sana ``tietokone'' on suomen kieltä, joka koostuu yhdeksästä merkistä ja sitä voidaan käyttää muodostettaessa suomenkielisiä lauseita. Tietokone taas on fyysinen laite, joka käsittelee tietoa ohjelmointinsa mukaisesti, eikä sitä voida käyttää suomen kielen lauseiden osana. Lause ``Tietokoneeni on Mac'' on totta tai epätotta, riippuen siitä, mihin nimenomaiseen tietokoneeseen sana ``tietokone'' viittaa.
 
 \begin{maar}[Alimalli]
-Oletaan, että $A$ on $L$-malli. $A$:n \textit{alimalli} $B$ on $L$-malli, jolle pätee
+Oletaan, että $A$ on $L$-malli. $A$:n \textit{alimalli} on sellainen $L$-malli $B$, että
 \begin{itemize}
 \item $B \subset A$
 \item jos $R \in L$ on relaatiosymboli ja $\#R = n \in \mathbb{Z}_+$, niin tällöin $R^B = R^A \cap B^n$
@@ -231,7 +231,7 @@ Oletaan, että $A$ on $L$-malli. $A$:n \textit{alimalli} $B$ on $L$-malli, jolle
 Olkoon $A$ malli ja $B \subset A$. Tällöin $\langle B \rangle$ on pienin $A$:n alimalli, joka sisältää joukon $B$. 
 
 \subsection{Isomorfia}
-Mallien kohdalla puhuttiin ``jonkinlaisesta rakenteesta'', eli struktuurista. Mallin objekteille annettiin nimiä, symboleja ja kaavoja, jotta tätä rakennetta voitiin kuvailla. Malleja joiden rakenne on samanlainen kutsutaan isomorfisiksi.
+Mallien kohdalla puhuttiin ``jonkinlaisesta rakenteesta'', eli struktuurista. Mallin objekteille annettiin nimiä, symboleja ja kaavoja, jotta tätä rakennetta voitiin kuvailla. Malleja, joiden rakenne on samanlainen, kutsutaan isomorfisiksi.
 
 \begin{maar}[Isomorfismi]
 Oletetaan, että $L$ on aakkosto ja $A$ sekä $B$ ovat $L$-malleja. Kuvaus $g: A \rightarrow B$ on \textit{isomorfismi} mallista $A$ mallille $B$, jos
@@ -247,10 +247,10 @@ Jos on olemassa isomorfinen kuvaus $A \rightarrow B$, niin sanotaan, että $A$ j
 Isomorfia mallien välillä on refleksiivinen, symmetrinen ja transitiivinen. Jotta mallien välillä voi olla isomorfia, niin mallien täytyy olla saman kokoiset, sillä muuten niiden välillä ei voi olla bijektiota, eikä siten isomorfiaakaan. EF-pelien kannalta tärkeä isomorfian ominaisuus on, että se säilyttää totuuden.
 
 \begin{maar}[Osittaisisomorfismi]
-Olkoon $L$ aakkosto sekä olkoon $A$ ja $B$ kummatkin $L$-malleja. Olkoon $A' \subset A$ ja $B' \subset B$. Lisäksi olkoon $f: A' \rightarrow B'$. Jos on olemassa isomorfismi $g: \langle A' \rangle \rightarrow \langle B' \rangle$, siten että $g \restriction A' = f$ eli kuvaus $g$ on kuvauksen $f$ rajoittuma osajoukkoon $A'$. Tällöin kuvausta $f$ kutsutaan \textit{osittaisisomorfismiksi} $A \rightarrow B$ ja tätä merkitään $A \cong_p B$.
+Olkoon $L$ aakkosto sekä olkoot $A$ ja $B$ kumpikin $L$-malleja. Olkoon $A' \subset A$ ja $B' \subset B$. Lisäksi olkoon $f: A' \rightarrow B'$. Kuvausta $f$ kutsutaan \textit{osittaisisomorfismiksi}, jos on olemassa isomorfismi $g: \langle A' \rangle \rightarrow \langle B' \rangle$, jolle $g \restriction A' = f$ eli kuvaus $f$ on kuvauksen $g$ rajoittuma osajoukkoon $A'$. Tästä käytetään merkintää $A \cong_p B$.
 \end{maar}
 
-Toisin kuin isomorfismissa, osittaisisomorfismissa totuus ei välttämättä säily. Joissain tilanteissa osittaisisomorfismi kuitenkin säilyttää totuuden. Erityisesti näin on \textit{relationaalisten} aakkostojen, eli aakkostojen jotka sisältävät vain relaatiosymboleja ja vakioita, tapauksessa.
+Toisin kuin isomorfismissa, osittaisisomorfismissa totuus ei välttämättä säily. Joissain tilanteissa osittaisisomorfismi kuitenkin säilyttää totuuden. Erityisesti näin on relationaalisten aakkostojen tapauksessa.
 
 Edellä puhuttiin paljon totuudesta ja määritellään seuraavaksi mitä sillä tarkalleen ottaen tarkoitetaan.
 
@@ -276,19 +276,31 @@ Siinä missä isomorfismi kuvailee kahden mallin rakenteellista samanlaisuutta, 
 \begin{maar}[Elementaarinen ekvivalenssi]
 Olkoon $L$ aakkosto joka muodostaa kielen $K$. Olkoon $A$ ja $B$ kummatkin $L$-malleja. $A$:ta ja $B$:tä sanotaan \textit{elementaarisesti ekvivalenteiksi}, jos kaikilla lauseilla $S \in K$ pätee $A \models S \Longleftrightarrow B \models S$. Tätä merkitään $A \equiv B$
 \end{maar}
-
+Toisin sanoen, jos kaksi mallia ovat elementaarisesti ekvivalentit, niitä ei voi erotella toisistaan millään ensimmäisen kertaluokan predikaattilogiikan lauseella. Isomorfian ja elementaarisen ekvivalenssin määritelmistä voidaan osoittaa seuraava tärkeä tulos:
 \begin{kor}
 Jos $L$-mallit $A$ ja $B$ ovat isomorfiset, niin ne ovat elementaarisesti ekvivalentit.
 \end{kor}
 
-On huomattava, että tämä ei päde toisinpäin. Mallien $A$ ja $B$ välinen elementaarinen ekvivalenssi ei kerro mitään mallien isomorfisuudesta. 
+On huomattava, että tämä ei päde toisinpäin. Mallien $A$ ja $B$ välinen elementaarinen ekvivalenssi ei kerro mitään mallien isomorfisuudesta. Korollaarin 12 johdosta elementaarinen ekvivalenssi on epäkiinnostava äärellisten mallien kontekstissa, sillä ensimmäisen kertaluokan predikaattilogiikka karakterisoi äärelliset mallit isomorfiaan asti.
+\begin{lau}
+Jokaiselle äärelliselle mallille $A$ on olemassa ensimmäisen kertaluokan predikaattilogiikan lause $\varphi$ siten, että $B \models \varphi$, jos ja vain jos mielivaltainen malli $B$ ja malli $A$ ovat isomorfiset.
+\end{lau}
+
+Vaikka jokaiselle mallille on ensimmäisen kertaluokanlogiikan lause, joka karakterisoi kyseisen mallin, isomorfia on kuitenkin liian vahva elementaarisen ekvivalenssin ilmaisemiseen. Esimerkiksi mitkä tahansa kaksi tiheää lineaarijärjestystä ilman päätepisteitä ovat elementaarisesti ekvivalentit, mutta eivät kuitenkaan ole isomorfiset. Erityisesti lineaarijärjestykset $(\mathbb{Q}, <)$ ja $(\mathbb{R}, <)$ ovat elementaarisesti ekvivalentit, joten reaalilukujen täydellisyyttä ei voi ilmaista ensimmäisen kertaluokan predikaattilogiikan kielellä.
+
+Ratkaisu tähän on Fraïssén käyttämä osittaisisomorfismi, joka karakterisoi elementaarisen ekvivalenssin.
+\begin{lau}[Fraïssé]
+Olkoon $L$ aakkosto ja olkoot $A$ ja $B$ kumpikin $L$-malleja. Tällöin $A \equiv B$ jos ja vain jos $A \cong_p B$.
+\end{lau}
+
+Fraïssén teoreema siis antaa meille algebrallisen keinon käsitellä elementaarista ekvivalenssia, jonka käyttö suoraan määritelmästä olisi hyvin hankalaa ja rajallista. Toinen keino käsitellä elementaarista ekvivalenssia on Fraïssén teoreeman peliteoreettinen muotoilu EF-peli.
 
 \section{EF-peli}
 Tässä kappaleessa esitellään EF-peli, sen säännöt, strategian ja voittavan strategian käsitteet, joissa seuraan pitkälti Jouko Väänästä \cite{Vaa11} ja havainnollistetaan EF-peliä esimerkillä kahdelle verkolle.
 
-EF-pelissä ideana on, että peli on kahdelle pelaajalle, joita kutsutaan nimillä Pelaaja I ja Pelaaja II. Peliä pelataan kahdella mallilla $A$ ja $B$, joilla on sama relationaalinen aakkosto. \begin{huom}
+EF-peli on kahdelle pelaajalle, joita kutsutaan nimillä Pelaaja I ja Pelaaja II. Peliä pelataan kahdella mallilla $A$ ja $B$, joilla on sama relationaalinen aakkosto. \begin{huom}
 Jatkossa aakkostolla tarkoitetaan aina relationaalista aakkostoa, ellei toisin mainita.
-\end{huom} Pelaaja II haluaa osoittaa, että kyseiset mallit ovat jossain määrin samankaltaiset, kun taas Pelaaja I haluaa osoittaa, että mallit ovat erilaiset. Pelissä on äärellinen määrä vuoroja ja vuorojen määrä on alussa sovittu.
+\end{huom} Pelaaja II haluaa osoittaa, että kyseiset mallit ovat jossain määrin samankaltaiset eli että kyseisten mallien välillä on osittaisisomorfismi, kun taas Pelaaja I haluaa osoittaa, että mallit ovat erilaiset. Pelissä on äärellinen määrä vuoroja ja vuorojen määrä on alussa sovittu.
 
 \subsection{Pelin kulku}
 Pelin kulku kuvataan kirjallisuudessa lähes aina samalla tavalla. Määritellään aluksi mielivaltaisen kierroksen kulku ja kummankin pelaajan voittokriteerit.
@@ -386,7 +398,30 @@ Jos Pelaaja I olisi tehnyt toisellakin kierroksella valintansa verkosta $X$:
 \end{esim}
 
 \subsection{EF-pelin ominaisuuksia}
+EF-peleillä on monia mielenkiintoisia ominaisuuksia joista muutamia esitellään tässä alaluvussa. Aikaisemmin esiteltiin voittostrategian käsite jossa todettiin, että voittostrategian omaava pelaaja voittaa kyseisen pelin teki toinen pelaaja mitä tahansa. Tämän suora seuraus on, että vain toisella pelaajalla voi olla voittostrategia kyseisessä EF-pelissä. Tarkemmin sanottuna:
+\begin{lau}
+Olkoon $A$ ja $B$ malleja. Tällöin täsmälleen toisella pelaajista I ja II on voittostrategia $k$-kierroksisessa EF-pelissä $EF_k(A, B)$.
+\end{lau}
 
+Koska osittaisisomorfismin $A \rightarrow B$ pitää toteutua jokaisella kierroksella, jotta Pelaaja II voittaa EF-pelin $EF_k(A, B)$, olisi Pelaaja II voittanut myös kaikki EF-pelit $EF_r(A, B), r \leq k$. Tämä ominaisuus voidaan ilmaista voittostrategian näkökulmasta seuraavasti:
+\begin{lau}
+Jos Pelaajalla II on voittostrategia EF-pelissä $EF_k(A, B)$, niin Pelaajalla II on voittostrategia kaikissa peleissä $EF_r(A, B), r \leq k$.
+\end{lau}
+
+Tämä ei kuitenkaan päde peleillä $EF_t(A, B), k < t$. Esimerkiksi jos esimerkissä 16 pelattu kahden kierroksen EF-peli verkoille oltaisiin pelattu kolme kierroksisena pelinä, voittostrategia olisikin Pelaajalla I. Hän yksinkertaisesti valitsisi yksi kerrallaan kaikki verkon $Y$ solmut, jolloin kolmannella kierroksella Pelaaja II ei enää pystyisi valitsemaan solmua joka säilyttää relaatiot.
+
+Lause 18 ei kuitenkaan päde kaikissa EF-peleissä. Esimerkiksi Vadim Kulikov ja Tapani Hyttinen ovat kehittäneet EF-pelistä version jota he kutsuvat Heikoksi EF-Peliksi, jossa Pelaajalla II on voittostrategia suurempikierroksisessa pelissä, mutta Pelaajalla I voi olla voittostrategia samoilla malleilla pelattavassa vähempikierroksisessa EF-pelissä \cite{Hyt11}.
+
+Heikon EF-pelin ero tavalliseen EF-peliin on siinä, että Heikossa EF-pelissä osittaisisomorfismi voi olla mielivaltainen, kun tavallisessa EF-pelissä osittaisisomorfian pitää olla pelaajien tekemien valintojen määräämä. Toisin sanoen Heikossa EF-pelissä riittää, että pelin päättyessä mallien $A$ ja $B$ välillä on osittaisisomorfismi $A \rightarrow B$, mutta näin ei välttämättä täydy olla pelin aikaisempien kierroksien jälkeen.
+
+Esitellään lopuksi Ehrenfeuchtin ja Fraïssen teoreema, eli miten EF-peli, elementaarinen ekvivalenssi ja Fraïssén teoreema nivoutuvat yhteen.
+\begin{lau}[Ehrenfeucht--Fraïssé]
+Olkoon $L$ aakkosto ja olkoot $A$ ja $B$ kumpikin $L$-malleja. Tällöin seuraavat ovat yhtäpitäviä kaikilla kokonaisluvuilla $k$:
+\begin{itemize}
+\item $A \equiv B$, toisin sanoen $A$ ja $B$ eivät ole erotettavissa toisistaan ensimmäisen kertaluokan predikaattilogiikan lauseilla.
+\item $A \sim_k B$, toisin sanoen Pelaajalla II on voittava strategia $k$-kierroksisessa EF-pelissä.
+\end{itemize}
+\end{lau}
 
 \section{Sovelluksia}
 EF-peli on teoreettisen tietojenkäsittelyn ja äärellisten mallien teorian työkalu jota pääasiassa käytetään määriteltävyyskysymyksiin ja todistusten apuna. Äärellisten mallien teoriaa ja sen menetelmää EF-peliä voidaan soveltaa tietojenkäsittelytieteessä muun muassa verifikoinnissa. 
