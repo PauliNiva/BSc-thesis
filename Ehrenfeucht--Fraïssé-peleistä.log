@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.25)  8 MAY 2016 21:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.25)  8 MAY 2016 21:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1311,13 +1311,6 @@ Package babel Info: Redefining finnish shorthand "|
  [11]
 LaTeX Font Info:    Font shape `OMS/lmr/m/it' in size <10.95> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 422.
-
-Overfull \hbox (3.09596pt too wide) in paragraph at lines 423--424
-[]$\OML/lmm/m/it/10.95 A \OMS/lmsy/m/n/10.95 ^^X[] \OML/lmm/m/it/10.95 B$\T1/lm
-r/m/it/10.95 (-20) , toi-sin sa-noen Pe-laa-jal-la II on voit-ta-va stra-te-gia
- $\OML/lmm/m/it/10.95 k$\T1/lmr/m/it/10.95 (-20) -kierroksisessa
- []
-
 Package babel Info: Redefining finnish shorthand "|
 (babel)             in language  on input line 427.
 Package babel Info: Redefining finnish shorthand "|
@@ -1326,7 +1319,7 @@ Package babel Info: Redefining finnish shorthand "|
 (babel)             in language  on input line 442.
 Package babel Info: Redefining finnish shorthand "|
 (babel)             in language  on input line 442.
-[12]
+ [12]
 Package babel Info: Redefining finnish shorthand "|
 (babel)             in language  on input line 462.
 Package babel Info: Redefining finnish shorthand "|
@@ -1437,7 +1430,7 @@ type1/public/lm/lmr8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public
 local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></
 usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pf
 b>
-Output written on Ehrenfeucht--Fraïssé-peleistä.pdf (25 pages, 317970 byt
+Output written on Ehrenfeucht--Fraïssé-peleistä.pdf (25 pages, 318024 byt
 es).
 PDF statistics:
  368 PDF objects out of 1000 (max. 8388607)
