@@ -148,7 +148,7 @@ Tämän tutkielman tavoitteena on esitellä täsmällisesti, mutta samalla kuite
 Luvussa kaksi esitellään lyhyesti peruskäsitteistö, kuten relaatiot, isomorfismi, kielet, mallit, elementaarinen ekvivalenssi ja sen algebrallinen karakterisointi. Kolmannessa luvussa esitellään itse EF-peli, sen kulku ja voittokriteerit ja -strategia sekä todistetaan, että toisen pelaajan voittostrategian avulla saadaan mallit jaettua ekvivalenssiluokkiin. Lisäksi kolmannessa luvussa tarkastellaan EF-pelin ominaisuuksia. Neljännessä luvussa esitellään EF-pelin sovellusaloja ja muutamia konkreettisia esimerkkejä siitä, miten EF-peliä sovelletaan. Luvussa viisi vedetään yhteen tärkeimmät havainnot ja johtopäätökset.
 
 \section{Peruskäsitteitä}
-Tässä luvussa esitellään joitakin \textit{ensimmäisen kertaluvun predikaattilogiikan} peruskäsitteitä. Alaluku $2.1$ käsittelee relaatioita. Alaluvussa $2.2$ määritellään kieli ja sen alakäsitteet aakkosto, termit ja atomikaavat. Alaluvussa $2.3$ puolestaan määritellään mallin sekä alimallin käsitteet. Alaluku $2.4$ keskittyy isomorfiaan ja osittaisisomorfiaan. Lisäksi alaluvussa esitetään Tarskin totuusmääritelmä. Alaluvussa $2.5$ määritellään elementaarinen ekvivalenssi ja esitellään isomorfian ja elementaarisen ekvivalenssin keskinäistä suhdetta. Peruskäsitteiden määrittelyssä seuraan karkeasti Wilfrid Hodgesia \cite{Hod97}.
+Tässä luvussa esitellään joitakin \textit{ensimmäisen kertaluvun predikaattilogiikan} peruskäsitteitä. Alaluku $2.1$ käsittelee relaatioita. Alaluvussa $2.2$ määritellään kieli ja sen alakäsitteet aakkosto, termit ja atomikaavat. Alaluvussa $2.3$ puolestaan määritellään mallin sekä alimallin käsitteet. Alaluku $2.4$ keskittyy isomorfiaan ja osittaisisomorfiaan. Lisäksi alaluvussa esitetään Tarskin totuusmääritelmä. Alaluvussa $2.5$ määritellään elementaarinen ekvivalenssi ja esitellään isomorfian ja elementaarisen ekvivalenssin keskinäistä suhdetta. Peruskäsitteiden määrittelyssä seurataan karkeasti Wilfrid Hodgesia \cite{Hod97}.
 
 \subsection{Relaatiot}
 Olkoon $X$ jokin joukko. Joukon $X$ $n$\textit{-kertainen karteesinen tulo} tarkoittaa kaikkien joukon $X$ alkioiden $n$-pituisten jonojen joukkoa. Tätä merkitään $X^n$ tai vaihtoehtoisesti $X \times X \times \ldots \times X$, missä $X$ esiintyy $n$ kertaa. Esimerkiksi joukko $\mathbb{R}^2$ on järjestettyjen reaalilukuparien joukko. Sen geometrinen vastine on taso. $\mathbb{R}^3$ on järjestettyjen reaalilukukolmikoiden joukko. Sen geometrinen vastine on kolmiulotteinen avaruus. 
@@ -201,7 +201,7 @@ Olkoon $A$ atomikaavojen joukko ja olkoon $X$ muuttujien joukko. \textit{Kieli} 
 Kieli $K$ on ensimmäisen kertaluvun predikaattilogiikan kieli, joka sisältää merkkijonoja. Näitä merkkijonoja kutsutaan kirjallisuudessa usein myös \textit{kaavoiksi}. Kaavojen \textit{alikaavoja} ovat kaikki kaavan osat, jotka itsekin ovat kaavoja. 
 
 \subsection{Mallit}
-Tässä alaluvussa määritellään, mikä on \textit{malli} eli \textit{struktuuri}. Karkeasti ottaen se on joukko, jolla on jonkinlainen rakenne ja joka koostuu relaatioista, vakioista ja funktioista. Malli ja struktuuri ovat synonyymeja. Näitä kahta sanaa käytetään rinnakkain konteksista riippuen sen mukaan, kumpi soveltuu kyseiseen tilanteeseen. Sanaa ``malli'' käytetään yleensä kontekstissa ``Olkoon $M$ malli kaavalle $\varphi$'', mikä tarkoittaa samaa kuin ``Olkoon $M$ struktuuri siten, että $M \models \varphi$'' Nämä konseptit määritellään myöhemmin tässä kappaleessa.
+Tässä alaluvussa määritellään, mikä on \textit{malli} eli \textit{struktuuri}. Karkeasti ottaen se on joukko, jolla on jonkinlainen rakenne ja joka koostuu relaatioista, vakioista ja funktioista. Malli ja struktuuri ovat synonyymeja. Näitä kahta sanaa käytetään rinnakkain konteksista riippuen sen mukaan, kumpi soveltuu kyseiseen tilanteeseen. Sanaa ``malli'' käytetään yleensä kontekstissa ``Olkoon $M$ malli kaavalle $\varphi$'', mikä tarkoittaa samaa kuin ``Olkoon $M$ struktuuri siten, että $M \models \varphi$'' Nämä konseptit määritellään myöhemmin tässä luvussa.
 
 \begin{maar}[Malli] Olkoon $L$ aakkosto ja olkoon $M$ epätyhjä joukko. Tällöin $L$\textit{-malli} koostuu seuraavista:
 \begin{itemize}
@@ -297,7 +297,7 @@ Olkoon $L$ aakkosto ja olkoot $A$ ja $B$ kumpikin $L$-malleja. Tällöin $A \equ
 Fraïssén teoreema ja tässä tutkielmassa käytettävä sen heikennetty muoto, antavat siis algebrallisen keinon käsitellä elementaarista ekvivalenssia, jonka käyttö suoraan määritelmästä olisi hyvin hankalaa ja rajallista. Toinen keino käsitellä elementaarista ekvivalenssia on Fraïssén teoreeman peliteoreettinen muotoilu EF-peli.
 
 \section{EF-peli}
-Tässä kappaleessa esitellään EF-peli, sen säännöt, strategian ja voittavan strategian käsitteet, joissa seuraan pitkälti Jouko Väänästä \cite{Vaa11} ja havainnollistetaan EF-peliä esimerkillä kahdelle verkolle.
+Tässä luvussa esitellään EF-peli ja sen säännöt sekä strategian ja voittavan strategian käsitteet, joissa seurataan pitkälti Jouko Väänästä \cite{Vaa11}. Lisäksi havainnollistetaan EF-peliä esimerkin avulla kahdelle verkolle.
 
 EF-peli on kahdelle pelaajalle, joita kutsutaan nimillä Pelaaja I ja Pelaaja II. Peliä pelataan kahdella mallilla $A$ ja $B$, joilla on sama relationaalinen aakkosto. \begin{huom}
 Jatkossa aakkostolla tarkoitetaan aina relationaalista aakkostoa, ellei toisin mainita.
@@ -315,37 +315,37 @@ Merkitään pelattavien kierrosten määrää luvulla $k \in \mathbb{Z}_+$. EF-p
 \end{maar}
 
 \begin{maar}[Voittokriteeri]
-Olkoon $a = (a_1, \ldots, a_i)$ mallista $A$ valitut alkiot ja $b = (b_1, \ldots, b_i)$ mallista $B$ valitut alkiot mielivaltaisella kierroksella $i$. Pelaajan II voittaa jos ja vain jos jokaisella kierroksella $i \leq n$ pari $(a_i, b_i)$ määrää osittaisen isomorfismin $A \rightarrow B$ eli on olemassa kuvaus $h: A \rightarrow B$, siten että $a_i \in A \mapsto b_i \in B$ Muussa tapauksessa Pelaaja I voittaa.
+Olkoon $a = (a_1, \ldots, a_i)$ mallista $A$ valitut alkiot ja $b = (b_1, \ldots, b_i)$ mallista $B$ valitut alkiot mielivaltaisella kierroksella $i$. Pelaaja II voittaa jos ja vain jos jokaisella kierroksella $i \leq n$ pari $(a_i, b_i)$ määrää osittaisen isomorfismin $A \rightarrow B$ eli on olemassa kuvaus $h: A \rightarrow B$ siten, että $a_i \in A \mapsto b_i \in B$. Muussa tapauksessa Pelaaja I voittaa.
 \end{maar}
 
-\textit{Strategia} on joukko sääntöjä, joiden mukaan pelaaja tekee valintansa toisen pelaajan valinnasta riippuen. EF-pelissä kummallakin pelaajalla on koko ajan tiedossa mallit, niiden rakenne ja jo tehdyt valinnat, eli peli on \textit{täydellisen informaation peli}. Strategiaa, jota seuraamalla pelaaja voittaa pelin riippumatta mitä valintoja toinen pelajaa tekee kutsutaan \textit{voittavaksi strategiaksi}. Jos Pelaaja II:lla on voittava strategia EF-pelissä $EF_k(A, B)$, niin tätä merkitään $A \sim_k B$.
+\textit{Strategia} on joukko sääntöjä, joiden mukaan pelaaja tekee valintansa toisen pelaajan valinnasta riippuen. EF-pelissä kummallakin pelaajalla on koko ajan tiedossaan mallit, niiden rakenne ja jo tehdyt valinnat, eli peli on \textit{täydellisen informaation peli}. Strategiaa, jota seuraamalla pelaaja voittaa pelin, riippumatta siitä, mitä valintoja toinen pelaaja tekee, kutsutaan \textit{voittavaksi strategiaksi}. Jos Pelaajalla II on voittava strategia EF-pelissä $EF_k(A, B)$, tällöin tätä merkitään $A \sim_k B$.
 
 \begin{lau} 
 Relaatio $\sim_k$ on $L$-mallien ekvivalenssirelaatio.
 \end{lau}
-\begin{tod} Todistus on Jouko Väänäsen kirjassa \cite{Vaa11} esiintyvää todistusta mukaileva. Oletetaan, että $A, B$ ja $C$ ovat kaikki saman aakkoston $L$-malleja. Tällöin
+\begin{tod} Todistus on Väänäsen teoksessa \cite{Vaa11} esiintyvää todistusta mukaileva. Oletetaan, että $A, B$ ja $C$ ovat kaikki saman aakkoston $L$-malleja. Tällöin:
 \begin{itemize}
 \item Refleksiivisyys: $A \sim_k A$.\\
-Voittava strategia Pelaajalle II on valita aina sama alkio minkä Pelaaja I valitsi. Täten $\sim_k$ on refleksiivinen.
+Voittava strategia Pelaajalle II on valita aina sama alkio, jonka Pelaaja I valitsi. Täten $\sim_k$ on refleksiivinen.
 \item Symmetrisyys: $A \sim_k B \iff B \sim_k A$.\\
-EF-pelin määritelmä ei millään tavoin tee eroa pelien $EF_k(A, B)$:n ja $EF_k(B, A)$:n välillä. Täten jos $A \sim_k B$, niin Pelaaja II voi käyttää samaa voittostrategiaa myös pelissä $EF_k(B, A)$. Jos taas $B \sim_k A$, niin Pelaaja II voi käyttää samaa voittostrategiaa pelissä $EF_k(A, B)$. Siis $\sim_k$ on symmetrinen.
+EF-pelin määritelmä ei tee millään tavoin eroa pelien $EF_k(A, B)$ ja $EF_k(B, A)$ välillä. Täten jos $A \sim_k B$, niin Pelaaja II voi käyttää samaa voittostrategiaa myös pelissä $EF_k(B, A)$. Jos taas $B \sim_k A$, niin Pelaaja II voi käyttää samaa voittostrategiaa pelissä $EF_k(A, B)$. Siis $\sim_k$ on symmetrinen.
 \item Transitiivisuus: $A \sim_k C \land B \sim_k C \implies A \sim_k C$.\\
 Todistetaan väite käsittelemällä kaikki väitteen ja implikaation pelit samaan aikaan. Peli $EF_k(A, C)$ pelataan siten, että Pelaaja II tekee valintansa pelaamalla samaan aikaa kuvitteellisia pelejä $EF_k(A, B)$ ja $EF_k(B, C)$. Oletetaan, että peli $EF_k(A, C)$ alkaa Pelaajan II valinnalla $a_1 \in A$, jolloin Pelaaja II valitsee seuraavalla strategialla:
 
 Pelaaja II kuvittelee, että Pelaaja I valitsi alkion $a_1 \in A$ pelissä $EF_k(A, B)$, jolloin hän valitsee alkion $b_1 \in B$ pelin $EF_k(A, B)$ voittostrategian mukaisesti. Seuraavaksi Pelaaja II kuvittelee, että äskeinen valinta oli Pelaajan I valinta pelissä $EF_k(B, C)$ ja valitsee alkion $c_1 \in C$ pelin $EF_k(B, C)$ voittostrategian mukaisesti. Tämä valinta $c_1$ on Pelaajan II vastaus Pelaajan I valintaan $a_1$ pelissä $EF_k(A, C)$.
 
-Jos Pelaaja I valitseekin alkion $c_1 \in C$, niin Pelaaja II yksinkertaisesti seuraa strategiaa toiseen suuntaan. Näin voidaan toimia, koska äsken todistimme, että voittavat strategiat ovat symmetrisiä.
+Jos Pelaaja I valitseekin alkion $c_1 \in C$, niin Pelaaja II yksinkertaisesti seuraa strategiaa toiseen suuntaan. Näin voidaan toimia, koska äsken todistettiin, että voittavat strategiat ovat symmetrisiä.
 
-Kun peliä on pelattu $k$-kierrosta, niin meillä on valinnoista muodostuneet jonot $a_1, \ldots, a_k$, $b1, \ldots, b_k$ ja $c_1, \ldots, c_k$. Oletusten nojalla on olemassa osittaisisomorfismit $f: A \cong_p B$ ja $g: B \cong_p C$. Nyt voidaan muodostaa yhdistetty kuvaus $h(f(a_i)) = g(a_i)$, siten että $a_i \mapsto c_i$ on osittaisisomorfismi, kaikilla $i \in \{1, \ldots, k\}$. Täten $A \sim_k C$, siis relaatio $\sim_k$ on transitiivinen.
+Kun peliä on pelattu $k$-kierrosta, niin meillä on valinnoista muodostuneet jonot $a_1, \ldots, a_k$, $b1, \ldots, b_k$ ja $c_1, \ldots, c_k$. Oletusten nojalla on olemassa osittaisisomorfismit $f: A \cong_p B$ ja $g: B \cong_p C$. Nyt voidaan muodostaa yhdistetty kuvaus $h(f(a_i)) = g(a_i)$ siten, että $a_i \mapsto c_i$ on osittaisisomorfismi, kaikilla $i \in \{1, \ldots, k\}$. Täten $A \sim_k C$, siis relaatio $\sim_k$ on transitiivinen.
 \end{itemize}
 Koska relaatio $\sim_k$ on refleksiivinen, symmetrinen ja transitiivinen, niin se on tällöin ekvivalenssirelaatio.
 \end{tod}
 \\
 
-Kuten aikaisemmin todettiin, EF-pelistä on kehitetty monia erilaisia variaatioita, kuten esimerkiksi EF-peli verkoille. Verkoilla voidaan esittää ensimmäisen kertaluvun predikaattilogiikan kaavoja. Verkon kaaret ovat relaatioita verkon pisteiden välillä. Havainnollistetaan nyt EF-pelin ideaa yksinkertaisella esimerkillä kahden kierroksen EF-pelillä verkoille $X$ ja $Y$, sekä esitetään samalla strategia $X \sim_k Y$, eli voittava strategia Pelaajalle II.
+Kuten aikaisemmin todettiin, EF-pelistä on kehitetty monia erilaisia variaatioita, kuten esimerkiksi EF-peli verkoille. Verkoilla voidaan esittää ensimmäisen kertaluvun predikaattilogiikan kaavoja. Verkon kaaret ovat relaatioita verkon pisteiden välillä. Havainnollistetaan nyt EF-pelin ideaa yksinkertaisella esimerkillä kahden kierroksen EF-pelillä verkoille $X$ ja $Y$, sekä esitetään samalla strategia $X \sim_k Y$ eli voittava strategia Pelaajalle II.
 
 \begin{esim}
-Tässä EF-pelissä verkoille ideana on, että rakennetaan pelaajien tekemistä valinnoista kahta uutta verkkoa $A$ ja $B$, siten että verkosta $X$ valittu solmu merkitään verkon $A$ solmuksi $a_i$ ja verkosta $Y$ valittu solmu verkon $B$ solmuksi $b_i$, jossa $i$ ilmaisee millä kierroksella valinta on tapahtunut. Uudet verkot $A$ ja $B$ rakennetaan puhtaasti helpottamaan tehtyjen valintojen ja näiden relaatioiden muodostaman kokonaisuuden hahmottamista ja hallintaa.
+Tässä EF-pelissä verkoille ideana on, että rakennetaan pelaajien tekemistä valinnoista kahta uutta verkkoa $A$ ja $B$ siten, että verkosta $X$ valittu solmu merkitään verkon $A$ solmuksi $a_i$ ja verkosta $Y$ valittu solmu verkon $B$ solmuksi $b_i$, missä $i$ ilmaisee kierrosta, jolla valinta on tapahtunut. Uudet verkot $A$ ja $B$ rakennetaan helpottamaan tehtyjen valintojen ja näiden relaatioiden muodostaman kokonaisuuden hahmottamista ja hallintaa.
 
 \begin{center}
 \begin{tikzpicture}[-latex ,auto ,node distance =4 cm and 5cm ,on grid ,
@@ -399,7 +399,7 @@ Jos Pelaaja I olisi tehnyt toisellakin kierroksella valintansa verkosta $X$:
 \end{esim}
 
 \subsection{EF-pelin ominaisuuksia}
-EF-peleillä on monia mielenkiintoisia ominaisuuksia joista muutamia esitellään tässä alaluvussa. Aikaisemmin esiteltiin voittostrategian käsite jossa todettiin, että voittostrategian omaava pelaaja voittaa kyseisen pelin teki toinen pelaaja mitä tahansa. Tämän suora seuraus on, että vain toisella pelaajalla voi olla voittostrategia kyseisessä EF-pelissä. Tarkemmin sanottuna:
+EF-peleillä on monia mielenkiintoisia ominaisuuksia, joista muutamia esitellään tässä alaluvussa. Aikaisemmin esiteltiin voittostrategian käsite, jossa todettiin, että voittostrategian omaava pelaaja voittaa kyseisen pelin teki toinen pelaaja mitä tahansa. Tämän suora seuraus on, että vain toisella pelaajalla voi olla voittostrategia kyseisessä EF-pelissä. Tarkemmin sanottuna:
 \begin{lau}
 Olkoon $A$ ja $B$ malleja. Tällöin täsmälleen toisella pelaajista I ja II on voittostrategia $k$-kierroksisessa EF-pelissä $EF_k(A, B)$.
 \end{lau}
