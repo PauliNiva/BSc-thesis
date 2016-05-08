@@ -151,7 +151,7 @@ Luvussa kaksi esitellään lyhyesti peruskäsitteistö, kuten relaatiot, isomorf
 Tässä luvussa esitellään joitakin \textit{ensimmäisen kertaluvun predikaattilogiikan} peruskäsitteitä. Alaluku $2.1$ käsittelee relaatioita. Alaluvussa $2.2$ määritellään kieli ja sen alakäsitteet aakkosto, termit ja atomikaavat. Alaluvussa $2.3$ puolestaan määritellään mallin sekä alimallin käsitteet. Alaluku $2.4$ keskittyy isomorfiaan ja osittaisisomorfiaan. Lisäksi alaluvussa esitetään Tarskin totuusmääritelmä. Alaluvussa $2.5$ määritellään elementaarinen ekvivalenssi ja esitellään isomorfian ja elementaarisen ekvivalenssin keskinäistä suhdetta. Peruskäsitteiden määrittelyssä seuraan karkeasti Wilfrid Hodgesia \cite{Hod97}.
 
 \subsection{Relaatiot}
-Olkoon $X$ jokin joukko. Joukon $X$ $n$\textit{-kertainen karteesinen tulo} tarkoittaa kaikkien joukon $X$ alkioiden $n$-pituisten jonojen joukkoa. Tätä merkitään $X^n$ tai vaihtoehtoisesti $X \times X \times \ldots \times X$, jossa $X$ esiintyy $n$ kertaa. Esimerkiksi joukko $\mathbb{R}^2$ on järjestettyjen reaalilukuparien joukko. Sen geometrinen vastine on taso. $\mathbb{R}^3$ on järjestettyjen reaalilukukolmikoiden joukko. Sen geometrinen vastine on kolmiulotteinen avaruus. 
+Olkoon $X$ jokin joukko. Joukon $X$ $n$\textit{-kertainen karteesinen tulo} tarkoittaa kaikkien joukon $X$ alkioiden $n$-pituisten jonojen joukkoa. Tätä merkitään $X^n$ tai vaihtoehtoisesti $X \times X \times \ldots \times X$, missä $X$ esiintyy $n$ kertaa. Esimerkiksi joukko $\mathbb{R}^2$ on järjestettyjen reaalilukuparien joukko. Sen geometrinen vastine on taso. $\mathbb{R}^3$ on järjestettyjen reaalilukukolmikoiden joukko. Sen geometrinen vastine on kolmiulotteinen avaruus. 
 
 \begin{maar}[Kaksipaikkainen relaatio]
 Joukon $X$ \textit{kaksipaikkainen relaatio} $R$ on mikä tahansa joukko joukon $X$ alkioista muodostettuja pareja $(x, y)$, joiden molemmat alkiot ovat joukossa $X$, eli $R \subset X^2$.  Jos $(x, y) \in R$, sanotaan, että $x$ on $y$:n kanssa \textit{relaatiossa} $R$. Joukon $X$ kaksipaikkainen relaatio $R$ on:
@@ -255,9 +255,9 @@ Toisin kuin isomorfismissa, osittaisisomorfismissa totuus ei välttämättä sä
 Määritellään seuraavaksi, mitä keskeisellä käsitteellä \textit{totuus} tarkalleen ottaen tarkoitetaan.
 
 \begin{maar}[Tarskin totuusmääritelmä]
-Oletetaan, että $A$ on $L$-malli ja olkoon $L$ aakkosto ja $K$ kieli. Määritellään rekursiivisesti, että kielen $K$ kaava $\varphi$ on totta $A$:ssa eli $A$ toteuttaa $\varphi$:n eli $A \models \varphi$ seuraavasti:
+Oletetaan, että $A$ on $L$-malli ja olkoon $L$ aakkosto ja $K$ kieli. Määritellään rekursiivisesti, että kielen $K$ kaava $\varphi$ on totta $A$:ssa, eli $A$ toteuttaa $\varphi$:n, eli $A \models \varphi$ seuraavasti:
 \begin{itemize}
-\item Jos $\varphi$ on kaava $s = t$ jossa $s$ ja $t$ ovat termejä, niin $A \models \varphi$ jos ja vain jos $s^A = t^A$.
+\item Jos $\varphi$ on kaava $s = t$, missä $s$ ja $t$ ovat termejä, niin $A \models \varphi$ jos ja vain jos $s^A = t^A$.
 \item Jos $\varphi$ on kaava $R(t_1, \ldots, t_n)$, missä $R$ on $n$-paikkainen relaatiosymboli ja $t_1, \ldots, t_n$ ovat termejä, niin $A \models \varphi$ jos ja vain jos $(t_1^A, \ldots, t_n^A) \in R$.
 \item $A \models \neg \varphi$ jos ja vain jos $A \not \models \varphi$.
 \item $A \models (\varphi \land \psi)$ jos ja vain jos $A \models \varphi$ ja $A \models \psi$.
@@ -266,17 +266,17 @@ Oletetaan, että $A$ on $L$-malli ja olkoon $L$ aakkosto ja $K$ kieli. Määrite
 \item $A \models (\varphi \leftrightarrow \psi)$ jos ja vain jos $A \models \varphi$ ja $A \models \psi$ tai $A \not \models \varphi$ ja $A \not \models \psi$.
 \item $A \models \forall x(\varphi)$ jos ja vain jos jokaisella mallin $A$ alkiolla $a
 $ pätee $A \models \varphi$ kun muuttaja $x$ tulkitaan $a$:ksi.
-\item $A \models \exists x(\varphi)$ jos ja vain jos löytyy jokin mallin $A$ alkio $a$ jolla $A \models \varphi$ kun muuttuja $x$ tulkitaan $a$:ksi.
+\item $A \models \exists x(\varphi)$ jos ja vain jos löytyy jokin mallin $A$ alkio $a$, jolla $A \models \varphi$, kun muuttuja $x$ tulkitaan $a$:ksi.
 \end{itemize}
 \end{maar}
 
 \subsection{Elementaarinen ekvivalenssi}
-Siinä missä isomorfismi kuvailee kahden mallin rakenteellista samanlaisuutta, niin elementaarinen ekvivalenssi puolestaan vertailee malleja suhteessa käytettyyn kieleen.
+Siinä missä isomorfismi kuvailee kahden mallin rakenteellista samanlaisuutta, elementaarinen ekvivalenssi puolestaan vertailee malleja suhteessa käytettyyn kieleen.
 
 \begin{maar}[Elementaarinen ekvivalenssi]
-Olkoon $L$ aakkosto joka muodostaa kielen $K$. Olkoon $A$ ja $B$ kummatkin $L$-malleja. $A$:ta ja $B$:tä sanotaan \textit{elementaarisesti ekvivalenteiksi}, jos kaikilla lauseilla $S \in K$ pätee $A \models S \Longleftrightarrow B \models S$. Tätä merkitään $A \equiv B$
+Olkoon $L$ aakkosto, joka muodostaa kielen $K$. Olkoot $A$ ja $B$ kummatkin $L$-malleja. $A$:ta ja $B$:tä sanotaan \textit{elementaarisesti ekvivalenteiksi}, jos kaikilla lauseilla $S \in K$ pätee $A \models S \Longleftrightarrow B \models S$. Tätä merkitään $A \equiv B$.
 \end{maar}
-Toisin sanoen, jos kaksi mallia ovat elementaarisesti ekvivalentit, niitä ei voi erotella toisistaan millään ensimmäisen kertaluvun predikaattilogiikan lauseella. Isomorfian ja elementaarisen ekvivalenssin määritelmistä voidaan osoittaa seuraava tärkeä tulos:
+Toisin sanoen, jos kaksi mallia ovat elementaarisesti ekvivalentit, niitä ei voi erottaa toisistaan millään ensimmäisen kertaluvun predikaattilogiikan lauseella. Isomorfian ja elementaarisen ekvivalenssin määritelmistä voidaan osoittaa seuraava tärkeä tulos:
 \begin{kor}
 Jos $L$-mallit $A$ ja $B$ ovat isomorfiset, niin ne ovat elementaarisesti ekvivalentit.
 \end{kor}
@@ -286,15 +286,15 @@ On huomattava, että tämä ei päde toisinpäin. Mallien $A$ ja $B$ välinen el
 Jokaiselle äärelliselle mallille $A$ on olemassa ensimmäisen kertaluvun predikaattilogiikan lause $\varphi$ siten, että $B \models \varphi$, jos ja vain jos mielivaltainen malli $B$ ja malli $A$ ovat isomorfiset.
 \end{lau}
 
-Vaikka jokaiselle mallille on ensimmäisen kertaluvun predikaattilogiikan lause, joka karakterisoi kyseisen mallin, isomorfia on kuitenkin liian vahva elementaarisen ekvivalenssin ilmaisemiseen. Esimerkiksi mitkä tahansa kaksi tiheää lineaarijärjestystä ilman päätepisteitä ovat elementaarisesti ekvivalentit, mutta eivät kuitenkaan ole isomorfiset. Erityisesti lineaarijärjestykset $(\mathbb{Q}, <)$ ja $(\mathbb{R}, <)$ ovat elementaarisesti ekvivalentit, joten reaalilukujen täydellisyyttä ei voi ilmaista ensimmäisen kertaluvun predikaattilogiikan kielellä.
+Vaikka jokaiselle mallille on ensimmäisen kertaluvun predikaattilogiikan lause, joka karakterisoi kyseisen mallin, isomorfia on kuitenkin liian vahva elementaarisen ekvivalenssin ilmaisemiseen. Esimerkiksi, mitkä tahansa kaksi tiheää lineaarijärjestystä ilman päätepisteitä ovat elementaarisesti ekvivalentit mutta eivät kuitenkaan isomorfiset. Erityisesti lineaarijärjestykset $(\mathbb{Q}, <)$ ja $(\mathbb{R}, <)$ ovat elementaarisesti ekvivalentit, eli esimerkiksi reaalilukujen täydellisyyttä ei voi ilmaista ensimmäisen kertaluvun predikaattilogiikan kielellä.
 
-Ratkaisu siihen, että isomorfismi on liian vahva elementaarisen ekvivalenssin ilmaisemiseen on isomorfismin heikennys, äärellinen isomorfismi. Fraïssén kehittämä äärellinen isomorfismi karakterisoi elementaarisen ekvivalenssin. Tässä tutkielmassa ei kuitenkaan ole tarvetta erikseen määritellä äärellistä isomorfismia, koska kaikkiin käytettyihin esimerkkeihin riittää osittaisisomorfismi. Tästä syystä tässä tutkielmassa on otettu vapaus heikentää Fraïssén lausetta, siten että äärellisen isomorfismin sijaan rajoitutaan osittaisisomorfismiin. Tämä heikennys oikeutetaan sillä, että jos kaksi mallia ovat osittaisisomorfiset, niin tällöin ne ovat äärellisesti isomorfiset.
+Ratkaisu siihen ongelmaan, että isomorfismi on liian vahva elementaarisen ekvivalenssin ilmaisemiseksi, on isomorfismin heikennys, äärellinen isomorfismi. Fraïssén kehittämä äärellinen isomorfismi karakterisoi elementaarisen ekvivalenssin. Tässä tutkielmassa ei kuitenkaan ole tarvetta erikseen määritellä äärellistä isomorfismia, koska kaikkiin käytettyihin esimerkkeihin riittää osittaisisomorfismi. Tästä syystä tässä tutkielmassa on otettu vapaus heikentää Fraïssén lausetta, siten että äärellisen isomorfismin sijaan rajoitutaan osittaisisomorfismiin. Tämä heikennys oikeutetaan sillä, että jos kaksi mallia ovat osittaisisomorfiset, niin ne ovat äärellisesti isomorfiset.
 
 \begin{lau}[Fraïssén lauseen heikennetty versio]
-Olkoon $L$ aakkosto ja olkoot $A$ ja $B$ kumpikin $L$-malleja. Tällöin $A \equiv B$ jos ja vain jos $A \cong_p B$.
+Olkoon $L$ aakkosto ja olkoot $A$ ja $B$ kumpikin $L$-malleja. Tällöin $A \equiv B$ jos ja vain jos $A \cong_p B$. Toisin sanoen, $A$ ja $B$ ovat elementaarisesti ekvivalentit jos ja vain jos $A$ ja $B$ ovat osittaisisomorfiset.
 \end{lau}
 
-Fraïssén teoreema, tarkemmin sen heikennetty muoto siis antaa algebrallisen keinon käsitellä elementaarista ekvivalenssia, jonka käyttö suoraan määritelmästä olisi hyvin hankalaa ja rajallista. Toinen keino käsitellä elementaarista ekvivalenssia on Fraïssén teoreeman peliteoreettinen muotoilu EF-peli.
+Fraïssén teoreema ja tässä tutkielmassa käytettävä sen heikennetty muoto, antavat siis algebrallisen keinon käsitellä elementaarista ekvivalenssia, jonka käyttö suoraan määritelmästä olisi hyvin hankalaa ja rajallista. Toinen keino käsitellä elementaarista ekvivalenssia on Fraïssén teoreeman peliteoreettinen muotoilu EF-peli.
 
 \section{EF-peli}
 Tässä kappaleessa esitellään EF-peli, sen säännöt, strategian ja voittavan strategian käsitteet, joissa seuraan pitkälti Jouko Väänästä \cite{Vaa11} ja havainnollistetaan EF-peliä esimerkillä kahdelle verkolle.
