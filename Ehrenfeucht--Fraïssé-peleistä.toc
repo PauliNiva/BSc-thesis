@@ -16,7 +16,7 @@
 \contentsline {subsection}{\numberline {4.3}Kongruenssiapulauseet}{16}{subsection.4.3}
 \contentsline {subsection}{\numberline {4.4}Bisimulaatio}{18}{subsection.4.4}
 \contentsline {section}{\numberline {5}Yhteenveto}{19}{section.5}
-\contentsline {section}{L\IeC {\"a}hteet}{20}{section*.3}
+\contentsline {section}{L\IeC {\"a}hteet}{21}{section*.3}
 \select@language {finnish}
 \select@language {finnish}
 \select@language {finnish}

@@ -369,6 +369,8 @@ draw,processblue , text=blue , minimum width =1 cm}]
 {Verkko \textit{X}};
 \node[align=right, below] at (7.5,-.9)%
 {Verkko \textit{Y}};
+\node[align=left, below] at (0.1,-1.9)%
+{\textbf{Kuva 1.} Verkot $X$ ja $Y$.};
 \end{tikzpicture}
 \end{center}
 
@@ -432,12 +434,12 @@ Alaluvussa 4.1 esitellään EF-pelin yleisiä sovellusaloja. Lisäksi esitellä�
 \subsection{Sovellusaloja}
 Kaikki äärelliset mallit voidaan koodata verkkoina, puina tai merkkijonoina \cite{Ebb99}. Tällöin niitä voidaan käyttää laskennan olioina ja siten niillä voidaan kuvata äärellistilallisia systeemejä ja tutkia näiden toiminnan oikeellisuutta. 
 
-Yksi sovellusala on tietokantateoria, koska relationaalinen malli samaistaa tietokannan äärellisen relaationaalisen struktuurin kanssa \cite{Luo10}. Formaalin kielen kaavat voidaan siis ajatella ohjelmina, jotta niiden merkitystä struktuurissa voidaan arvioida. Ja toisinpäin, voidaan esittää jonkin laskennallisen vaativuusluokan kyselyitä jollakin formaalilla kielellä.
+Yksi sovellusala on tietokantateoria, koska relationaalinen malli samaistaa tietokannan äärellisen relaationaalisen struktuurin kanssa \cite{Luo10}. Formaalin kielen kaavat voidaan siis ajatella ohjelmina, jotta niiden merkitystä struktuurissa voidaan arvioida. Ja toisinpäin, jonkin laskennallisen vaativuusluokan kyselyitä voidaan esittää jollakin formaalilla kielellä.
 
-Muita tietojenkäsittelytieteen osa-alueita joihin EF-peliä voi soveltaa on esimerkiksi vaativuusteoria, koska äärelliset mallit tarjoavat laskennan vaativuusluokkien loogisen karakterisoinnin ja mahdollistavat vaativuusteoreettisten tulosten todistamisen tätä kautta. Esimerkiksi $\mathrm{P} \neq \mathrm{NP}$ -ongelma redusoituu kysymykseksi: onko kolmella värillä väritettävien suunnattujen verkkojen luokka määriteltävissä pienimmän kiintopisteen logiikassa \cite{Imm86}? Määriteltävyystulosten todistuksissa seuraava teoreema on keskeinen:
+Muita tietojenkäsittelytieteen osa-alueita, joihin EF-peliä voi soveltaa, on esimerkiksi vaativuusteoria, koska äärelliset mallit tarjoavat laskennan vaativuusluokkien loogisen karakterisoinnin ja mahdollistavat vaativuusteoreettisten tulosten todistamisen tätä kautta. Esimerkiksi $\mathrm{P} \neq \mathrm{NP}$ -ongelma redusoituu kysymykseksi: onko kolmella värillä väritettävien suunnattujen verkkojen luokka määriteltävissä pienimmän kiintopisteen logiikassa \cite{Imm86}? Määriteltävyystulosten todistuksissa seuraava teoreema on keskeinen:
 
 \begin{lau}[Metodologiateoreema]
-Ei ole olemassa ensimmäisen kertaluvun predikaattilogiikan lausetta joka ilmaisee ominaisuuden $P$, jos ja vain jos, kaikilla $n \in \mathbb{Z}_+$, on olemassa mallit $A$ ja $B$, joille pätee:
+Ei ole olemassa ensimmäisen kertaluvun predikaattilogiikan lausetta, joka ilmaisee ominaisuuden $P$, jos ja vain jos, kaikilla $n \in \mathbb{Z}_+$, on olemassa mallit $A$ ja $B$, joille pätee:
 \begin{itemize}
 \item Ominaisuus $P$ on totta $A$:ssä.
 \item Ominaisuus $P$ on epätotta $B$:ssä.
@@ -445,24 +447,24 @@ Ei ole olemassa ensimmäisen kertaluvun predikaattilogiikan lausetta joka ilmais
 \end{itemize}
 \end{lau}
 
-Esitetään yksinkertainen relaatioalgebran ongelma esimerkkinä siitä miten metodologia teoreemaa käytetään määärittelemättömyystuloksia todistettaessa. Tässä esimerkissä käytämme Boolen kyselyä, joten ensimmäiseksi määrittelemme tämän tarkasti.
+Esitetään yksinkertainen relaatioalgebran ongelma esimerkkinä siitä, miten metodologiateoreemaa käytetään määärittelemättömyystuloksia todistettaessa. Tässä esimerkissä käytämme Boolen kyselyä, joten ensimmäiseksi määritellään tämän tarkasti.
 
 \begin{maar}[Boolen kysely]
-Olkoon $M$ malli. Tällöin \textit{Boolen kysely} $Q$ on kuvaus $Q: M \to \{0, 1\}$ joka säilyy isomorfismeissa. Siis jos $A \cong B$, niin $Q(A) = Q(B)$. Kuvauksen maalijoukon alkioista $1$ merkitsee totuusarvoa ``tosi'' ja $0$ totuusarvoa ``epätosi''.
+Olkoon $M$ malli. Tällöin \textit{Boolen kysely} $Q$ on kuvaus $Q: M \to \{0, 1\}$, joka säilyy isomorfismeissa. Siis jos $A \cong B$, niin $Q(A) = Q(B)$. Kuvauksen maalijoukon alkioista $1$ merkitsee totuusarvoa ``tosi'' ja $0$ totuusarvoa ``epätosi''.
 \end{maar}
 
 \begin{esim}
-Olkoon $A$ malli, joka sisältää vain vakioita. Tutkitaan Boolen kyselyä: onko $A$:ssa parillinen määrä alkioita? Konstruoidaan mallit $A$ ja $B$ todistusta varten seuraavanlaisiksi: $A \coloneqq \{a_1, \ldots, a_n\}$ ja $B \coloneqq \{b_1, \ldots, b_{n + 1}\}$, mielivaltaisella $n \in \mathbb{Z}_+$. Eli toisessa mallissa on yksi alkio enemmän kuin toisessa. Täten toinen malleista sisältää parittoman määrän alkioita ja toinen parillisen määrän alkioita.
+Olkoon $A$ malli, joka sisältää vain vakioita. Tutkitaan Boolen kyselyä ``onko $A$:ssa parillinen määrä alkioita?''. Konstruoidaan mallit $A$ ja $B$ todistusta varten seuraavanlaisiksi: $A \coloneqq \{a_1, \ldots, a_n\}$ ja $B \coloneqq \{b_1, \ldots, b_{n + 1}\}$, mielivaltaisella $n \in \mathbb{Z}_+$. Eli toisessa mallissa on yksi alkio enemmän kuin toisessa. Täten toinen malleista sisältää parittoman määrän alkioita ja toinen parillisen määrän alkioita.
 
-Voittostrategia Pelaajalle II on sellainen, että Pelaaja I:den valitessa mielivaltaisella kierroksella $i$ alkion jommasta kummasta mallista, Pelaaja II yksinkertaisesti valitsee alkion toisesta mallista. Tämä strategia toimii, koska mallissa $B$ on yksi alkio enemmän kuin mikä pelattavien kierroksien määrä on, eikä mallien alkioilla ole mitään relaatioita keskenään. Koska $A \sim_n B$ ja koska toisessa mallissa on parillinen ja toisessa pariton määrä alkioita, niin ominaisuus ``parillinen määrä alkioita'' on totta toisessa mallissa ja epätotta toisessa. Täten metodologiateoreeman nojalla Boolen kysely onko mallissa $A$ parillinen määrä alkioita ei ole määriteltävissä ensimmäisen kertaluvun predikaattilogiikan lauseeksi, eikä siten myöskään relaatioalgebran kyselyksi.
+Voittostrategia Pelaajalle II on sellainen, että Pelaajan I valitessa mielivaltaisella kierroksella $i$ alkion jommasta kummasta mallista, Pelaaja II yksinkertaisesti valitsee alkion toisesta mallista. Tämä strategia toimii, koska mallissa $B$ on yksi alkio enemmän kuin mikä pelattavien kierroksien määrä on, eikä mallien alkioilla ole mitään relaatioita keskenään. Koska $A \sim_n B$ ja koska toisessa mallissa on parillinen ja toisessa pariton määrä alkioita, niin ominaisuus ``parillinen määrä alkioita'' on totta toisessa mallissa ja epätotta toisessa. Täten metodologiateoreeman nojalla Boolen kysely ``onko mallissa $A$ parillinen määrä alkioita'' ei ole määriteltävissä ensimmäisen kertaluvun predikaattilogiikan lauseeksi eikä siten myöskään relaatioalgebran kyselyksi.
 \end{esim}
 
-Edellinen esimerkki voidaan muuttaa koskemaan verkkoja lisäämällä malleihin kaarirelaatio $R$. Mallin $A$alkiot ovat verkon solmuja siten, että solmusta $a_i$ on kaari solmuun $a_{i + 1}$ ja edelleen solmusta $a_{i + 1}$ on kaari solmuun $a_{i + 2}$ ja niin edelleen, kunnes saavutaan viimeiseen solmuun. Lisäksi viimeisestä solmusta on kaari takaisin ensimmäiseen solmuun. Vastavuoroisesti $B$ muodostetaan samalla tavalla. Eli verkoille ei ole olemassa ensimmäisen kertaluvun predikaattilogiikan lausetta jolla voisi esittää ominaisuuden, että verkko sisältää parillisen määrän solmuja.
+Edellinen esimerkki voidaan muuttaa koskemaan verkkoja lisäämällä malleihin kaarirelaatio $R$. Mallin $A$ alkiot ovat verkon solmuja siten, että solmusta $a_i$ on kaari solmuun $a_{i + 1}$ ja edelleen solmusta $a_{i + 1}$ on kaari solmuun $a_{i + 2}$ ja niin edelleen, kunnes saavutaan viimeiseen solmuun. Lisäksi viimeisestä solmusta on kaari takaisin ensimmäiseen solmuun. Vastavuoroisesti $B$ muodostetaan samalla tavalla. Eli verkoille ei ole olemassa ensimmäisen kertaluvun predikaattilogiikan lausetta, jolla voisi esittää sen ominaisuuden, että verkko sisältää parillisen määrän solmuja.
 
 \subsection{Ensimmäisen kertaluvun predikaattilogiikan rajoitteet}
-Verkoilla on paljon ominaisuuksia jotka eivät ole ensimmäisen kertaluvun predikaattilogiikka määriteltäviä. Jos $G$ on äärellisten verkkojen luokka, niin esimerkiksi seuraavat kyselyt eivät ole ensimmäisen kertaluvun predikaattilogiikka määriteltävissä $G$:lle: transitiivinen sulkeuma, tasoverkkoisuus, Eulerilaisuus, Hamiltonilaisuus, $k$-värittyvyys, kaikilla $ k \geq 2$, asyklisyys, leikkaussolmu ja verkon yhtenäisyys.
+Verkoilla on paljon ominaisuuksia, jotka eivät ole määriteltävissä ensimmäisen kertaluvun predikaattilogiikan keinoin. Jos $G$ on äärellisten verkkojen luokka, niin esimerkiksi seuraavat kyselyt eivät ole määriteltävissä $G$:lle ensimmäisen kertaluvun predikaattilogiikan keinoin: transitiivinen sulkeuma, tasoverkkoisuus, eulerilaisuus, hamiltonilaisuus, $k$-värittyvyys, kaikilla $ k \geq 2$, asyklisyys, leikkaussolmu ja verkon yhtenäisyys.
 
-Todistetaan esimerkin vuoksi näistä epäsuorasti verkon yhtenäisyyden määrittelemättömyys.
+Todistetaan epäsuorasti verkon yhtenäisyyden määrittelemättömyys esimerkin vuoksi.
 \begin{esim}
 Oletetaan, että ensimmäisen kertaluvun predikaattilogiikan lause $\varphi$ määrittelee verkkojen yhtenäisyyden aakkostossa, joka muodostuu kaksipaikkaisesta relaatiosymbolista $E$. Olkoon $L$ jokin lineaarijärjestys. Muodostestaan lineaarijärjestyksestä $L$ suunnattu verkko $G$ seuraavanlaisesti: Määritellään ensimmäiseksi seuraajarelaatio $S$ lineaarijärjestyksestä $L$ \[S(x, y) \coloneqq (x < y) \land \forall z ((z \leq x) \lor (y \leq z))\]
 Määritellään ensimmäisen kertaluvun predikaattilogiikan kaava $\psi(x, y)$ siten, että $\psi(x, y)$ on toteutuva jos ja vain jos jokin seuraavista on totta:
@@ -471,7 +473,7 @@ Määritellään ensimmäisen kertaluvun predikaattilogiikan kaava $\psi(x, y)$ 
 \item $\forall u (y \leq u) \land (\exists z(S(x, z) \land \forall u(u \leq z)))$, toisin sanoen $x$ on viimeisen alkion edeltäjä ja $y$ on ensimmäinen alkio.
 \item $\forall u (u \leq x) \land (\exists z(S(z, y) \land \forall u(z \leq u)))$, toisin sanoen $x$ on viimeinen alkio ja $y$ on ensimmäisen alkion seuraaja.
 \end{itemize}
-Ensimmäisen kertaluvun predikaattilogiikan kaavan $\psi$ määräämä suunnattu verkko $G$ lineaarijärjestyksen $L$ alkioista on yhtenäinen, tarkemmin sanoen se muodostuu yhdestä syklistä, jos sen solmujen määrä on pariton. Seuraavat kaksi kuvaa havainnolistavat tätä:
+Ensimmäisen kertaluvun predikaattilogiikan kaavan $\psi$ määräämä suunnattu verkko $G$ lineaarijärjestyksen $L$ alkioista on yhtenäinen. Tarkemmin sanoen se muodostuu yhdestä syklistä, jos sen solmujen määrä on pariton. Kuvat $2$ ja $3$ havainnollistavat tätä:
 
 \begin{huom}
 Verkot on numeroitu vain havainnollistamisen helpottamiseksi.
@@ -493,7 +495,7 @@ draw,processblue , text=blue , minimum width =1 cm}]
 \path (x_2) edge [bend left] node [right] {} (x_4);
 \path (x_4) edge [bend left] node [left] {} (x_1);
 \node[align=center, below] at (4.0,-1.3)%
-{Verkko $G$ jossa on pariton määrä solmuja (lineaarijärjestystä korostaen)};
+{\textbf{Kuva 2.} Verkko $G$, jossa on pariton määrä solmuja (lineaarijärjestystä korostaen).};
 \end{tikzpicture}
 \end{center}
 
@@ -513,11 +515,11 @@ draw,processblue , text=blue , minimum width =1 cm}]
 \path (x_2) edge (x_4);
 \path (x_4) edge (x_1);
 \node[align=center, below] at (4.0,-2.6)%
-{Verkko $G$ jossa on pariton määrä solmuja (syklisyyttä korostaen)};
+{\textbf{Kuva 3.} Verkko $G$, jossa on pariton määrä solmuja (syklisyyttä korostaen).};
 \end{tikzpicture}
 \end{center}
 
-Jos solmujen määrä on parillinen niin verkko ei ole yhtenäinen, tarkemmin sanoen se koostuu kahdesta erillisestä syklistä. Havainnollistetaan tätä kahdella kuvalla:
+Jos solmujen määrä on parillinen, niin verkko ei ole yhtenäinen. Tarkemmin sanoen se koostuu kahdesta erillisestä syklistä. Havainnollistetaan tätä kuvilla $4$ ja $5$:
 
 \begin{center}
 \begin{tikzpicture}[-latex ,auto ,node distance =2 cm and 2cm ,on grid ,
@@ -537,7 +539,7 @@ draw,processblue , text=blue , minimum width =1 cm}]
 \path (x_4) edge [bend left] node [right] {} (x_6);
 \path (x_6) edge [bend left] node [left] {} (x_2);
 \node[align=center, below] at (5.0,-1.6)%
-{Verkko $G$ jossa on parillinen määrä solmuja (lineaarijärjestystä korostaen)};
+{\textbf{Kuva 4.} Verkko $G$, jossa on parillinen määrä solmuja (lineaarijärjestystä korostaen).};
 \end{tikzpicture}
 \end{center}
 
@@ -559,27 +561,27 @@ draw,processblue , text=blue , minimum width =1 cm}]
 \path (x_4) edge (x_6);
 \path (x_6) edge (x_2);
 \node[align=center, below] at (4.0,-2.6)%
-{Verkko $G$ jossa on parillinen määrä solmuja (syklisyyttä korostaen)};
+{\textbf{Kuva 5.} Verkko $G$, jossa on parillinen määrä solmuja (syklisyyttä korostaen).};
 \end{tikzpicture}
 \end{center}
 
-Sijoittamalla kaavan $\psi$ relaatiosymbolin $E$ ilmentymien tilalle lauseessa $\neg \varphi$ voidaan nyt testata verkon $G$ parillisuutta. Edellisen esimerkin Boolen kyselyn ja sen yleistämisen verkoille perusteella tiedetään, ettei kyseinen testaus ole mahdollista, joten päädymme ristiriitaan. Täten ei ole olemassa ensimmäisen kertaluvun predikaattilogiikan lausetta $\varphi$ joka määrittelisi verkkojen yhtenäisyyden.
+Sijoittamalla kaavan $\psi$ relaatiosymbolin $E$ ilmentymien tilalle lauseessa $\neg \varphi$ voidaan nyt testata verkon $G$ parillisuutta. Edellisen esimerkin Boolen kyselyn ja sen yleistämisen verkoille perusteella tiedetään, ettei kyseinen testaus ole mahdollista, joten päädymme ristiriitaan. Täten ei ole olemassa ensimmäisen kertaluvun predikaattilogiikan lausetta $\varphi$, joka määrittelisi verkkojen yhtenäisyyden.
 \end{esim}
 
-Näiden lisäksi on hyvin monia muitakin verkkojen ominaisuuksia, joita ensimmäisen kertaluvun predikaattilogiikka ei pysty ilmaisemaan. Itse asiassa on osoitettu, että ensimmäisen kertaluvun predikaattilogiikka kykenee ilmaisemaan vain verkkojen lokaaleja ominaisuuksia \cite{Han65}. Hanf käytti tässä todistuksessaan EF-peliä, tarkemmin Fraïssén algebrallista versiota siitä. Sama lokaalisuus on osoitettu myöhemmin myös toisella metodilla, kvanttorien eliminoinnilla \cite{Gai82}. Nämä tulokset ovat motivoineet pyrkimyksiä kehittää ensimmäisen kertaluvun predikaattilogiikan laajennuksia verkoille, samoin kuin kehittämään näille omia EF-pelejä ilmaisuvoiman tutkimiseen. Tällaisia tutkimuksia on tehty muun muassa monadiselle toisen kertaluvun predikaattilogiikalle \cite{Fag75} \cite{Fag93}, transitiivisen sulkeuman logiikalle \cite{Gra92} ja erilaisille kiintopistelogiikoille \cite{Bos93}.
+Näiden lisäksi on hyvin monia muitakin verkkojen ominaisuuksia, joita ensimmäisen kertaluvun predikaattilogiikka ei pysty ilmaisemaan. Itse asiassa, on osoitettu, että ensimmäisen kertaluvun predikaattilogiikka kykenee ilmaisemaan vain verkkojen paikallisia ominaisuuksia \cite{Han65}. William Hanf käytti tässä todistuksessaan EF-peliä, tarkemmin Fraïssén algebrallista versiota siitä. Sama paikallisuus on osoitettu myöhemmin myös toisella metodilla, kvanttorien eliminoinnilla \cite{Gai82}. Nämä tulokset ovat motivoineet pyrkimyksiä kehittää ensimmäisen kertaluvun predikaattilogiikan laajennuksia verkoille, samoin kuin kehittämään näille omia EF-pelejä ilmaisuvoiman tutkimiseen. Tällaisia tutkimuksia on tehty muun muassa monadiselle toisen kertaluvun predikaattilogiikalle \cite{Fag75} \cite{Fag93}, transitiivisen sulkeuman logiikalle \cite{Gra92} ja erilaisille kiintopistelogiikoille \cite{Bos93}.
 
-Vaikka ensimmäisen kertaluvun predikaattilogiikka on hyvin rajoittunut kieli esimerkiksi verkkojen ominaisuuksien ilmaisemiseen, niin kuitenkin sillä voi joitain hyödyllisiäkin kyselyitä verkkojen suhteen ilmaista. Esimerkiksi seuraavat lauseet ovat ilmaistavissa ensimmäisen kertaluvun predikaattilogiikalla (oletetaan, että $E$ on relaatio joka ilmaisee verkon solmujen välistä kaarta ja symbolit $x, y, z_i, q$ ovat solmuja):
+Vaikka ensimmäisen kertaluvun predikaattilogiikka on hyvin rajoittunut kieli esimerkiksi verkkojen ominaisuuksien ilmaisemiseen, voi sillä kuitenkin ilmaista joitain hyödyllisiäkin kyselyitä verkkojen suhteen. Esimerkiksi seuraavat lauseet ovat ilmaistavissa ensimmäisen kertaluvun predikaattilogiikalla (oletetaan, että $E$ on relaatio joka ilmaisee verkon solmujen välistä kaarta ja symbolit $x, y, z_i, q$ ovat solmuja):
 
 \begin{itemize}
-\item ``solmulla $x$ on vähintään kaksi toisistaan eroavaa naapuria'' \[(\exists y)(\exists q)(\neg(y = q) \land E(x, y) \land E(x, q))\]
-\item ``jokaisella solmulla $x$ on vähintään kaksi toisistaan eroavaa naapuria'' \[(\forall x)(\exists y)(\exists q)(\neg(y = q)\land E(x, y) \land E(x, q))\]
-\item ``on olemassa polku solmusta $x$ solmuun $y$ jonka pituus on $3$'' \[(\exists z_1)(\exists z_2)(E(x, z_1)\land E(z_1, z_2) \land E(z_2, y))\]
+\item ``Solmulla $x$ on vähintään kaksi toisistaan eroavaa naapuria''. \[(\exists y)(\exists q)(\neg(y = q) \land E(x, y) \land E(x, q))\]
+\item ``Jokaisella solmulla $x$ on vähintään kaksi toisistaan eroavaa naapuria''. \[(\forall x)(\exists y)(\exists q)(\neg(y = q)\land E(x, y) \land E(x, q))\]
+\item ``On olemassa polku solmusta $x$ solmuun $y$, jonka pituus on $3$''. \[(\exists z_1)(\exists z_2)(E(x, z_1)\land E(z_1, z_2) \land E(z_2, y))\]
 \end{itemize}
 
 Verkkojen ohella EF-pelit ovat olleet hyödyllisiä ensimmäisen kertaluvun predikaattilogiikan ja formaalien kielten teorian määriteltävyyskysymysten välisen suhteen tutkimisessa. Erityisesti \textit{tähtivapaat säännölliset kielet} (star-free regular languages) ovat olleet mielenkiinnon kohteena.
 
 \subsection{Kongruenssiapulauseet}
-Kieltä kutsutaan \textit{tähtivapaaaksi}, jos sen pystyy kuvailemaan säännöllisenä lausekkeena, joka on konstruoitu aakkoston symboleista, tyhjän joukon symbolista ja kaikista muista loogisista operaatioista, kuten konkatenaatiosta ja komplementista paitsi Kleenen tähdestä. Hyvin tunnettu tulos formaalien kielten teoriassa on, että kieli on määriteltävissä ensimmäinen kertaluvun predikaattilogiikan keinoin jos ja vain jos se on tähtivapaa \cite{McN71}. Tämän todistuksessa käytetään yleensä induktiota kvanttorisyvyyden suhteen kuten esimerkiksi Ladner tekee \cite{Lad77}.
+Kieltä kutsutaan \textit{tähtivapaaaksi}, jos sen pystyy kuvailemaan säännöllisenä lausekkeena, joka on konstruoitu aakkoston symboleista, tyhjän joukon symbolista ja kaikista muista loogisista operaatioista, kuten konkatenaatiosta ja komplementista, paitsi Kleenen tähdestä. Hyvin tunnettu tulos formaalien kielten teoriassa on, että kieli on määriteltävissä ensimmäinen kertaluvun predikaattilogiikan keinoin jos ja vain jos se on tähtivapaa \cite{McN71}. Tämän todistuksessa käytetään yleensä induktiota kvanttorisyvyyden suhteen, kuten esimerkiksi Richard Ladner tekee \cite{Lad77}.
 
 \begin{maar}[Kvanttoriaste]
 Ensimmäisen kertaluvun predikaattilogiikan kaavan $\varphi$ \textit{kvanttoriaste} $qr(\varphi)$ on sisäkkäisten kvanttorien syvyys ja se määritellään seuraavasti:
@@ -591,7 +593,7 @@ Ensimmäisen kertaluvun predikaattilogiikan kaavan $\varphi$ \textit{kvanttorias
 \end{itemize}
 \end{maar}
 
-Esitellään miten EF-peliä käytetään tähtivapaan kielen ja kielen ensimmäisen kertaluvun predikaattilogiikan määriteltävyyden välisen loogisen ekvivalenssin todistamiseen. Edellä mainitun ekvivalenssin todistuksen induktioaskeleen kriittinen kohta on seuraava väite:
+Esitellään seuraavaksi sitä, miten EF-peliä käytetään tähtivapaan kielen ja kielen ensimmäisen kertaluvun predikaattilogiikan määriteltävyyden välisen loogisen ekvivalenssin todistamiseen. Edellä mainitun ekvivalenssin todistuksen induktioaskeleen kriittinen kohta on seuraava väite:
 
 \begin{lem}[Kongruenssilemma]
 Sanan $w$ yli aakkoston $\Sigma = \{s_1, \ldots, s_k\}$ voi esittää mallina $W = (\{1, \ldots, |w|\}, <, R_1, \ldots, R_k)$, jossa $R_i$ on yksipaikkainen relaatio ja $j \in R_i$ jos ja vain jos $j$:s kirjain sanasta $w$ on $s_i$. Olkoon $s, s', t, t'$ sanoja yli aakkoston $\Sigma$ ja olkoon $S, S', T , T'$ näitä kuvailevia malleja. Tällöin: \[ S \cong_p S' \land T \cong_p T' \Longrightarrow S \cdot T \cong_p S' \cdot T' \]
@@ -600,17 +602,17 @@ Eli jos mallien $S$ ja $S'$ välillä on osittaisisomorfismi sekä mallien $T$ j
 
 Lemman todistus on EF-peliä käyttämällä hyvin suoraviivainen. Oletuksen nojalla Pelaajalla II on voittostrategia peleissä $EF_m(S, S')$ ja $EF_m(T, T')$, joten Pelaajan II voittostrategia pelille $EF_m(S \cdot T, S' \cdot T')$ on kompositio kummastakin oletuksen voittostrategiasta. Siis osille $S$ ja $S'$ käytetään ensimmäisen pelin voittostrategiaa ja osille $T$ ja $T'$ toisen pelin voittostrategiaa.
 
-Kongruenssilemma sanoo, että mallin ominaisuudet määräytyvät osiensa ominaisuuksien mukaan. Täten mallit voidaan myös rakentaa osista ja näiden ominaisuuksista. Kongruenssilemmat ovat tyypillisiä EF-pelien sovelluksia. Näitä on todistettu monille muille logiikoilla sekä sanoja monimutkaisemmille malleille. Esimerkiksi Shelah esittelee esimerkkejä monadisen logiikan kongruenssilemmoista lineaarijärjestyksille \cite{She75}. Wolfgang Thomas käyttää EF-pelejä todistaakseen kongruenssilemman ensimmäisen kertaluvun predikaattilogiikan muunnokselle, jossa kaavat ovat \textit{prenex-normaalimuodossa}, eli kaavat on muokattu niin, että kvanttorit ovat jonona kaavan alussa määrätynlaisessa järjestyksessä, jonka jälkeen seuraa kvanttoreilla sitomaton osuus \cite{Tho84}.
+Kongruenssilemma sanoo, että mallin ominaisuudet määräytyvät osiensa ominaisuuksien mukaan. Täten mallit voidaan myös rakentaa osista ja näiden ominaisuuksista. Kongruenssilemmat ovat tyypillisiä EF-pelien sovelluksia. Näitä on todistettu monille muille logiikoille sekä sanoja monimutkaisemmille malleille. Esimerkiksi Saharon Shelah esittelee esimerkkejä monadisen logiikan kongruenssilemmoista lineaarijärjestyksille \cite{She75}. Wolfgang Thomas käyttää EF-pelejä todistaakseen kongruenssilemman ensimmäisen kertaluvun predikaattilogiikan muunnokselle, jossa kaavat ovat \textit{prenex-normaalimuodossa}, eli kaavat on muokattu niin, että kvanttorit ovat jonona kaavan alussa määrätynlaisessa järjestyksessä, minkä jälkeen seuraa kvanttoreilla sitomaton osuus \cite{Tho84}.
 
-Predikaattilogiikan ja tähtivapaiden lausekkeiden ekvivalenssi on hyvin tunnettu. Thomas ja Lippert esittelevät EF-pelin muunnoksen, konkatenaatiopelin, jonka avulla he esittelevät ensimmäisen kertaluvun predikaattilogiikan ja \textit{relativoitujen tähtivapaiden säännöllisten lausekkeiden} (relativized star-free expressions) välisiä eroja. Tähtivapaa säännöllinen lauseke on relativoitu, jos siihen on lisätty ylimääräinen vakio ja tämä vakio kiinnitetään johonkin kieleen. Tässä työssään he näyttävät että relativoidut tähtivapaat lausekkeet ovat heikompia kuin vastaavat ensimmäisen kertaluvun predikaattilogiikan lauseet \cite{Lip88}.
+Predikaattilogiikan ja tähtivapaiden lausekkeiden ekvivalenssi on hyvin tunnettu. Thomas yhdessä D. Lippertin kanssa esittelee EF-pelin muunnoksen, konkatenaatiopelin, jonka avulla he havainnollistavat ensimmäisen kertaluvun predikaattilogiikan ja \textit{relativoitujen tähtivapaiden säännöllisten lausekkeiden} (relativized star-free expressions) välisiä eroja. Tähtivapaa säännöllinen lauseke on relativoitu, jos siihen on lisätty ylimääräinen vakio ja tämä vakio kiinnitetään johonkin kieleen. Työssään Thomas ja Lippert näyttävät että relativoidut tähtivapaat lausekkeet ovat heikompia kuin vastaavat ensimmäisen kertaluvun predikaattilogiikan lauseet \cite{Lip88}.
 
 \subsection{Bisimulaatio}
-Yksi tärkeä malliteoreettisten pelien sovellus automaattien ja tilasiirtymäsysteemien teoriassa on Parkin esittelemä \textit{bisimulaation} käsite \cite{Par81}. Bisimulaatiota voi tarkastella eräänlaisena osittaisisomorfismien ``perheenä'', joka vastaa rajoitettua EF-peliä, jossa osittaisisomorfismia on heikennetty niin että kuvauksen ei tarvitse olla enää injektiivinen. Vaikka klassisen, tässä tutkielmassa määritellyn, EF-pelin ja bisimulaation välillä on hyvin läheinen kytkös, niin ne on kehitetty kuitenkin hyvin pitkälti erillään toisistaan. Bisimulaatiota käytetään esimerkiksi Hennessyn ja Milnerin modaalilogiikassa \cite{Hen80}. 
+Yksi tärkeä malliteoreettisten pelien sovellus automaattien ja tilasiirtymäsysteemien teoriassa on David Parkin esittelemä \textit{bisimulaation} käsite \cite{Par81}. Bisimulaatiota voi tarkastella eräänlaisena osittaisisomorfismien ``perheenä'', joka vastaa rajoitettua EF-peliä. Tässä pelissä osittaisisomorfismia on heikennetty niin, että kuvauksen ei tarvitse olla enää injektiivinen. Vaikka klassisen, tässä tutkielmassa määritellyn, EF-pelin ja bisimulaation välillä on hyvin läheinen kytkös, ne on kehitetty kuitenkin hyvin pitkälti toisistaan erillään. Bisimulaatiota käytetään esimerkiksi Matthew Hennessyn ja Robin Milnerin modaalilogiikassa \cite{Hen80}. 
 
-\textit{Hennessy-Milner modaalilogiikkaa} käytetään tilasiirtymäsysteemien omaisuuksien määrittelyyn. Tilasiirtymäsysteemit ovat hyvin paljon automaatteja muistuttavia struktuureja. Modaalilogiikka on propositiologiikan laajennus jossa propositiologiikan kieleen on lisätty uusia operaattoreita, joita kutsutaan \textit{modaalioperaattoreiksi} tai \textit{modaliteeteiksi}. Modaliteetti tarkoittaa jonkin asian tai tapahtuman laatua eli niiden tapaa olla. Modaalilogiikassa sen voi ajatella määrittävän tavan, jolla väite on tosi. Modaliteetin tarkempi määrittely ei ole tämän tutkielman kontekstissa oleellista. Määritellään seuraavaksi bisimulaatio.
+\textit{Hennessy-Milner modaalilogiikkaa} käytetään tilasiirtymäsysteemien omaisuuksien määrittelyyn. Tilasiirtymäsysteemit ovat hyvin paljon automaatteja muistuttavia struktuureja. Modaalilogiikka on propositiologiikan laajennus, jossa propositiologiikan kieleen on lisätty uusia operaattoreita. Näitä kutsutaan \textit{modaalioperaattoreiksi} tai \textit{modaliteeteiksi}. Modaliteetti tarkoittaa jonkin asian tai tapahtuman laatua eli niiden tapaa olla. Modaalilogiikassa sen voi ajatella määrittävän tavan, jolla väite on tosi. Modaliteetin tarkempi määrittely ei ole tämän tutkielman kontekstissa oleellista. Määritellään seuraavaksi bisimulaatio.
 
 \begin{maar}[Bisimulaatio]
-Olkoon $M$ ja $M'$ malleja, jotka koostuvat solmujen (tilojen) joukosta $W$, solmujen välisistä relaatioista (kaarista) $R$ ja funktiosta $V$, joka liittää jokaiseen propositiosymboliin $p_i$ joukon $W$ osajoukon $V(p_i)$. Intuitiivisesti ajatellen joukko $V(p_i)$ on niiden tilojen joukko, jossa $p_i$ on tosi. \textit{Bisimulaatio} mallien $M$ ja $M'$ välillä on epätyhjä relaatio $B \subseteq W \times W'$, jolle pätee kaikilla $(w, w') \in B$ seuraavat ehdot:
+Olkoot $M$ ja $M'$ malleja, jotka koostuvat solmujen (tilojen) joukosta $W$, solmujen välisistä relaatioista (kaarista) $R$ ja funktiosta $V$, joka liittää jokaiseen propositiosymboliin $p_i$ joukon $W$ osajoukon $V(p_i)$. Intuitiivisesti ajatellen joukko $V(p_i)$ on niiden tilojen joukko, jossa $p_i$ on tosi. \textit{Bisimulaatio} mallien $M$ ja $M'$ välillä on epätyhjä relaatio $B \subseteq W \times W'$, jolle pätee kaikilla $(w, w') \in B$ seuraavat ehdot:
 \begin{itemize}
 \item Tilat $w$ ja $w'$ toteuttavat samat propositiosymbolit.
 \item Jos $(w, v) \in R$, niin on olemassa $v' \in W'$, jolle pätee $(w', v') \in R'$ ja $(v, v') \in B$.
@@ -619,7 +621,7 @@ Olkoon $M$ ja $M'$ malleja, jotka koostuvat solmujen (tilojen) joukosta $W$, sol
 Jos on olemassa jokin bisimulaatio $B$ mallien $M$ ja $M'$ välillä ja $(w, w') \in B$ niin sanotaan, että tilat ovat bisimilaarisia.
 \end{maar}
 
-Kaksi tilaa ovat siis bisimilaarisia, jos ja vain jos niiden toteuttamat propositiosymbolit sekä tilojen mahdolliset tilasiirtymät vastaavat toisiaan. Yleensä tilat nimetään siten, että niistä ilmenee tilan nimi, sekä tilan mahdollisesti toteuttamat propositiosymbolit. Seuraava kuva havainnollistaa tilojen bisimilaarisuutta:
+Kaksi tilaa ovat siis bisimilaarisia, jos ja vain jos niiden toteuttamat propositiosymbolit sekä tilojen mahdolliset tilasiirtymät vastaavat toisiaan. Yleensä tilat nimetään siten, että niistä ilmenee tilan nimi sekä tilan mahdollisesti toteuttamat propositiosymbolit. Kuva 6 havainnollistaa tilojen bisimilaarisuutta:
 
 \begin{center}
 \begin{tikzpicture}[-latex ,auto ,node distance =2 cm and 2cm ,on grid ,
@@ -646,18 +648,23 @@ draw,processblue , text=blue , minimum width =1 cm}]
 \draw[gray,thin,dashed] (x_2) -- (x_6);
 \draw[gray,thin,dashed] (x_4) -- (x_6);
 \node[align=center, below] at (2.0,-3.0)%
-{Bisimilaariset tilat on yhdistetty katkonuolilla};
+{\textbf{Kuva 6.} Bisimilaariset tilat on yhdistetty katkonuolilla};
 \end{tikzpicture}
 \end{center}
 
-Bisimulaation käsite mahdollistaa sen tutkimisen että mitä mallien ominaisuuksia on mahdollista kuvailla modaalilogiikan avulla ja mitä taas ei ole mahdollista kuvailla. Bisimulaatio on yksi modaalilogiikan tärkeimpiä työkaluja ja sopii mainiosta ohjelmien verifiointiin \cite{Bla01}. Se onkin yksi verifioinnin ja samanaikaisuusteorian kulmakivistä. Sille löytyy myös käyttöä tekoälytutkimuksessa, lingvistiikassa ja filosofiassa \cite{Bla06}.
+Bisimulaation käsitteen avulla voi tutkia sitä, mitä mallien ominaisuuksia on mahdollista kuvailla modaalilogiikan avulla ja mitä taas ei ole mahdollista kuvailla. Bisimulaatio on yksi modaalilogiikan tärkeimpiä työkaluja ja sopii mainiosti ohjelmien verifiointiin \cite{Bla01}. Se onkin yksi verifioinnin ja samanaikaisuusteorian kulmakivistä. Sille löytyy käyttöä myös tekoälytutkimuksessa, lingvistiikassa ja filosofiassa \cite{Bla06}.
 
 \section{Yhteenveto}
-Tässä tutkielmassa on tarkasteltu Ehrenfeucht--Fraïssé-pelejä ja näiden sovelluksia eri näkökulmista. Teoreettiselta kannalta tutkielmassa esiteltiin EF-peli, sen säännöt ja esiteltiin esimerkin avulla miten EF-peliä käytännössä pelataan. Lisäksi todistettiin, että Pelaajan II voittostrategia on ekvivalenssirelaatio joten voittostrategian avulla voidaan jakaa malleja ekvivalenssiluokkiin ja täten tarvittaessa samaistaa nämä mallit yhdeksi malliksi. Käytännön kannalta tutkielmassa on esimerkkien avulla esitelty miten EF-peliä sovelletaan määriteltävyyskysymyksissä ja todistuksissa. Kirjallisuutta ja tutkimuksia on esitelty syvällistä aiheeseen tutustumista helpottamaan.
+Tässä tutkielmassa on tarkasteltu Ehrenfeucht--Fraïssé-pelejä ja näiden sovelluksia eri näkökulmista. Teoreettiselta kannalta tutkielmassa esiteltiin EF-peli sääntöineen ja esiteltiin esimerkin avulla, miten EF-peliä käytännössä pelataan. Lisäksi todistettiin, että Pelaajan II voittostrategia on ekvivalenssirelaatio, joten voittostrategian avulla malleja voidaan jakaa ekvivalenssiluokkiin ja täten tarvittaessa samaistaa nämä mallit yhdeksi malliksi.
+
+Voittostrategia voi olla vain toisella pelaajista. Lisäksi yleisesti ottaen jos pelaajalla on voittostrategia pelissä jonka kesto on $k$ kierrosta, niin hänellä on voittostrategia myös kaikissa tätä lyhyemmissä peleissä. On myös kehitelty EF-pelin variaatio, jossa kyseinen ominaisuus ei päde.
+
+EF-pelejä on monia eri variaatioita, monille erilaisille logiikoille ja moniin eri käyttötarpeisiin. EF-pelejä käytetään esimerkiksi kongruenssiapulauseiden johtamiseen, verkkojen ominaisuuksien tutkimiseen, eri logiikoiden sekä tietokantakielien ilmaisuvoiman tutkimiseen ja tietokoneohjelmien verifiointiin ja moneen muuhun. Etenkin ensimmäisen kertaluvun predikaattilogiikkaa on tutkittu paljon EF-pelien avulla.
 
 Ensimmäisen kertaluvun predikaattilogiikka karakterisoi äärelliset mallit isomorfiaan asti. Isomorfismi on kuitenkin liian voimakas työkalu elementaarisen ekvivalenssin ilmaisemiseen. Tämä ongelma ratkeaa heikentämällä isomorfismia äärelliseksi isomorfismiksi. Kaikki osittaisisomorfismit ovat myös äärellisiä isomorfismeja, mutta kaikki äärelliset isomorfismit eivät ole osittaisisomorfismeja. Tämä äärellinen isomorfismi karakterisoi elementaarisen ekvivalenssin.
 
-EF-pelejä on monia eri variaatioita, monille erilaisille logiikoille ja moniin eri käyttötarpeisiin. Koska EF-pelien voittostrategia on ekvivalenssirelaation, EF-pelin avulla voidaan jakaa malleja eri ekvivalenssiluokkiin. Voittostrategia voi olla vain toisella pelaajista. Lisäksi yleisesti ottaen jos pelaajalla on voittostrategia pelissä jonka kesto on $k$ kierrosta, niin hänellä on voittostrategia myös kaikissa tätä lyhyemmissä peleissä. On myös kehitelty EF-pelin variaatio, jossa kyseinen ominaisuus ei päde.
+Käytännön kannalta tutkielmassa on esimerkkien avulla esitelty, miten EF-peliä sovelletaan määriteltävyyskysymyksissä ja todistuksissa. Kirjallisuutta ja tutkimuksia on esitelty syvällisemmän aiheeseen tutustumisen helpottamiseksi. Yksi mielenkiintoinen tutkimuskohde voisi olla EF-pelit hyperpelien (hypergame) kontekstissa. Hyperpeli on kahdelle pelaajalle ja sitä pelataan siten, että pelaaja I valitsee ensin minkä tahansa äärellisen pelin, jonka jälkeen pelaaja II tekee ensimmäisen siirron tässä pelissä, jonka jälkeen valittu peli jatkuu tavallisesti. Se kumpi voittaa valitun pelin, voittaa myös hyperpelin.
+
 
 
 
