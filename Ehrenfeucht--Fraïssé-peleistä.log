@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.25)  8 MAY 2016 20:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.25)  8 MAY 2016 20:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1370,9 +1370,9 @@ Package babel Info: Redefining finnish shorthand "|
 Package babel Info: Redefining finnish shorthand "|
 (babel)             in language  on input line 655.
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 666.
+(babel)             in language  on input line 670.
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 666.
+(babel)             in language  on input line 670.
  [19] (./Ehrenfeucht--Fraïssé-peleistä.bbl
 Package babel Info: Redefining finnish shorthand "|
 (babel)             in language  on input line 1.
@@ -1399,19 +1399,19 @@ Package babel Info: Redefining finnish shorthand "|
 (babel)             in language  on input line 221.
  [21])
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 690.
+(babel)             in language  on input line 694.
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 690.
+(babel)             in language  on input line 694.
  [22]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 690.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 690.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 694.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 694.
  (./Ehrenfeucht--Fraïssé-peleistä.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 690.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 690.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 694.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 694.
 Package rerunfilecheck Info: File `Ehrenfeucht--Fraïssé-peleistä.out' has
  not changed.
 (rerunfilecheck)             Checksum: 44BF421BBEEAD4242E5C85674EEA15F1;1017.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 690.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 694.
  ) 
 Here is how much of TeX's memory you used:
  20457 strings out of 493089
@@ -1437,7 +1437,7 @@ type1/public/lm/lmr8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public
 local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></
 usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pf
 b>
-Output written on Ehrenfeucht--Fraïssé-peleistä.pdf (25 pages, 317450 byt
+Output written on Ehrenfeucht--Fraïssé-peleistä.pdf (25 pages, 317974 byt
 es).
 PDF statistics:
  368 PDF objects out of 1000 (max. 8388607)
