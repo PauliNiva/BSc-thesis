@@ -12,7 +12,7 @@
 \contentsline {subsection}{\numberline {3.2}EF-pelin ominaisuuksia}{11}{subsection.3.2}
 \contentsline {section}{\numberline {4}Sovelluksia}{12}{section.4}
 \contentsline {subsection}{\numberline {4.1}Sovellusaloja}{12}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Ensimm\IeC {\"a}isen kertaluokan predikaattilogiikan rajoitteet}{14}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.2}Ensimm\IeC {\"a}isen kertaluvun predikaattilogiikan rajoitteet}{14}{subsection.4.2}
 \contentsline {subsection}{\numberline {4.3}Kongruenssiapulauseet}{16}{subsection.4.3}
 \contentsline {subsection}{\numberline {4.4}Bisimulaatio}{18}{subsection.4.4}
 \contentsline {section}{\numberline {5}Yhteenveto}{19}{section.5}
