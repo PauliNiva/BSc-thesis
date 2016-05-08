@@ -198,10 +198,10 @@ Olkoon $A$ atomikaavojen joukko ja olkoon $X$ muuttujien joukko. \textit{Kieli} 
 \item Jos $\varphi \in K$ ja $x \in X$, niin $\forall x(\varphi) \in K$ ja $\exists x(\varphi) \in K$
 \end{itemize}
 \end{maar}
-Kieli $K$ on \textit{ensimmäisen kertaluvun predikaattilogiikan} kieli, joka sisältää merkkijonoja. Näitä merkkijonoja kutsutaan usein kirjallisuudessa myös kaavoiksi. Kaavojen \textit{alikaavoja} ovat kaikki kaavan osat jotka itsekin ovat kaavoja. 
+Kieli $K$ on ensimmäisen kertaluvun predikaattilogiikan kieli, joka sisältää merkkijonoja. Näitä merkkijonoja kutsutaan kirjallisuudessa usein myös \textit{kaavoiksi}. Kaavojen \textit{alikaavoja} ovat kaikki kaavan osat, jotka itsekin ovat kaavoja. 
 
 \subsection{Mallit}
-Tässä alaluvussa määritellään, mikä on \textit{malli} eli \textit{struktuuri}. Karkeasti ottaen se on joukko, jolla on jonkinlainen rakenne ja joka koostuu relaatioista, vakioista ja funktioista. Malli ja struktuuri ovat synonyymeja. Näitä kahta sanaa käytetään rinnakkain konteksista riippuen sen mukaan kumpi soveltuu kyseiseen tilanteeseen. Sanaa malli käytetään yleensä tällaisessa kontekstissa ``Olkoon $M$ malli kaavalle $\varphi$'', joka tarkoittaa samaa kuin ``Olkoon M struktuuri siten että $M \models \varphi$'' Nämä konseptit määritellään myöhemmin tässä kappaleessa.
+Tässä alaluvussa määritellään, mikä on \textit{malli} eli \textit{struktuuri}. Karkeasti ottaen se on joukko, jolla on jonkinlainen rakenne ja joka koostuu relaatioista, vakioista ja funktioista. Malli ja struktuuri ovat synonyymeja. Näitä kahta sanaa käytetään rinnakkain konteksista riippuen sen mukaan, kumpi soveltuu kyseiseen tilanteeseen. Sanaa ``malli'' käytetään yleensä kontekstissa ``Olkoon $M$ malli kaavalle $\varphi$'', mikä tarkoittaa samaa kuin ``Olkoon $M$ struktuuri siten, että $M \models \varphi$'' Nämä konseptit määritellään myöhemmin tässä kappaleessa.
 
 \begin{maar}[Malli] Olkoon $L$ aakkosto ja olkoon $M$ epätyhjä joukko. Tällöin $L$\textit{-malli} koostuu seuraavista:
 \begin{itemize}
@@ -221,9 +221,9 @@ Relaatiosymbolin $R$ ja sen tulkinnan $R^M$ välistä eroa voidaan havainnollist
 \begin{maar}[Alimalli]
 Oletaan, että $A$ on $L$-malli. $A$:n \textit{alimalli} on sellainen $L$-malli $B$, että
 \begin{itemize}
-\item $B \subset A$
-\item jos $R \in L$ on relaatiosymboli ja $\#R = n \in \mathbb{Z}_+$, niin tällöin $R^B = R^A \cap B^n$
-\item jos $c \in L$ on vakiosymboli, niin tällöin $c^B = c^A$ ja $c^B \in B$
+\item $B \subset A$.
+\item jos $R \in L$ on relaatiosymboli ja $\#R = n \in \mathbb{Z}_+$, niin tällöin $R^B = R^A \cap B^n$.
+\item jos $c \in L$ on vakiosymboli, niin tällöin $c^B = c^A$ ja $c^B \in B$.
 \item jos $f \in L$ on funktiosymboli ja $\#f = n \in \mathbb{Z}_+$, niin tällöin $f^A(B^n) \subset B$ ja $f^B = f^A \restriction B^n$ eli $f^B$ on $f^A$:n rajoittuma osajoukkoon $B^n$. Siis $B$ on suljettu $f^A$:n suhteen.
 \end{itemize}
 \end{maar}
@@ -231,20 +231,20 @@ Oletaan, että $A$ on $L$-malli. $A$:n \textit{alimalli} on sellainen $L$-malli 
 Olkoon $A$ malli ja $B \subset A$. Tällöin $\langle B \rangle$ on pienin $A$:n alimalli, joka sisältää joukon $B$. 
 
 \subsection{Isomorfia}
-Mallien kohdalla puhuttiin ``jonkinlaisesta rakenteesta'', eli struktuurista. Mallin objekteille annettiin nimiä, symboleja ja kaavoja, jotta tätä rakennetta voitiin kuvailla. Malleja, joiden rakenne on samanlainen, kutsutaan isomorfisiksi.
+Mallien kohdalla puhuttiin ``jonkinlaisesta rakenteesta'' eli struktuurista. Mallin objekteille annettiin nimiä, symboleja ja kaavoja, jotta tätä rakennetta voitiin kuvailla. Malleja, joiden rakenne on samanlainen, kutsutaan isomorfisiksi.
 
 \begin{maar}[Isomorfismi]
 Oletetaan, että $L$ on aakkosto ja $A$ sekä $B$ ovat $L$-malleja. Kuvaus $g: A \rightarrow B$ on \textit{isomorfismi} mallista $A$ mallille $B$, jos
 \begin{itemize}
 \item $g$ on bijektio.
-\item Jokaisella vakiosymbolilla $c \in L$ pätee $g(c^A) = c^B$.
-\item Jokaisella relaatiosymbollilla $R \in L, \#R = n$ pätee $(a_1, \ldots, a_n) \in R^A \Longleftrightarrow (g(a_1), \ldots, g(a_n)) \in R^B$.
-\item Jokaisella funktiosymbolilla $f \in L, \#f = m$ pätee $g(f^A(a_1, \ldots, a_m)) = f^B(g(a_1), \ldots, g(a_m))$.
+\item jokaisella vakiosymbolilla $c \in L$ pätee $g(c^A) = c^B$.
+\item jokaisella relaatiosymbollilla $R \in L, \#R = n$ pätee $(a_1, \ldots, a_n) \in R^A \Longleftrightarrow (g(a_1), \ldots, g(a_n)) \in R^B$.
+\item jokaisella funktiosymbolilla $f \in L, \#f = m$ pätee $g(f^A(a_1, \ldots, a_m)) = f^B(g(a_1), \ldots, g(a_m))$.
 \end{itemize}
 Jos on olemassa isomorfinen kuvaus $A \rightarrow B$, niin sanotaan, että $A$ ja $B$ ovat isomorfiset ja tätä merkitään $A \cong B$.
 \end{maar}
 
-Isomorfia mallien välillä on refleksiivinen, symmetrinen ja transitiivinen. Jotta mallien välillä voi olla isomorfia, niin mallien täytyy olla saman kokoiset, sillä muuten niiden välillä ei voi olla bijektiota, eikä siten isomorfiaakaan. EF-pelien kannalta tärkeä isomorfian ominaisuus on, että se säilyttää totuuden.
+Isomorfia mallien välillä on refleksiivinen, symmetrinen ja transitiivinen. Jotta mallien välillä voisi olla isomorfia, mallien täytyy olla samankokoiset, sillä muuten niiden välillä ei voi olla bijektiota eikä siten isomorfiaakaan. EF-pelien kannalta tärkeä isomorfian ominaisuus on, että se säilyttää totuuden.
 
 \begin{maar}[Osittaisisomorfismi]
 Olkoon $L$ aakkosto sekä olkoot $A$ ja $B$ kumpikin $L$-malleja. Olkoon $A' \subset A$ ja $B' \subset B$. Lisäksi olkoon $f: A' \rightarrow B'$. Kuvausta $f$ kutsutaan \textit{osittaisisomorfismiksi}, jos on olemassa isomorfismi $g: \langle A' \rangle \rightarrow \langle B' \rangle$, jolle $g \restriction A' = f$ eli kuvaus $f$ on kuvauksen $g$ rajoittuma osajoukkoon $A'$. Tästä käytetään merkintää $A \cong_p B$.
@@ -252,10 +252,10 @@ Olkoon $L$ aakkosto sekä olkoot $A$ ja $B$ kumpikin $L$-malleja. Olkoon $A' \su
 
 Toisin kuin isomorfismissa, osittaisisomorfismissa totuus ei välttämättä säily. Joissain tilanteissa osittaisisomorfismi kuitenkin säilyttää totuuden. Erityisesti näin on relationaalisten aakkostojen tapauksessa.
 
-Edellä puhuttiin paljon totuudesta ja määritellään seuraavaksi mitä sillä tarkalleen ottaen tarkoitetaan.
+Määritellään seuraavaksi, mitä keskeisellä käsitteellä \textit{totuus} tarkalleen ottaen tarkoitetaan.
 
-\begin{maar}[Tarski]
-Oletetaan, että $A$ on $L$-malli ja olkoon $L$ aakkosto ja $K$ kieli. Määritellään rekursiivisesti että kielen $K$ kaava $\varphi$ on totta $A$:ssa, eli $A$ toteuttaa $\varphi$:n, eli $A \models \varphi$ seuraavasti:
+\begin{maar}[Tarskin totuusmääritelmä]
+Oletetaan, että $A$ on $L$-malli ja olkoon $L$ aakkosto ja $K$ kieli. Määritellään rekursiivisesti, että kielen $K$ kaava $\varphi$ on totta $A$:ssa eli $A$ toteuttaa $\varphi$:n eli $A \models \varphi$ seuraavasti:
 \begin{itemize}
 \item Jos $\varphi$ on kaava $s = t$ jossa $s$ ja $t$ ovat termejä, niin $A \models \varphi$ jos ja vain jos $s^A = t^A$.
 \item Jos $\varphi$ on kaava $R(t_1, \ldots, t_n)$, missä $R$ on $n$-paikkainen relaatiosymboli ja $t_1, \ldots, t_n$ ovat termejä, niin $A \models \varphi$ jos ja vain jos $(t_1^A, \ldots, t_n^A) \in R$.

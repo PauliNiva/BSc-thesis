@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.25)  8 MAY 2016 18:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.25)  8 MAY 2016 18:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1262,9 +1262,9 @@ Package babel Info: Redefining finnish shorthand "|
 Package babel Info: Redefining finnish shorthand "|
 (babel)             in language  on input line 233.
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 260.
+(babel)             in language  on input line 261.
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 260.
+(babel)             in language  on input line 261.
 
 [5]
 Package babel Info: Redefining finnish shorthand "|
@@ -1414,11 +1414,11 @@ Package rerunfilecheck Info: File `Ehrenfeucht--Fraïssé-peleistä.out' has
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 690.
  ) 
 Here is how much of TeX's memory you used:
- 20455 strings out of 493089
- 370883 string characters out of 6134841
+ 20457 strings out of 493089
+ 370905 string characters out of 6134841
  492527 words of memory out of 5000000
  23233 multiletter control sequences out of 15000+600000
- 67072 words of font info for 157 fonts, out of 8000000 for 9000
+ 67155 words of font info for 158 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,8n,57p,1004b,906s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/lo
@@ -1437,7 +1437,7 @@ type1/public/lm/lmr8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public
 local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></
 usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pf
 b>
-Output written on Ehrenfeucht--Fraïssé-peleistä.pdf (25 pages, 317326 byt
+Output written on Ehrenfeucht--Fraïssé-peleistä.pdf (25 pages, 317290 byt
 es).
 PDF statistics:
  368 PDF objects out of 1000 (max. 8388607)
