@@ -5,33 +5,32 @@ The style file: babplain-lf.bst
 Database file #1: references-fi.bib
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Warning--empty language in Bla06
-Warning--empty publisher in Luo10
 You've used 25 entries,
             2783 wiz_defined-function locations,
-            832 strings with 9832 characters,
-and the built_in function-call counts, 10507 in all, are:
-= -- 997
+            833 strings with 9890 characters,
+and the built_in function-call counts, 10506 in all, are:
+= -- 998
 > -- 289
 < -- 11
 + -- 117
 - -- 86
-* -- 997
-:= -- 1445
+* -- 995
+:= -- 1446
 add.period$ -- 58
 call.type$ -- 25
 change.case$ -- 105
 chr.to.int$ -- 0
-cite$ -- 27
+cite$ -- 26
 duplicate$ -- 583
 empty$ -- 1052
 format.name$ -- 147
-if$ -- 2320
+if$ -- 2321
 int.to.chr$ -- 0
 int.to.str$ -- 25
 missing$ -- 41
 newline$ -- 116
 num.names$ -- 62
-pop$ -- 179
+pop$ -- 178
 preamble$ -- 1
 purify$ -- 87
 quote$ -- 0
@@ -43,8 +42,8 @@ text.length$ -- 11
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 86
-warning$ -- 2
+warning$ -- 1
 while$ -- 102
 width$ -- 27
-write$ -- 283
-(There were 2 warnings)
+write$ -- 284
+(There was 1 warning)
