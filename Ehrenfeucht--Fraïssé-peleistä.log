@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.25)  9 MAY 2016 09:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.25)  9 MAY 2016 10:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1406,9 +1406,9 @@ Package babel Info: Redefining finnish shorthand "|
 (babel)             in language  on input line 120.
 [21]
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 220.
+(babel)             in language  on input line 219.
 Package babel Info: Redefining finnish shorthand "|
-(babel)             in language  on input line 220.
+(babel)             in language  on input line 219.
  [22])
 Package babel Info: Redefining finnish shorthand "|
 (babel)             in language  on input line 705.
@@ -1426,11 +1426,11 @@ Package rerunfilecheck Info: File `Ehrenfeucht--Fraïssé-peleistä.out' has
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 705.
  ) 
 Here is how much of TeX's memory you used:
- 20459 strings out of 493089
- 370933 string characters out of 6134841
- 493538 words of memory out of 5000000
- 23234 multiletter control sequences out of 15000+600000
- 67249 words of font info for 158 fonts, out of 8000000 for 9000
+ 20463 strings out of 493089
+ 370970 string characters out of 6134841
+ 492566 words of memory out of 5000000
+ 23235 multiletter control sequences out of 15000+600000
+ 67332 words of font info for 159 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,8n,57p,1016b,906s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/lo
@@ -1449,11 +1449,11 @@ type1/public/lm/lmr8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public
 local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></
 usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pf
 b>
-Output written on Ehrenfeucht--Fraïssé-peleistä.pdf (26 pages, 319946 byt
+Output written on Ehrenfeucht--Fraïssé-peleistä.pdf (26 pages, 320220 byt
 es).
 PDF statistics:
- 372 PDF objects out of 1000 (max. 8388607)
- 326 compressed objects within 4 object streams
- 98 named destinations out of 1000 (max. 500000)
+ 375 PDF objects out of 1000 (max. 8388607)
+ 329 compressed objects within 4 object streams
+ 99 named destinations out of 1000 (max. 500000)
  17051 words of extra memory for PDF output out of 17280 (max. 10000000)
 

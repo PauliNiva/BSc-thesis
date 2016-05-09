@@ -288,13 +288,13 @@ Jokaiselle äärelliselle mallille $A$ on olemassa ensimmäisen kertaluvun predi
 
 Vaikka jokaiselle mallille on ensimmäisen kertaluvun predikaattilogiikan lause, joka karakterisoi kyseisen mallin, isomorfia on kuitenkin liian vahva elementaarisen ekvivalenssin ilmaisemiseen. Esimerkiksi, mitkä tahansa kaksi tiheää lineaarijärjestystä ilman päätepisteitä ovat elementaarisesti ekvivalentit mutta eivät kuitenkaan isomorfiset. Erityisesti lineaarijärjestykset $(\mathbb{Q}, <)$ ja $(\mathbb{R}, <)$ ovat elementaarisesti ekvivalentit, eli esimerkiksi reaalilukujen täydellisyyttä ei voi ilmaista ensimmäisen kertaluvun predikaattilogiikan kielellä.
 
-Ratkaisu siihen ongelmaan, että isomorfismi on liian vahva elementaarisen ekvivalenssin ilmaisemiseksi, on isomorfismin heikennys, äärellinen isomorfismi. Fraïssén kehittämä äärellinen isomorfismi karakterisoi elementaarisen ekvivalenssin. Tässä tutkielmassa ei kuitenkaan ole tarvetta erikseen määritellä äärellistä isomorfismia, koska kaikkiin käytettyihin esimerkkeihin riittää osittaisisomorfismi. Tästä syystä tässä tutkielmassa on otettu vapaus heikentää Fraïssén lausetta, siten että äärellisen isomorfismin sijaan rajoitutaan osittaisisomorfismiin. Tämä heikennys oikeutetaan sillä, että jos kaksi mallia ovat osittaisisomorfiset, niin ne ovat äärellisesti isomorfiset.
+Ratkaisu siihen ongelmaan, että isomorfismi on liian vahva elementaarisen ekvivalenssin ilmaisemiseksi, on isomorfismin heikennys, äärellinen isomorfismi. Fraïssén kehittämä äärellinen isomorfismi karakterisoi elementaarisen ekvivalenssin. Tässä tutkielmassa ei kuitenkaan ole tarvetta erikseen määritellä äärellistä isomorfismia, koska kaikkiin käytettyihin esimerkkeihin riittää osittaisisomorfismi. Tästä syystä tutkielmassa on otettu vapaus heikentää Fraïssén lausetta siten, että äärellisen isomorfismin sijaan rajoitutaan osittaisisomorfismiin. Tämä heikennys oikeutetaan sillä, että jos kaksi mallia ovat osittaisisomorfiset, niin ne ovat äärellisesti isomorfiset.
 
 \begin{lau}[Fraïssén lauseen heikennetty versio]
 Olkoon $L$ aakkosto ja olkoot $A$ ja $B$ kumpikin $L$-malleja. Tällöin $A \equiv B$ jos ja vain jos $A \cong_p B$. Toisin sanoen, $A$ ja $B$ ovat elementaarisesti ekvivalentit jos ja vain jos $A$ ja $B$ ovat osittaisisomorfiset.
 \end{lau}
 
-Fraïssén teoreema ja tässä tutkielmassa käytettävä sen heikennetty muoto, antavat siis algebrallisen keinon käsitellä elementaarista ekvivalenssia, jonka käyttö suoraan määritelmästä olisi hyvin hankalaa ja rajallista. Toinen keino käsitellä elementaarista ekvivalenssia on Fraïssén teoreeman peliteoreettinen muotoilu EF-peli.
+Fraïssén teoreema ja sen heikennetty muoto, jota tässä tutkielmassa käytetään, antavat siis algebrallisen keinon käsitellä elementaarista ekvivalenssia, jonka käyttö suoraan määritelmästä olisi hyvin hankalaa ja rajallista. Toinen keino käsitellä elementaarista ekvivalenssia on Fraïssén teoreeman peliteoreettinen muotoilu EF-peli.
 
 \section{EF-peli}
 Tässä luvussa esitellään EF-peli ja sen säännöt sekä strategian ja voittostrategian käsitteet, joissa seurataan pitkälti Jouko Väänästä \cite{Vaa11}. Lisäksi havainnollistetaan EF-peliä esimerkin avulla kahdelle verkolle.
@@ -334,7 +334,7 @@ Todistetaan väite käsittelemällä kaikki väitteen ja implikaation pelit sama
 
 Pelaaja II kuvittelee, että Pelaaja I valitsi alkion $a_1 \in A$ pelissä $EF_k(A, B)$, jolloin hän valitsee alkion $b_1 \in B$ pelin $EF_k(A, B)$ voittostrategian mukaisesti. Seuraavaksi Pelaaja II kuvittelee, että äskeinen valinta oli Pelaajan I valinta pelissä $EF_k(B, C)$ ja valitsee alkion $c_1 \in C$ pelin $EF_k(B, C)$ voittostrategian mukaisesti. Tämä valinta $c_1$ on Pelaajan II vastaus Pelaajan I valintaan $a_1$ pelissä $EF_k(A, C)$.
 
-Jos Pelaaja I valitseekin alkion $c_1 \in C$, niin Pelaaja II yksinkertaisesti seuraa strategiaa toiseen suuntaan. Näin voidaan toimia, koska äsken todistettiin, että voittostrategiat ovat symmetrisiä.
+Jos Pelaaja I valitseekin alkion $c_1 \in C$, niin Pelaaja II yksinkertaisesti seuraa strategiaa toiseen suuntaan. Näin voidaan toimia, sillä kuten äsken todistettiin, voittostrategiat ovat symmetrisiä.
 
 Kun peliä on pelattu $k$-kierrosta, niin meillä on valinnoista muodostuneet jonot $a_1, \ldots, a_k$, $b1, \ldots, b_k$ ja $c_1, \ldots, c_k$. Oletusten nojalla on olemassa osittaisisomorfismit $f: A \cong_p B$ ja $g: B \cong_p C$. Nyt voidaan muodostaa yhdistetty kuvaus $h(f(a_i)) = g(a_i)$ siten, että $a_i \mapsto c_i$ on osittaisisomorfismi, kaikilla $i \in \{1, \ldots, k\}$. Täten $A \sim_k C$, siis relaatio $\sim_k$ on transitiivinen.
 \end{itemize}
@@ -434,9 +434,9 @@ Alaluvussa 4.1 esitellään EF-pelin yleisiä sovellusaloja. Lisäksi esitellä�
 \subsection{Sovellusaloja}
 Kaikki äärelliset mallit voidaan koodata verkkoina, puina tai merkkijonoina \cite{Ebb99}. Tällöin niitä voidaan käyttää laskennan olioina ja siten niillä voidaan kuvata äärellistilallisia systeemejä ja tutkia näiden toiminnan oikeellisuutta. 
 
-Yksi sovellusala on tietokantateoria, koska relationaalinen malli samaistaa tietokannan äärellisen relaationaalisen struktuurin kanssa \cite{Luo10}. Formaalin kielen kaavat voidaan siis ajatella ohjelmina, jotta niiden merkitystä struktuurissa voidaan arvioida. Ja toisinpäin, jonkin laskennallisen vaativuusluokan kyselyitä voidaan esittää jollakin formaalilla kielellä.
+Yksi sovellusala on tietokantateoria, koska relationaalinen malli samaistaa tietokannan äärellisen relaationaalisen struktuurin kanssa \cite{Luo10}. Formaalin kielen kaavat voidaan siis ajatella ohjelmina, jotta niiden merkitystä struktuurissa voidaan arvioida \cite{Nie10}. Ja toisinpäin, jonkin laskennallisen vaativuusluokan kyselyitä voidaan esittää jollakin formaalilla kielellä.
 
-Muita tietojenkäsittelytieteen osa-alueita, joihin EF-peliä voi soveltaa, on esimerkiksi vaativuusteoria, koska äärelliset mallit tarjoavat laskennan vaativuusluokkien loogisen karakterisoinnin ja mahdollistavat vaativuusteoreettisten tulosten todistamisen tätä kautta. Esimerkiksi $\mathrm{P} \neq \mathrm{NP}$ -ongelma redusoituu kysymykseksi: onko kolmella värillä väritettävien suunnattujen verkkojen luokka määriteltävissä pienimmän kiintopisteen logiikassa \cite{Imm86}? Määriteltävyystulosten todistuksissa seuraava teoreema on keskeinen:
+Muita tietojenkäsittelytieteen osa-alueita, joihin EF-peliä voi soveltaa, on esimerkiksi vaativuusteoria, koska äärelliset mallit tarjoavat laskennan vaativuusluokkien loogisen karakterisoinnin ja mahdollistavat vaativuusteoreettisten tulosten todistamisen tätä kautta \cite{Luo10}. Esimerkiksi $\mathrm{P} \neq \mathrm{NP}$ -ongelma redusoituu kysymykseksi: onko kolmella värillä väritettävien suunnattujen verkkojen luokka määriteltävissä pienimmän kiintopisteen logiikassa \cite{Imm86}? Määriteltävyystulosten todistuksissa seuraava teoreema on keskeinen:
 
 \begin{lau}[Metodologiateoreema]
 Ei ole olemassa ensimmäisen kertaluvun predikaattilogiikan lausetta, joka ilmaisee ominaisuuden $P$, jos ja vain jos, kaikilla $n \in \mathbb{Z}_+$, on olemassa mallit $A$ ja $B$, joille pätee:

@@ -5,45 +5,45 @@ The style file: babplain-lf.bst
 Database file #1: references-fi.bib
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Warning--empty language in Bla06
-You've used 25 entries,
+You've used 26 entries,
             2783 wiz_defined-function locations,
-            833 strings with 9890 characters,
-and the built_in function-call counts, 10506 in all, are:
-= -- 998
-> -- 289
+            839 strings with 10031 characters,
+and the built_in function-call counts, 10764 in all, are:
+= -- 1020
+> -- 296
 < -- 11
-+ -- 117
-- -- 86
-* -- 995
-:= -- 1446
-add.period$ -- 58
-call.type$ -- 25
-change.case$ -- 105
++ -- 120
+- -- 88
+* -- 1011
+:= -- 1485
+add.period$ -- 60
+call.type$ -- 26
+change.case$ -- 108
 chr.to.int$ -- 0
-cite$ -- 26
-duplicate$ -- 583
-empty$ -- 1052
-format.name$ -- 147
-if$ -- 2321
+cite$ -- 27
+duplicate$ -- 600
+empty$ -- 1083
+format.name$ -- 150
+if$ -- 2379
 int.to.chr$ -- 0
-int.to.str$ -- 25
-missing$ -- 41
-newline$ -- 116
-num.names$ -- 62
-pop$ -- 178
+int.to.str$ -- 26
+missing$ -- 43
+newline$ -- 120
+num.names$ -- 64
+pop$ -- 188
 preamble$ -- 1
-purify$ -- 87
+purify$ -- 90
 quote$ -- 0
-skip$ -- 340
+skip$ -- 348
 stack$ -- 0
-substring$ -- 634
-swap$ -- 252
+substring$ -- 639
+swap$ -- 256
 text.length$ -- 11
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 86
+type$ -- 88
 warning$ -- 1
-while$ -- 102
-width$ -- 27
-write$ -- 284
+while$ -- 104
+width$ -- 28
+write$ -- 293
 (There was 1 warning)

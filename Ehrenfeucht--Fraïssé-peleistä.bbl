@@ -187,6 +187,12 @@
 \newblock \btxpublisherfont {The MIT Press}, 1971\ifbtxprintISBN {,
   \mbox{\btxISBN~\btxISBNfont {0262130769}}}.
 
+\bibitem {Nie10}
+\btxnamefont {\btxlastnamefont {Niemistö}, Hannu}\btxauthorcolon\
+  \btxtitlefont {Locality and order-invariant logics}.
+\newblock \btxpublisherfont {Väitöstutkimus. Helsingin Yliopisto,
+  matematiikan ja tilastotieteen laitos}, 2007.
+
 \bibitem {Par81}
 \btxnamefont {\btxlastnamefont {Park}, David}\btxauthorcolon\ \btxtitlefont
   {\btxifchangecase {Concurrency and automata on infinite
