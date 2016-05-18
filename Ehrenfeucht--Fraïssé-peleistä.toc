@@ -5,15 +5,15 @@
 \contentsline {subsection}{\numberline {2.2}Kielet}{2}{subsection.2.2}
 \contentsline {subsection}{\numberline {2.3}Mallit}{4}{subsection.2.3}
 \contentsline {subsection}{\numberline {2.4}Isomorfia}{5}{subsection.2.4}
-\contentsline {subsection}{\numberline {2.5}Elementaarinen ekvivalenssi}{6}{subsection.2.5}
-\contentsline {section}{\numberline {3}EF-peli}{7}{section.3}
+\contentsline {subsection}{\numberline {2.5}Elementaarinen ekvivalenssi}{7}{subsection.2.5}
+\contentsline {section}{\numberline {3}EF-peli}{8}{section.3}
 \contentsline {subsection}{\numberline {3.1}Pelin kulku}{8}{subsection.3.1}
-\contentsline {paragraph}{Todistus:}{8}{section*.2}
+\contentsline {paragraph}{Todistus:}{9}{section*.2}
 \contentsline {subsection}{\numberline {3.2}EF-pelin ominaisuuksia}{11}{subsection.3.2}
 \contentsline {section}{\numberline {4}Sovelluksia}{12}{section.4}
-\contentsline {subsection}{\numberline {4.1}Sovellusaloja}{12}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.1}Sovellusaloja}{13}{subsection.4.1}
 \contentsline {subsection}{\numberline {4.2}Ensimm\IeC {\"a}isen kertaluvun predikaattilogiikan rajoitteet}{14}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Kongruenssiapulauseet}{16}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.3}Kongruenssiapulauseet}{17}{subsection.4.3}
 \contentsline {subsection}{\numberline {4.4}Bisimulaatio}{18}{subsection.4.4}
 \contentsline {section}{\numberline {5}Yhteenveto}{19}{section.5}
 \contentsline {section}{L\IeC {\"a}hteet}{21}{section*.3}

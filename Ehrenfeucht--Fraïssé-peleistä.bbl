@@ -150,6 +150,12 @@
   time}{Relational Queries Computable in Polynomial Time}}.
 \newblock \btxjournalfont {Information and Control}, 68:86--104, 1986.
 
+\bibitem {Kul08}
+\btxnamefont {\btxlastnamefont {Kulikov}, Vadim}\btxauthorcolon\ \btxtitlefont
+  {Weak Ehrenfeucht-Fra{\"\i}ss{\'e} games}.
+\newblock \btxpublisherfont {Pro gradu -tutkielma. Helsingin Yliopisto,
+  matematiikan ja tilastotieteen laitos}, 2008.
+
 \bibitem {Lad77}
 \btxnamefont {\btxlastnamefont {Ladner}, Richard\btxfnamespacelong
   E.}\btxauthorcolon\ \btxjtitlefont {\btxifchangecase {Application of model
@@ -157,6 +163,18 @@
   model theoretic games to discrete linear orders and finite automata}}.
 \newblock \btxjournalfont {Information and Control}, 33(4):281--303,
   1977\ifbtxprintISSN {, \mbox{\btxISSN~\btxISSNfont {0019-9958}}}.
+
+\bibitem {Lib99}
+\btxnamefont {\btxlastnamefont {Libkin}, Leonid} \btxandlong {}\ \btxnamefont
+  {\btxlastnamefont {Nurmonen}, Juha}\btxauthorcolon\ \btxtitlefont
+  {\btxifchangecase {Counting and locality over finite structures a
+  survey}{Counting and locality over finite structures a survey}}.
+\newblock \Btxinlong {}\ \btxnamefont {\btxlastnamefont {V{\"a}{\"a}n{\"a}nen},
+  Jouko}\ (\btxeditorlong {}): \btxtitlefont {Generalized Quantifiers and
+  Computation: 9th European Summer School in Logic, Language, and Information
+  ESSLLI'97}, \btxpageslong {}\ 18--50. \btxpublisherfont {Springer Berlin
+  Heidelberg}, 1999\ifbtxprintISBN {, \mbox{\btxISBN~\btxISBNfont
+  {978-3-540-46583-6}}}.
 
 \bibitem {Lip88}
 \btxnamefont {\btxlastnamefont {Lippert}, D.} \btxandlong {}\ \btxnamefont
